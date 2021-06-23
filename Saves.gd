@@ -25,19 +25,17 @@ func _ready():
 		check_delete(lista_slots[x],lista_deletes[x])
 func change_title(slot,savenumber):
 	voltar.text = Options.lang_content["back"]
-	match Directory.new().file_exists(slot):
-		false:
-			savenumber.text = Options.lang_content["new_game"]
-		true:
-			savenumber.text = Options.lang_content["load"]
+	if Directory.new().file_exists(slot):
+		savenumber.text = Options.lang_content["load"]
+	else:
+		savenumber.text = Options.lang_content["new_game"]
 func create_or_load(slot):
-	match Directory.new().file_exists(slot):
-		false:
-			Playervariables.set_slot(slot)
-			get_tree().change_scene(jogo)
-		true:
-			Playervariables.set_slot(slot)
-			get_tree().change_scene(jogo)
+	if Directory.new().file_exists(slot):
+		Playervariables.set_slot(slot)
+		get_tree().change_scene(jogo)
+	else:
+		Playervariables.set_slot(slot)
+		get_tree().change_scene(jogo)
 func _on_Save_1_pressed():
 	create_or_load(lista_slots[0])
 func _on_Save_2_pressed():
