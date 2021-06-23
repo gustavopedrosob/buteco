@@ -131,5 +131,6 @@ __meta__ = {
 wait_time = 5.0
 one_shot = true
 autostart = true
+
 [connection signal="pressed" from="Center/Alinhamento/Center2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

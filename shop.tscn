@@ -328,135 +328,135 @@ shadow_color = Color( 1, 1, 1, 0.6 )
 use_filter = true
 font_data = ExtResource( 10 )
 
+[sub_resource type="StyleBoxFlat" id=64]
+bg_color = Color( 0.266667, 0.215686, 0.176471, 1 )
+
 [sub_resource type="StyleBoxFlat" id=65]
 bg_color = Color( 0.266667, 0.215686, 0.176471, 1 )
 
 [sub_resource type="StyleBoxFlat" id=66]
-bg_color = Color( 0.266667, 0.215686, 0.176471, 1 )
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=67]
 bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=68]
-bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
+bg_color = Color( 0.498039, 0.368627, 0.278431, 1 )
 
 [sub_resource type="StyleBoxFlat" id=69]
 bg_color = Color( 0.498039, 0.368627, 0.278431, 1 )
 
 [sub_resource type="StyleBoxFlat" id=70]
-bg_color = Color( 0.498039, 0.368627, 0.278431, 1 )
+bg_color = Color( 1, 0.803922, 0.564706, 1 )
 
 [sub_resource type="StyleBoxFlat" id=71]
 bg_color = Color( 1, 0.803922, 0.564706, 1 )
 
-[sub_resource type="StyleBoxFlat" id=72]
-bg_color = Color( 1, 0.803922, 0.564706, 1 )
-
-[sub_resource type="DynamicFont" id=73]
+[sub_resource type="DynamicFont" id=72]
 use_filter = true
 font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=73]
+bg_color = Color( 0.541176, 0.533333, 0.545098, 1 )
 
 [sub_resource type="StyleBoxFlat" id=74]
 bg_color = Color( 0.541176, 0.533333, 0.545098, 1 )
 
 [sub_resource type="StyleBoxFlat" id=75]
-bg_color = Color( 0.541176, 0.533333, 0.545098, 1 )
+bg_color = Color( 0.168627, 0.109804, 0.0823529, 1 )
 
 [sub_resource type="StyleBoxFlat" id=76]
-bg_color = Color( 0.168627, 0.109804, 0.0823529, 1 )
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=77]
 bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
 
-[sub_resource type="StyleBoxFlat" id=78]
-bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
-
-[sub_resource type="DynamicFont" id=79]
+[sub_resource type="DynamicFont" id=78]
 size = 40
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=80]
+[sub_resource type="StyleBoxTexture" id=79]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="StyleBoxTexture" id=81]
+[sub_resource type="StyleBoxTexture" id=80]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="StyleBoxTexture" id=82]
+[sub_resource type="StyleBoxTexture" id=81]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 4.73684
 margin_right = 3.15789
 
-[sub_resource type="DynamicFont" id=83]
+[sub_resource type="DynamicFont" id=82]
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=84]
+[sub_resource type="StyleBoxTexture" id=83]
 texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=84]
+texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
 [sub_resource type="StyleBoxTexture" id=85]
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 203, 36 )
-
-[sub_resource type="StyleBoxTexture" id=86]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 3.15789
 margin_right = 3.15789
 
-[sub_resource type="DynamicFont" id=87]
+[sub_resource type="DynamicFont" id=86]
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=88]
+[sub_resource type="StyleBoxTexture" id=87]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="StyleBoxTexture" id=89]
+[sub_resource type="StyleBoxTexture" id=88]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="StyleBoxTexture" id=90]
+[sub_resource type="StyleBoxTexture" id=89]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 3.15789
 margin_right = 3.15789
 
-[sub_resource type="DynamicFont" id=91]
+[sub_resource type="DynamicFont" id=90]
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=92]
+[sub_resource type="StyleBoxTexture" id=91]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 7.0
 margin_right = 6.0
 
-[sub_resource type="StyleBoxTexture" id=93]
+[sub_resource type="StyleBoxTexture" id=92]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 7.0
 margin_right = 7.0
 
-[sub_resource type="StyleBoxTexture" id=94]
+[sub_resource type="StyleBoxTexture" id=93]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 202.579, 36 )
 margin_left = 7.89474
 margin_right = 7.89474
 
-[sub_resource type="DynamicFont" id=95]
+[sub_resource type="DynamicFont" id=94]
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=96]
+[sub_resource type="StyleBoxTexture" id=95]
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
-[sub_resource type="DynamicFont" id=97]
+[sub_resource type="DynamicFont" id=96]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
@@ -1192,8 +1192,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
 "botoes balcao",
@@ -1204,8 +1204,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
 "botoes balcao",
@@ -1216,8 +1216,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
 "botoes balcao",
@@ -1228,8 +1228,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer12" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
 margin_left = 104.0
@@ -1318,8 +1318,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
 "botoes balcao",
@@ -1330,8 +1330,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
 "botoes balcao",
@@ -1342,8 +1342,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
 "botoes balcao",
@@ -1354,8 +1354,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer13" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
 margin_left = 208.0
@@ -1444,8 +1444,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
 "botoes balcao",
@@ -1456,8 +1456,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
 "botoes balcao",
@@ -1468,8 +1468,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
 "botoes balcao",
@@ -1480,8 +1480,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer14" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
 margin_left = 312.0
@@ -1570,8 +1570,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
 "botoes balcao",
@@ -1582,8 +1582,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
 "botoes balcao",
@@ -1594,8 +1594,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
 "botoes balcao",
@@ -1606,8 +1606,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer15" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
 margin_left = 416.0
@@ -1696,8 +1696,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
 "botoes balcao",
@@ -1708,8 +1708,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
 "botoes balcao",
@@ -1720,8 +1720,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
 "botoes balcao",
@@ -1732,8 +1732,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/Chairs"]
 margin_top = 206.0
@@ -1829,8 +1829,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
 "botoes balcao",
@@ -1841,8 +1841,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
 "botoes balcao",
@@ -1853,8 +1853,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
 "botoes balcao",
@@ -1865,8 +1865,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer17" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
 margin_left = 104.0
@@ -1955,8 +1955,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
 "botoes balcao",
@@ -1967,8 +1967,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
 "botoes balcao",
@@ -1979,8 +1979,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
 "botoes balcao",
@@ -1991,8 +1991,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer18" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
 margin_left = 208.0
@@ -2081,8 +2081,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
 "botoes balcao",
@@ -2093,8 +2093,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
 "botoes balcao",
@@ -2105,8 +2105,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
 "botoes balcao",
@@ -2117,8 +2117,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer19" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
 margin_left = 312.0
@@ -2207,8 +2207,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
 "botoes balcao",
@@ -2219,8 +2219,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
 "botoes balcao",
@@ -2231,8 +2231,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
 "botoes balcao",
@@ -2243,8 +2243,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="VBoxContainer20" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
 margin_left = 416.0
@@ -2333,8 +2333,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
 "botoes balcao",
@@ -2345,8 +2345,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
 "botoes balcao",
@@ -2357,8 +2357,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
 "botoes balcao",
@@ -2369,14 +2369,14 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="balconies" type="VBoxContainer" parent="CenterContainer"]
 visible = false
-margin_left = 90.0
+margin_left = 38.0
 margin_top = 30.0
-margin_right = 502.0
+margin_right = 554.0
 margin_bottom = 412.0
 custom_constants/separation = 30
 __meta__ = {
@@ -2427,7 +2427,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 1"
 align = 1
@@ -2475,8 +2475,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 65 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor2" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
 "botoes balcao",
@@ -2487,8 +2487,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 67 )
-custom_styles/normal = SubResource( 68 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/normal = SubResource( 67 )
 
 [node name="Buttoncor3" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
 "botoes balcao",
@@ -2499,8 +2499,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor4" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
 "botoes balcao",
@@ -2511,8 +2511,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor5" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
 "botoes balcao",
@@ -2523,8 +2523,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="VBoxContainer22" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
 margin_left = 104.0
@@ -2564,7 +2564,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 2"
 __meta__ = {
@@ -2611,8 +2611,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 76 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 75 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor7" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
 "botoes balcao",
@@ -2623,8 +2623,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 77 )
-custom_styles/normal = SubResource( 78 )
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 
 [node name="Buttoncor8" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
 "botoes balcao",
@@ -2635,8 +2635,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor9" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
 "botoes balcao",
@@ -2647,8 +2647,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor10" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
 "botoes balcao",
@@ -2659,8 +2659,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="VBoxContainer23" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
 margin_left = 104.0
@@ -2700,7 +2700,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 3"
 __meta__ = {
@@ -2747,8 +2747,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 76 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 75 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor12" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
 "botoes balcao",
@@ -2759,8 +2759,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 77 )
-custom_styles/normal = SubResource( 78 )
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 
 [node name="Buttoncor13" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
 "botoes balcao",
@@ -2771,8 +2771,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor14" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
 "botoes balcao",
@@ -2783,8 +2783,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor15" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
 "botoes balcao",
@@ -2795,8 +2795,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="VBoxContainer24" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
 margin_left = 208.0
@@ -2836,7 +2836,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 4"
 __meta__ = {
@@ -2883,8 +2883,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 76 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 75 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor17" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
 "botoes balcao",
@@ -2895,8 +2895,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 77 )
-custom_styles/normal = SubResource( 78 )
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 
 [node name="Buttoncor18" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
 "botoes balcao",
@@ -2907,8 +2907,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor19" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
 "botoes balcao",
@@ -2919,8 +2919,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor20" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
 "botoes balcao",
@@ -2931,8 +2931,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="VBoxContainer25" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
 margin_left = 312.0
@@ -2972,7 +2972,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 5"
 __meta__ = {
@@ -3019,8 +3019,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 76 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 75 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor22" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
 "botoes balcao",
@@ -3031,8 +3031,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 77 )
-custom_styles/normal = SubResource( 78 )
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 
 [node name="Buttoncor23" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
 "botoes balcao",
@@ -3043,8 +3043,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor24" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
 "botoes balcao",
@@ -3055,8 +3055,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor25" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
 "botoes balcao",
@@ -3067,8 +3067,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/balconies"]
 margin_top = 206.0
@@ -3115,7 +3115,7 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 100.0
 margin_bottom = 152.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 72 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Modelo 6"
 __meta__ = {
@@ -3162,8 +3162,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 76 )
-custom_styles/normal = SubResource( 66 )
+custom_styles/hover = SubResource( 75 )
+custom_styles/normal = SubResource( 65 )
 
 [node name="Buttoncor27" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
 "botoes balcao",
@@ -3174,8 +3174,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 77 )
-custom_styles/normal = SubResource( 78 )
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 
 [node name="Buttoncor28" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
 "botoes balcao",
@@ -3186,8 +3186,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 69 )
-custom_styles/normal = SubResource( 70 )
+custom_styles/hover = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
 
 [node name="Buttoncor29" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
 "botoes balcao",
@@ -3198,8 +3198,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 71 )
-custom_styles/normal = SubResource( 72 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 
 [node name="Buttoncor30" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
 "botoes balcao",
@@ -3210,8 +3210,8 @@ margin_bottom = 96.0
 rect_min_size = Vector2( 64, 96 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 74 )
-custom_styles/normal = SubResource( 75 )
+custom_styles/hover = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 213.0
@@ -3226,7 +3226,7 @@ __meta__ = {
 [node name="title" type="Label" parent="HBoxContainer"]
 margin_right = 104.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 79 )
+custom_fonts/font = SubResource( 78 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "shop"
 __meta__ = {
@@ -3242,10 +3242,10 @@ custom_constants/separation = 20
 [node name="papeis de parede" type="Button" parent="HBoxContainer/HBoxContainer"]
 margin_right = 154.895
 margin_bottom = 46.0
-custom_styles/hover = SubResource( 80 )
-custom_styles/pressed = SubResource( 81 )
-custom_styles/normal = SubResource( 82 )
-custom_fonts/font = SubResource( 83 )
+custom_styles/hover = SubResource( 79 )
+custom_styles/pressed = SubResource( 80 )
+custom_styles/normal = SubResource( 81 )
+custom_fonts/font = SubResource( 82 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Papeis de parede"
 
@@ -3253,10 +3253,10 @@ text = "Papeis de parede"
 margin_left = 174.0
 margin_right = 256.316
 margin_bottom = 46.0
-custom_styles/hover = SubResource( 84 )
-custom_styles/pressed = SubResource( 85 )
-custom_styles/normal = SubResource( 86 )
-custom_fonts/font = SubResource( 87 )
+custom_styles/hover = SubResource( 83 )
+custom_styles/pressed = SubResource( 84 )
+custom_styles/normal = SubResource( 85 )
+custom_fonts/font = SubResource( 86 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Cadeiras"
 
@@ -3264,10 +3264,10 @@ text = "Cadeiras"
 margin_left = 276.0
 margin_right = 349.316
 margin_bottom = 46.0
-custom_styles/hover = SubResource( 88 )
-custom_styles/pressed = SubResource( 89 )
-custom_styles/normal = SubResource( 90 )
-custom_fonts/font = SubResource( 91 )
+custom_styles/hover = SubResource( 87 )
+custom_styles/pressed = SubResource( 88 )
+custom_styles/normal = SubResource( 89 )
+custom_fonts/font = SubResource( 90 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Balcoes"
 
@@ -3275,10 +3275,10 @@ text = "Balcoes"
 margin_left = 563.0
 margin_right = 589.789
 margin_bottom = 46.0
-custom_styles/hover = SubResource( 92 )
-custom_styles/pressed = SubResource( 93 )
-custom_styles/normal = SubResource( 94 )
-custom_fonts/font = SubResource( 95 )
+custom_styles/hover = SubResource( 91 )
+custom_styles/pressed = SubResource( 92 )
+custom_styles/normal = SubResource( 93 )
+custom_fonts/font = SubResource( 94 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "X"
 
@@ -3288,7 +3288,7 @@ margin_left = 380.0
 margin_top = 166.0
 margin_right = 642.0
 margin_bottom = 300.0
-custom_styles/panel = SubResource( 96 )
+custom_styles/panel = SubResource( 95 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -3298,7 +3298,7 @@ margin_left = 1.05261
 margin_top = 1.10526
 margin_right = 260.053
 margin_bottom = 135.105
-custom_fonts/font = SubResource( 97 )
+custom_fonts/font = SubResource( 96 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Dinheiro insuficiente!
@@ -3312,6 +3312,7 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="mensagem de erro"]
 wait_time = 2.0
 autostart = true
+
 [connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1/Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3/Button3" to="." method="_on_Button3_pressed"]

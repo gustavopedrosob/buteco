@@ -1,11 +1,7 @@
 extends Control
 
 func _ready():
-	match Options.language:
-		'pt-br':
-			$"Centralizado/Creditos Texto".bbcode_text = "[center]Programação:\nGustavo Pedroso Bernardes e Bruno Rodrigues\nDesigne:\nGustavo Pedroso Bernardes\nSons:\nGustavo Pedroso Bernardes"
-		'en-us':
-			$"Centralizado/Creditos Texto".bbcode_text = "[center]Programming:\nGustavo Pedroso Bernardes e Bruno Rodrigues\nDesigne:\nGustavo Pedroso Bernardes\nSounds:\nGustavo Pedroso Bernardes"
+	$"Centralizado/Creditos Texto".bbcode_text = str("[center]",Options.lang_content["programming"],":\nGustavo Pedroso Bernardes e Bruno Rodrigues\n",Options.lang_content["designer"],":\nGustavo Pedroso Bernardes\n",Options.lang_content["sounds"],":\nGustavo Pedroso Bernardes")
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene("res://TelaInicial.tscn")

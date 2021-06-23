@@ -12,19 +12,11 @@ func _ready():
 			quantidade_clicks_requiridos = 35
 		'dificil':
 			quantidade_clicks_requiridos = 50
-	match Options.language:
-		'pt-br':
-			$Center/Alinhamento/Dica.text = str('Click na caneca de cerveja, ',quantidade_clicks_requiridos,' vezes antes que o tempo acabe para a encher.')
-		'en-us':
-			$Center/Alinhamento/Dica.text = str('Click on the beer mug, ',quantidade_clicks_requiridos,' times before time runs out to fill it.')
+	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % quantidade_clicks_requiridos
 # warning-ignore:unused_argument
 func _process(delta):
 	$AnimationPlayer/QntPrecionado.text = str(quantidade_de_vezes_precionado)
-	match Options.language:
-		'pt-br':
-			$Center/Alinhamento/Time.text = str('Tempo restante: ',int($Timer.time_left))
-		'en-us':
-			$Center/Alinhamento/Time.text = str('Time left: ',int($Timer.time_left))
+	$Center/Alinhamento/Time.text = str(Options.lang_content["time_left"], int($Timer.time_left))
 	# Aqui executa se conseguir os clicks necessarios
 	if quantidade_de_vezes_precionado == quantidade_clicks_requiridos:
 		Playervariables.set_jogo2(3)

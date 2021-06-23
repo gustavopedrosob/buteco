@@ -3,22 +3,15 @@ extends VBoxContainer
 func _ready():
 	$"GridContainer/SeleLan".connect("reload_language", self, "on_reload_language")
 	exchange_language()
+
 func exchange_language():
-	match Options.language:
-		'pt-br':
-			$"Opcoes Title".text = 'Opções'
-			$"Voltar".text = 'Voltar'
-			$'GridContainer/Dif'.text = 'Selecione uma dificuldade:'
-			$"GridContainer/Language Display".text = 'Selecione uma linguagem:'
-			$"GridContainer/Fullscreen Display".text = 'Tela Cheia'
-			$"GridContainer/Autosave Display".text = 'Auto-Salvar'
-		'en-us':
-			$"Opcoes Title".text = 'Options'
-			$"Voltar".text = 'Back'
-			$'GridContainer/Dif'.text = 'Select a Difficult'
-			$"GridContainer/Language Display".text = 'Select a Language:'
-			$"GridContainer/Fullscreen Display".text = 'Fullscreen'
-			$"GridContainer/Autosave Display".text = 'Auto-Save'
+	$"Opcoes Title".text = Options.lang_content["options"]
+	$"Voltar".text = Options.lang_content["back"]
+	$'GridContainer/Dif'.text = Options.lang_content["select_dificult"]
+	$"GridContainer/Language Display".text = Options.lang_content["select_language"]
+	$"GridContainer/Fullscreen Display".text = Options.lang_content["fullscreen"]
+	$"GridContainer/Autosave Display".text = Options.lang_content["auto_save"]
+
 func on_reload_language():
 	exchange_language()
 

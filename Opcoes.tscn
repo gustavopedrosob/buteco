@@ -203,5 +203,6 @@ custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Voltar"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" to="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" method="_on_CheckFullscreen_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/Autosave" to="CenterContainer/VBoxContainer/GridContainer/Autosave" method="_on_Autosave_pressed"]

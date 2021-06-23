@@ -24,6 +24,10 @@ var balcao_cinza={"cz1":"res://sprites/balcoes/Ativo 49buteco.png","cz2":"res://
 
 
 func _ready():
+	$"HBoxContainer/title".text = Options.lang_content["shop"]
+	$"HBoxContainer/HBoxContainer/cadeiras".text = Options.lang_content["chairs"]
+	$"HBoxContainer/HBoxContainer/papeis de parede".text = Options.lang_content["wallpapers"]
+	$"HBoxContainer/HBoxContainer/balcoes".text = Options.lang_content["kitchen_baltion"]
 	load_cores()
 	load_cadeiras()
 	load_balcoes()

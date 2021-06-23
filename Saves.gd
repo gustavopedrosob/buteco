@@ -24,21 +24,12 @@ func _ready():
 		change_title(lista_slots[x],lista_saves[x])
 		check_delete(lista_slots[x],lista_deletes[x])
 func change_title(slot,savenumber):
-	match Options.language:
-		'pt-br':
-			voltar.text = 'Voltar'
-			match Directory.new().file_exists(slot):
-				false:
-					savenumber.text = 'Novo jogo'
-				true:
-					savenumber.text = 'Carregar'
-		'en-us':
-			voltar.text = 'Back'
-			match Directory.new().file_exists(slot):
-				false:
-					savenumber.text = 'New game'
-				true:
-					savenumber.text = 'Load'
+	voltar.text = Options.lang_content["back"]
+	match Directory.new().file_exists(slot):
+		false:
+			savenumber.text = Options.lang_content["new_game"]
+		true:
+			savenumber.text = Options.lang_content["load"]
 func create_or_load(slot):
 	match Directory.new().file_exists(slot):
 		false:

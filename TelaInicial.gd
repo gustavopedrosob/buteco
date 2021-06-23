@@ -10,22 +10,18 @@ onready var opcoes = $'AlinhamentoV/Opcoes'
 onready var sairdojogo = $"AlinhamentoV/Sair do jogo"
 
 func _ready():
-	match Options.language:
-		'pt-br':
-			carregarjogo.text = 'Carregar Jogo'
-			creditos.text = 'Creditos'
-			opcoes.text = 'Opções'
-			sairdojogo.text = 'Sair do Jogo'
-		'en-us':
-			carregarjogo.text = 'Load game'
-			creditos.text = 'Credits'
-			opcoes.text = 'Options'
-			sairdojogo.text = 'Leave the game'
+	carregarjogo.text = Options.lang_content["load_game"]
+	creditos.text = Options.lang_content["credits"]
+	opcoes.text = Options.lang_content["options"]
+	sairdojogo.text = Options.lang_content["leave_the_game"]
+
 func _on_Carregar_Jogo_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(savesscene)
+
 func _on_Sair_do_jogo_pressed():
 	get_tree().quit()
+
 func _on_Creditos_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(creditosscene)

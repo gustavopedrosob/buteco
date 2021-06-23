@@ -27,26 +27,14 @@ func _process(delta):
 	var minutos_display = int(60 - horatimer.time_left)
 	var minutos_restantes = horatimer.time_left
 	if minutos_display < 10:
-		match Options.language:
-			'pt-br':
-				horadisplay.text = str('Horario: ',horas,':0',minutos_display)
-			'en-us':
-				horadisplay.text = str('Hour: ',horas,':0',minutos_display)
+		horadisplay.text = str(Options.lang_content["hour"], horas, ":0", minutos_display)
 	if minutos_display >= 10:
-		match Options.language:
-			'pt-br':
-				horadisplay.text = str('Horario: ',horas,':',minutos_display)
-			'en-us':
-				horadisplay.text = str('Hour: ',horas,':',minutos_display)
+		horadisplay.text = str(Options.lang_content["hour"], horas, ":", minutos_display)
 	Playervariables.data['minuto'] = minutos_restantes
 	reload_dia()
 func reload_dia():
 	var dia = Playervariables.data['dia']
-	match Options.language:
-		'pt-br':
-			diadisplay.text = str('Dia: ',dia)
-		'en-us':
-			diadisplay.text = str('Day: ',dia)
+	diadisplay.text = str(Options.lang_content["day"], dia)
 func _on_HourAndAutoSave_timeout():
 	reset_timer()
 	Playervariables.data['hora'] += 1

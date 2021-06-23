@@ -10,12 +10,13 @@ func _ready():
 func _on_item_pressed(ID):
 	match ID:
 		0:
-			Options.language = 'pt-br'
-			emit_signal("reload_language")
-			text = Options.language
-			Options.create_save()
+			set_language('pt-br')
 		1:
-			Options.language = 'en-us'
-			emit_signal("reload_language")
-			text = Options.language
-			Options.create_save()
+			set_language('en-us')
+func set_language(lang: String):
+	if lang != Options.language:
+		Options.language = lang
+		Options.get_language()
+		emit_signal("reload_language")
+		text = Options.language
+		Options.create_save()

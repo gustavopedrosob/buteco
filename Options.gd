@@ -5,10 +5,19 @@ var dificuldade = 'normal'
 var auto_save = false
 var fullscreen = false
 var dicas = true
+var lang_content = null
 
 func _ready():
 	Options.load_save()
 	change_fullscreen()
+	get_language()
+
+func get_language():
+	var file = File.new()
+	file.open('lang/%s.json' % language, File.READ)
+	var text = file.get_as_text()
+	lang_content = parse_json(text)
+
 func load_save():
 	var arquivo = File.new()
 	var erro = arquivo.open('user://options', File.READ)
@@ -20,6 +29,7 @@ func load_save():
 		fullscreen = dados['fullscreen']
 	else:
 		print(erro)
+
 func create_save():
 	var arquivo = File.new()
 	var erro = arquivo.open('user://options', File.WRITE)
@@ -28,6 +38,7 @@ func create_save():
 		arquivo.store_var(dados_to_save)
 	else:
 		print(erro)
+
 func change_fullscreen():
 	match fullscreen:
 		false:

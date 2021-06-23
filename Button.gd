@@ -13,12 +13,10 @@ func _ready():
 		var dados = Playervariables.load_save()
 		Playervariables.set_dinheiro(dados['dinheiro'])
 	reset_timer()
+	$"Button".text = Options.lang_content["shop"]
+
 func _process(delta):
-	match Options.language:
-		'pt-br':
-			dinheirodisplay.text = str('Dinheiro: ',Playervariables.dinheiro)
-		'en-us':
-			dinheirodisplay.text = str('Money: ',Playervariables.dinheiro)
+	dinheirodisplay.text = str(Options.lang_content["money"], Playervariables.dinheiro)
 func _on_Timer_timeout():
 	spawn_client()
 func reset_timer():
