@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Saves.gd" type="Script" id=1]
 [ext_resource path="res://Fonte.tres" type="DynamicFont" id=2]
-[ext_resource path="res://delete.tres" type="StyleBox" id=3]
 [ext_resource path="res://sprites/TelaInicial.png" type="Texture" id=4]
-[ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=5]
 [ext_resource path="res://botaopressed.tres" type="StyleBox" id=6]
 [ext_resource path="res://botaohover.tres" type="StyleBox" id=7]
 [ext_resource path="res://botão.tres" type="StyleBox" id=8]
@@ -34,18 +32,17 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 352.0
-margin_top = 218.0
-margin_right = 672.0
-margin_bottom = 381.0
+margin_left = 437.0
+margin_top = 277.0
+margin_right = 587.0
+margin_bottom = 322.0
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 320.0
-margin_bottom = 118.0
+margin_right = 150.0
 custom_constants/vseparation = 10
 custom_constants/hseparation = 20
 columns = 2
@@ -53,223 +50,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Slot 1" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_right = 150.0
-margin_bottom = 19.0
-custom_fonts/font = ExtResource( 5 )
-text = "Slot 1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Slot 2" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_left = 170.0
-margin_right = 320.0
-margin_bottom = 19.0
-custom_fonts/font = ExtResource( 5 )
-text = "Slot 2"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_top = 29.0
-margin_right = 150.0
-margin_bottom = 54.0
-
-[node name="Save 1" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer"]
-margin_right = 150.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 150, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 7 )
-custom_styles/pressed = ExtResource( 6 )
-custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-button_mask = 3
-enabled_focus_mode = 0
-text = "Novo jogo"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Deleta1" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer"]
-visible = false
-margin_left = 154.0
-margin_right = 179.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 25, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-enabled_focus_mode = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_left = 170.0
-margin_top = 29.0
-margin_right = 320.0
-margin_bottom = 54.0
-
-[node name="Save 2" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer2"]
-margin_right = 150.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 150, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 7 )
-custom_styles/pressed = ExtResource( 6 )
-custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-button_mask = 3
-enabled_focus_mode = 0
-text = "Novo jogo"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="Deleta2" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer2"]
-visible = false
-margin_left = 154.0
-margin_right = 179.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 25, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-enabled_focus_mode = 0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="Slot 3" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_top = 64.0
-margin_right = 150.0
-margin_bottom = 83.0
-custom_fonts/font = ExtResource( 5 )
-text = "Slot 3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Slot 4" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_left = 170.0
-margin_top = 64.0
-margin_right = 320.0
-margin_bottom = 83.0
-custom_fonts/font = ExtResource( 5 )
-text = "Slot 4"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_top = 93.0
-margin_right = 150.0
-margin_bottom = 118.0
-
-[node name="Save 3" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer3"]
-margin_right = 150.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 150, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 7 )
-custom_styles/pressed = ExtResource( 6 )
-custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-button_mask = 3
-enabled_focus_mode = 0
-text = "Novo jogo"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="Deleta3" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer3"]
-visible = false
-margin_left = 154.0
-margin_right = 179.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 25, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-enabled_focus_mode = 0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_left = 170.0
-margin_top = 93.0
-margin_right = 320.0
-margin_bottom = 118.0
-
-[node name="Save 4" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer4"]
-margin_right = 150.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 150, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 7 )
-custom_styles/pressed = ExtResource( 6 )
-custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-button_mask = 3
-enabled_focus_mode = 0
-text = "Novo jogo"
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
-[node name="Deleta4" type="Button" parent="CenterContainer/VBoxContainer/GridContainer/HBoxContainer4"]
-visible = false
-margin_left = 154.0
-margin_right = 179.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 25, 25 )
-focus_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-enabled_focus_mode = 0
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
-
 [node name="Voltar" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_left = 85.0
-margin_top = 138.0
-margin_right = 235.0
-margin_bottom = 163.0
+margin_top = 20.0
+margin_right = 150.0
+margin_bottom = 45.0
 rect_min_size = Vector2( 150, 25 )
 focus_mode = 0
 size_flags_horizontal = 4
@@ -287,12 +71,4 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer/Save 1" to="." method="_on_Save_1_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer/Deleta1" to="." method="_on_Deleta1_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer2/Save 2" to="." method="_on_Save_2_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer2/Deleta2" to="." method="_on_Deleta2_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer3/Save 3" to="." method="_on_Save_3_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer3/Deleta3" to="." method="_on_Deleta3_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer4/Save 4" to="." method="_on_Save_4_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/HBoxContainer4/Deleta4" to="." method="_on_Deleta4_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Voltar" to="." method="_on_Voltar_pressed"]
