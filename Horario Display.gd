@@ -26,10 +26,7 @@ func _process(delta):
 	var horas = Playervariables.data['hora']
 	var minutos_display = int(60 - horatimer.time_left)
 	var minutos_restantes = horatimer.time_left
-	if minutos_display < 10:
-		horadisplay.text = str(Options.lang_content["hour"], horas, ":0", minutos_display)
-	if minutos_display >= 10:
-		horadisplay.text = str(Options.lang_content["hour"], horas, ":", minutos_display)
+	horadisplay.text = str(Options.lang_content["hour"], horas, ":%002d" % minutos_display)
 	Playervariables.data['minuto'] = minutos_restantes
 	reload_dia()
 func reload_dia():
