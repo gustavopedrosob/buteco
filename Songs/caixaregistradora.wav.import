@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/caixaregistradora.wav-607321c886cd53b938fc1b4ac07fa62c.sample"
+
+[deps]
+
+source_file="res://Songs/caixaregistradora.wav"
+dest_files=[ "res://.import/caixaregistradora.wav-607321c886cd53b938fc1b4ac07fa62c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://sprites/cerveja.png" type="Texture" id=2]
+[ext_resource path="res://sprites/liquido cerveja.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=3]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/QntPrecionado:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ), Color( 0, 1, 0, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Center" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alinhamento" type="VBoxContainer" parent="Center"]
+margin_left = 374.0
+margin_top = 106.0
+margin_right = 650.0
+margin_bottom = 494.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Center/Alinhamento"]
+margin_right = 276.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dica" type="Label" parent="Center/Alinhamento"]
+margin_top = 48.0
+margin_right = 276.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Center2" type="CenterContainer" parent="Center/Alinhamento"]
+margin_top = 87.0
+margin_right = 276.0
+margin_bottom = 388.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Center/Alinhamento/Center2"]
+margin_right = 276.0
+margin_bottom = 301.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Center/Alinhamento/Center2/TextureButton"]
+margin_left = 14.0
+margin_top = 15.0
+margin_right = 186.0
+margin_bottom = 285.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+min_value = 1.0
+value = 1.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade = SubResource( 3 )
+
+[node name="QntPrecionado" type="Label" parent="AnimationPlayer"]
+visible = false
+margin_left = 168.0
+margin_top = 88.0
+margin_right = 208.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 1, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+[connection signal="pressed" from="Center/Alinhamento/Center2/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

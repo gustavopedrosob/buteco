@@ -1,0 +1,3414 @@
+[gd_scene load_steps=120 format=2]
+
+[ext_resource path="res://sprites/LojaGUI.png" type="Texture" id=1]
+[ext_resource path="res://sprites/cadeiras/Ativo 7cadeira.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Buttons/botaohover.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Buttons/botaopressed.png" type="Texture" id=4]
+[ext_resource path="res://Loja.gd" type="Script" id=5]
+[ext_resource path="res://sprites/Buttons/botao.png" type="Texture" id=6]
+[ext_resource path="res://sprites/cadeiras/Ativo 6cadeira.png" type="Texture" id=7]
+[ext_resource path="res://sprites/cadeiras/Ativo 5cadeira.png" type="Texture" id=8]
+[ext_resource path="res://sprites/cadeiras/Ativo 8cadeira.png" type="Texture" id=9]
+[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://sprites/cadeiras/Ativo 10cadeira.png" type="Texture" id=11]
+[ext_resource path="res://sprites/cadeiras/Ativo 9cadeira.png" type="Texture" id=12]
+[ext_resource path="res://sprites/cadeiras/Ativo 4cadeira.png" type="Texture" id=13]
+[ext_resource path="res://sprites/cadeiras/Ativo 3cadeira.png" type="Texture" id=14]
+[ext_resource path="res://sprites/cadeiras/Ativo 1cadeira.png" type="Texture" id=15]
+[ext_resource path="res://sprites/cadeiras/Ativo 2cadeira.png" type="Texture" id=16]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 1.png" type="Texture" id=18]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 3.png" type="Texture" id=19]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 6.png" type="Texture" id=20]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 4.png" type="Texture" id=22]
+[ext_resource path="res://sprites/balcoes cortados/Ativo 5.png" type="Texture" id=23]
+[ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.12549, 0.470588, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=7]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0.0235294, 0.215686, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=13]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.32549, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=15]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=19]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.882353, 0.745098, 0.0156863, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=21]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=23]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=25]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.145098, 0, 0.14902, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=27]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=30]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=31]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=33]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=34]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=36]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=37]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=39]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=40]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=41]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=42]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=43]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=44]
+bg_color = Color( 0.737255, 0.396078, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=45]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=46]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=47]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=48]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=49]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.337255, 0.333333, 0.329412, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="DynamicFont" id=51]
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=52]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=53]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=54]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=55]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=56]
+bg_color = Color( 0.270588, 0.168627, 0.0705882, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=57]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=58]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=59]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=60]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=61]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=62]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+shadow_color = Color( 1, 1, 1, 0.6 )
+
+[sub_resource type="DynamicFont" id=63]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=65]
+bg_color = Color( 0.266667, 0.215686, 0.176471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=66]
+bg_color = Color( 0.266667, 0.215686, 0.176471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=68]
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=69]
+bg_color = Color( 0.498039, 0.368627, 0.278431, 1 )
+
+[sub_resource type="StyleBoxFlat" id=70]
+bg_color = Color( 0.498039, 0.368627, 0.278431, 1 )
+
+[sub_resource type="StyleBoxFlat" id=71]
+bg_color = Color( 1, 0.803922, 0.564706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=72]
+bg_color = Color( 1, 0.803922, 0.564706, 1 )
+
+[sub_resource type="DynamicFont" id=73]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=74]
+bg_color = Color( 0.541176, 0.533333, 0.545098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=75]
+bg_color = Color( 0.541176, 0.533333, 0.545098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=76]
+bg_color = Color( 0.168627, 0.109804, 0.0823529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=77]
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=78]
+bg_color = Color( 0.772549, 0.772549, 0.772549, 1 )
+
+[sub_resource type="DynamicFont" id=79]
+size = 40
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=80]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=81]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=82]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+margin_left = 4.73684
+margin_right = 3.15789
+
+[sub_resource type="DynamicFont" id=83]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=84]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=85]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=86]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+margin_left = 3.15789
+margin_right = 3.15789
+
+[sub_resource type="DynamicFont" id=87]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=88]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=89]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=90]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+margin_left = 3.15789
+margin_right = 3.15789
+
+[sub_resource type="DynamicFont" id=91]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=92]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+margin_left = 7.0
+margin_right = 6.0
+
+[sub_resource type="StyleBoxTexture" id=93]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+margin_left = 7.0
+margin_right = 7.0
+
+[sub_resource type="StyleBoxTexture" id=94]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 202.579, 36 )
+margin_left = 7.89474
+margin_right = 7.89474
+
+[sub_resource type="DynamicFont" id=95]
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=96]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 369, 303 )
+
+[sub_resource type="DynamicFont" id=97]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+
+[node name="shop" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 3.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_top = 1.05263
+margin_right = 1027.0
+margin_bottom = 601.053
+rect_min_size = Vector2( 1024, 600 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 221.0
+margin_top = 123.56
+margin_right = 813.0
+margin_bottom = 566.56
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wallpaper" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 38.0
+margin_top = 30.0
+margin_right = 554.0
+margin_bottom = 412.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="CenterContainer/wallpaper"]
+margin_right = 516.0
+margin_bottom = 176.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer1"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Greenish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer1"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Blue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer1"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Red"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer1"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer4"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer4"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer4"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Yellow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer4"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer1"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer5"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer5"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer5"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 27 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Purple"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer5"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/wallpaper"]
+margin_top = 206.0
+margin_right = 516.0
+margin_bottom = 382.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer6"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer6"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer6"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Black"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer6"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/normal = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer2"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer7"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer7"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer7"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 39 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "White"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer7"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+custom_fonts/font = SubResource( 43 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer8" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer2"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer8"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer8"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 44 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer8"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 45 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Orange"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer8"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 46 )
+custom_styles/pressed = SubResource( 47 )
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 49 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer9" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer2"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer9"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer9"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 50 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer9"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Grey"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer9"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 52 )
+custom_styles/pressed = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+custom_fonts/font = SubResource( 55 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer10" type="VBoxContainer" parent="CenterContainer/wallpaper/HBoxContainer2"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer10"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer10"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer10"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 57 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Brown"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer10"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 58 )
+custom_styles/pressed = SubResource( 59 )
+custom_styles/normal = SubResource( 60 )
+custom_fonts/font = SubResource( 61 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chairs" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+margin_left = 38.0
+margin_top = 30.0
+margin_right = 554.0
+margin_bottom = 412.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/Chairs"]
+margin_right = 516.0
+margin_bottom = 176.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer11" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button11" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 15 )
+
+[node name="cores1" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.946
+margin_right = 24.0
+margin_bottom = 236.946
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer12" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button12" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 16 )
+
+[node name="cores2" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.81
+margin_right = 24.0
+margin_bottom = 236.81
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer13" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button13" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 14 )
+
+[node name="cores3" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.966
+margin_right = 24.0
+margin_bottom = 236.966
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer14" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button14" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 13 )
+
+[node name="cores4" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.966
+margin_right = 24.0
+margin_bottom = 236.966
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer15" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button15" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 8 )
+
+[node name="cores5" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.966
+margin_right = 24.0
+margin_bottom = 236.966
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/Chairs"]
+margin_top = 206.0
+margin_right = 516.0
+margin_bottom = 382.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer16" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button16" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/normal = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 7 )
+
+[node name="cores6" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.956
+margin_right = 24.0
+margin_bottom = 236.956
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer17" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button17" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+custom_fonts/font = SubResource( 43 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 2 )
+
+[node name="cores7" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.956
+margin_right = 24.0
+margin_bottom = 236.956
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer18" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button18" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 46 )
+custom_styles/pressed = SubResource( 47 )
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 49 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 9 )
+
+[node name="cores8" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.956
+margin_right = 24.0
+margin_bottom = 236.956
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer19" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button19" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 52 )
+custom_styles/pressed = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+custom_fonts/font = SubResource( 55 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 12 )
+
+[node name="cores9" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.956
+margin_right = 24.0
+margin_bottom = 236.956
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="VBoxContainer20" type="VBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button20" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 58 )
+custom_styles/pressed = SubResource( 59 )
+custom_styles/normal = SubResource( 60 )
+custom_fonts/font = SubResource( 61 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo" type="Sprite" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20"]
+self_modulate = Color( 0.266667, 0.215686, 0.176471, 1 )
+position = Vector2( 51, 78 )
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 11 )
+
+[node name="cores10" type="HBoxContainer" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo"]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -247.0
+margin_top = 136.956
+margin_right = 24.0
+margin_bottom = 236.956
+rect_min_size = Vector2( 16, 10 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncorc1" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncorc2" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
+"botoes balcao",
+]]
+margin_left = 69.0
+margin_right = 133.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncorc3" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
+"botoes balcao",
+]]
+margin_left = 138.0
+margin_right = 202.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncorc4" type="Button" parent="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10" groups=[
+"botoes balcao",
+]]
+margin_left = 207.0
+margin_right = 271.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="balconies" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+margin_left = 90.0
+margin_top = 30.0
+margin_right = 502.0
+margin_bottom = 412.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CenterContainer/balconies"]
+margin_right = 412.0
+margin_bottom = 176.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer21" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button21" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 18 )
+
+[node name="cores1" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.93
+margin_right = 126.909
+margin_bottom = 217.93
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor1" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor2" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="Buttoncor3" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor4" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor5" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="VBoxContainer22" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button22" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 17 )
+
+[node name="cores2" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.92
+margin_right = 126.909
+margin_bottom = 217.92
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor6" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor7" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+
+[node name="Buttoncor8" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor9" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor10" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="VBoxContainer23" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button23" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 19 )
+
+[node name="cores3" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.929
+margin_right = 126.909
+margin_bottom = 217.929
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor11" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor12" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+
+[node name="Buttoncor13" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor14" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor15" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="VBoxContainer24" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button24" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 22 )
+
+[node name="cores4" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.929
+margin_right = 126.909
+margin_bottom = 217.929
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor16" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor17" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+
+[node name="Buttoncor18" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor19" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor20" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="VBoxContainer25" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer5"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button25" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 23 )
+
+[node name="cores5" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.92
+margin_right = 126.909
+margin_bottom = 217.92
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor21" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor22" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+
+[node name="Buttoncor23" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor24" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor25" type="Button" parent="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/balconies"]
+margin_top = 206.0
+margin_right = 412.0
+margin_bottom = 382.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer26" type="VBoxContainer" parent="CenterContainer/balconies/HBoxContainer6"]
+margin_right = 100.0
+margin_bottom = 176.0
+custom_constants/separation = 5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26"]
+margin_right = 100.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100$"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="color" type="Panel" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26"]
+margin_top = 28.0
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26"]
+margin_top = 133.0
+margin_right = 100.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Modelo 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button26" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26"]
+margin_top = 157.0
+margin_right = 100.0
+margin_bottom = 176.0
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/normal = SubResource( 36 )
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Comprar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ativo " type="Sprite" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26"]
+position = Vector2( 50, 78 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 20 )
+
+[node name="cores6" type="HBoxContainer" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo "]
+visible = false
+anchor_top = -0.0097561
+anchor_bottom = -0.0097561
+margin_left = -209.091
+margin_top = 117.93
+margin_right = 126.909
+margin_bottom = 217.93
+rect_min_size = Vector2( 16, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttoncor26" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
+"botoes balcao",
+]]
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 76 )
+custom_styles/normal = SubResource( 66 )
+
+[node name="Buttoncor27" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+
+[node name="Buttoncor28" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 69 )
+custom_styles/normal = SubResource( 70 )
+
+[node name="Buttoncor29" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 71 )
+custom_styles/normal = SubResource( 72 )
+
+[node name="Buttoncor30" type="Button" parent="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6" groups=[
+"botoes balcao",
+]]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 74 )
+custom_styles/normal = SubResource( 75 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 213.0
+margin_top = 52.0
+margin_right = 806.0
+margin_bottom = 98.0
+custom_constants/separation = 55
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="HBoxContainer"]
+margin_right = 104.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 79 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+margin_left = 159.0
+margin_right = 508.0
+margin_bottom = 46.0
+custom_constants/separation = 20
+
+[node name="papeis de parede" type="Button" parent="HBoxContainer/HBoxContainer"]
+margin_right = 154.895
+margin_bottom = 46.0
+custom_styles/hover = SubResource( 80 )
+custom_styles/pressed = SubResource( 81 )
+custom_styles/normal = SubResource( 82 )
+custom_fonts/font = SubResource( 83 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Papeis de parede"
+
+[node name="cadeiras" type="Button" parent="HBoxContainer/HBoxContainer"]
+margin_left = 174.0
+margin_right = 256.316
+margin_bottom = 46.0
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 86 )
+custom_fonts/font = SubResource( 87 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Cadeiras"
+
+[node name="balcoes" type="Button" parent="HBoxContainer/HBoxContainer"]
+margin_left = 276.0
+margin_right = 349.316
+margin_bottom = 46.0
+custom_styles/hover = SubResource( 88 )
+custom_styles/pressed = SubResource( 89 )
+custom_styles/normal = SubResource( 90 )
+custom_fonts/font = SubResource( 91 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Balcoes"
+
+[node name="quit" type="Button" parent="HBoxContainer"]
+margin_left = 563.0
+margin_right = 589.789
+margin_bottom = 46.0
+custom_styles/hover = SubResource( 92 )
+custom_styles/pressed = SubResource( 93 )
+custom_styles/normal = SubResource( 94 )
+custom_fonts/font = SubResource( 95 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X"
+
+[node name="mensagem de erro" type="Panel" parent="."]
+visible = false
+margin_left = 380.0
+margin_top = 166.0
+margin_right = 642.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 96 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="mensagem de erro"]
+margin_left = 1.05261
+margin_top = 1.10526
+margin_right = 260.053
+margin_bottom = 135.105
+custom_fonts/font = SubResource( 97 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dinheiro insuficiente!
+Trabalhe para conseguir mais."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="mensagem de erro"]
+wait_time = 2.0
+autostart = true
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer1/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer3/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer4/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer1/VBoxContainer5/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer6/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer7/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer8/Button8" to="." method="_on_Button8_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer9/Button9" to="." method="_on_Button9_pressed"]
+[connection signal="pressed" from="CenterContainer/wallpaper/HBoxContainer2/VBoxContainer10/Button10" to="." method="_on_Button10_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Button11" to="." method="_on_Button11_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer11/Ativo/cores1/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Button12" to="." method="_on_Button12_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer12/Ativo/cores2/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Button13" to="." method="_on_Button13_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer13/Ativo/cores3/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Button14" to="." method="_on_Button14_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer14/Ativo/cores4/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Button15" to="." method="_on_Button15_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer3/VBoxContainer15/Ativo/cores5/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Button16" to="." method="_on_Button16_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer16/Ativo/cores6/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Button17" to="." method="_on_Button17_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer17/Ativo/cores7/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Button18" to="." method="_on_Button18_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer18/Ativo/cores8/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Button19" to="." method="_on_Button19_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer19/Ativo/cores9/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Button20" to="." method="_on_Button20_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10/Buttoncorc1" to="." method="_on_Buttoncorc1_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10/Buttoncorc2" to="." method="_on_Buttoncorc2_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10/Buttoncorc3" to="." method="_on_Buttoncorc3_pressed"]
+[connection signal="pressed" from="CenterContainer/Chairs/HBoxContainer4/VBoxContainer20/Ativo/cores10/Buttoncorc4" to="." method="_on_Buttoncorc4_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Button21" to="." method="_on_Button21_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1/Buttoncor1" to="." method="_on_Buttoncor1_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1/Buttoncor2" to="." method="_on_Buttoncor2_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1/Buttoncor3" to="." method="_on_Buttoncor3_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1/Buttoncor4" to="." method="_on_Buttoncor4_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer21/Ativo /cores1/Buttoncor5" to="." method="_on_Buttoncor5_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Button22" to="." method="_on_Button22_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2/Buttoncor6" to="." method="_on_Buttoncor6_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2/Buttoncor7" to="." method="_on_Buttoncor7_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2/Buttoncor8" to="." method="_on_Buttoncor8_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2/Buttoncor9" to="." method="_on_Buttoncor9_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer22/Ativo /cores2/Buttoncor10" to="." method="_on_Buttoncor10_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Button23" to="." method="_on_Button23_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3/Buttoncor11" to="." method="_on_Buttoncor11_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3/Buttoncor12" to="." method="_on_Buttoncor12_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3/Buttoncor13" to="." method="_on_Buttoncor13_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3/Buttoncor14" to="." method="_on_Buttoncor14_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer23/Ativo /cores3/Buttoncor15" to="." method="_on_Buttoncor15_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Button24" to="." method="_on_Button24_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4/Buttoncor16" to="." method="_on_Buttoncor16_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4/Buttoncor17" to="." method="_on_Buttoncor17_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4/Buttoncor18" to="." method="_on_Buttoncor18_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4/Buttoncor19" to="." method="_on_Buttoncor19_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer24/Ativo /cores4/Buttoncor20" to="." method="_on_Buttoncor20_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Button25" to="." method="_on_Button25_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5/Buttoncor21" to="." method="_on_Buttoncor21_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5/Buttoncor22" to="." method="_on_Buttoncor22_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5/Buttoncor23" to="." method="_on_Buttoncor23_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5/Buttoncor24" to="." method="_on_Buttoncor24_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer5/VBoxContainer25/Ativo /cores5/Buttoncor25" to="." method="_on_Buttoncor25_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Button26" to="." method="_on_Button26_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6/Buttoncor26" to="." method="_on_Buttoncor26_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6/Buttoncor27" to="." method="_on_Buttoncor27_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6/Buttoncor28" to="." method="_on_Buttoncor28_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6/Buttoncor29" to="." method="_on_Buttoncor29_pressed"]
+[connection signal="pressed" from="CenterContainer/balconies/HBoxContainer6/VBoxContainer26/Ativo /cores6/Buttoncor30" to="." method="_on_Buttoncor30_pressed"]
+[connection signal="pressed" from="HBoxContainer/HBoxContainer/papeis de parede" to="." method="_on_papeis_de_parede_pressed"]
+[connection signal="pressed" from="HBoxContainer/HBoxContainer/cadeiras" to="." method="_on_cadeiras_pressed"]
+[connection signal="pressed" from="HBoxContainer/HBoxContainer/balcoes" to="." method="_on_balcoes_pressed"]
+[connection signal="pressed" from="HBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="mensagem de erro/Timer" to="." method="_on_Timer_timeout"]

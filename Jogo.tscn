@@ -1,0 +1,117 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Button.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Horario Display.gd" type="Script" id=5]
+[ext_resource path="res://dica.gd" type="Script" id=6]
+[ext_resource path="res://dica.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sprites/Buttons/botaohover.png" type="Texture" id=8]
+[ext_resource path="res://Node.gd" type="Script" id=9]
+[ext_resource path="res://shop.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sprites/Buttons/botao.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Buttons/botaopressed.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Bar" parent="." instance=ExtResource( 2 )]
+
+[node name="Spawner" type="Node2D" parent="."]
+
+[node name="Pause" parent="." instance=ExtResource( 1 )]
+visible = false
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Alinhamento" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dia Display" type="Label" parent="Alinhamento"]
+margin_right = 40.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hora Display" type="Label" parent="Alinhamento"]
+margin_top = 23.0
+margin_right = 40.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hora" type="Timer" parent="Alinhamento/Hora Display"]
+wait_time = 60.0
+
+[node name="Dinheiro Display" type="Label" parent="Alinhamento"]
+margin_top = 46.0
+margin_right = 40.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSave" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="Dica" parent="." instance=ExtResource( 7 )]
+visible = false
+script = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 960.175
+margin_top = 6.02936
+margin_right = 1015.18
+margin_bottom = 43.0294
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LOJA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop" parent="." instance=ExtResource( 10 )]
+visible = false
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Alinhamento/Hora Display/Hora" to="Alinhamento" method="_on_HourAndAutoSave_timeout"]
+[connection signal="timeout" from="AutoSave" to="." method="_on_AutoSave_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

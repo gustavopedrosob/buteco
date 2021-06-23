@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Creditos.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/TelaInicial.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Creditos" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Centralizado" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TelaInicial" type="Sprite" parent="Centralizado"]
+position = Vector2( 510.246, 300.016 )
+scale = Vector2( 0.834449, 0.834449 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Creditos Texto" type="RichTextLabel" parent="Centralizado"]
+margin_left = 312.0
+margin_top = 200.0
+margin_right = 712.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 400, 200 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_constants/line_separation = 10
+bbcode_enabled = true
+bbcode_text = "
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
