@@ -9,12 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Button",
+"class": "ColorOption",
+"language": "GDScript",
+"path": "res://classes/ColorOption.gd"
+}, {
+"base": "VBoxContainer",
+"class": "ItemShop",
+"language": "GDScript",
+"path": "res://classes/ItemShop.gd"
+}, {
 "base": "VBoxContainer",
 "class": "SaveI",
 "language": "GDScript",
 "path": "res://classes/SaveI.gd"
 } ]
 _global_script_class_icons={
+"ColorOption": "",
+"ItemShop": "",
 "SaveI": ""
 }
 

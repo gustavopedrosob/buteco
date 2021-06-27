@@ -7,8 +7,12 @@ var jogo1 = 0 setget set_jogo1,get_jogo1
 var jogo2 = 0 setget set_jogo2,get_jogo2
 var data = {'dia': 1, 'hora': 12, 'minuto': 0}
 var dicas = {'movimento': true, 'jogo1': true, 'jogo2': true}
+var shop = {
+	'permissions': [],
+	'equipped': {'chair': null, 'cabinet': null, 'wallpaper': null}}
 
-var loja = {"verde":false,"azul":false,"vermelho":false,"amarelo":false,"roxo":false,"marrom":false,"cinza":false,"laranja":false,"branco":false,"preto":false,"b1":false,"b2":false,"b3":false,"b4":false,"b5":false,"b6":false,"b7":false,"b8":false,"b9":false,"b10":false,"c1":false,"c2":false,"c3":false,"c4":false,"c5":false,"c6":false,"c7":false,"c8":false,"c9":false,"c10":false}
+var buyed = []
+var equiped = []
 
 var Barman_x_positon
 var antipause = false
@@ -52,7 +56,8 @@ func create_save():
 	var dados_to_save = {
 		'dinheiro': get_dinheiro(),
 		'barmanposition': Barman_x_positon,
-		'data':data
+		'data':data,
+		'shop': shop
 		}
 	if not erro:
 		arquivo.store_var(dados_to_save)

@@ -27,6 +27,20 @@
     "hard": "Hard",
     "chairs": "Chairs",
     "wallpapers": "Wallpapers",
-    "kitchen_baltion": "Kitchen baltion",
-    "shop": "Shop"
+    "cabinets": "Kitchen baltion",
+    "shop": "Shop",
+    "buy": "Buy",
+    "equip": "Equip",
+    "equipped": "Equipped",
+    "model": "Model %d",
+    "black": "Black",
+    "white": "White",
+    "orange": "Orange",
+    "green": "Green",
+    "blue": "Blue",
+    "red": "Red",
+    "yellow": "Yellow",
+    "purple": "Purple",
+    "brown": "Brown",
+    "grey": "Grey"
 }

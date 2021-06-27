@@ -6,6 +6,7 @@ func _init(slot):
 	var slot_label = Label.new() 
 	slot_label.text = "Slot"
 	var hboxcontainer = HBoxContainer.new()
+	hboxcontainer.name = "HBoxContainer"
 	var save_button = Button.new()
 	save_button.name = "SaveButton"
 	var delete_button = Button.new()
@@ -31,5 +32,5 @@ func on_save_pressed(slot):
 
 func on_delete_pressed(slot):
 	Directory.new().remove(slot)
-	$SaveButton.text = Options.lang_content["new_game"]
-	$DeleteButton.visible = false
+	$HBoxContainer/SaveButton.text = Options.lang_content["new_game"]
+	$HBoxContainer/DeleteButton.visible = false

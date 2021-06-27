@@ -27,6 +27,20 @@
     "hard": "Dificil",
     "chairs": "Cadeiras",
     "wallpapers": "Papeis de parede",
-    "kitchen_baltion": "Balcoes",
-    "shop": "Loja"
+    "cabinets": "Balcoes",
+    "shop": "Loja",
+    "buy": "Comprar",
+    "equip": "Equipar",
+    "equipped": "Equipado",
+    "model": "Modelo %d",
+    "black": "Preto",
+    "white": "Branco",
+    "orange": "Laranja",
+    "green": "Verde",
+    "blue": "Azul",
+    "red": "Vermelho",
+    "yellow": "Amarelo",
+    "purple": "Roxo",
+    "brown": "Marrom",
+    "grey": "Cinza"
 }
