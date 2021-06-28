@@ -5,11 +5,11 @@ var dinheiro = 0 setget set_dinheiro,get_dinheiro
 var valor_da_bebida
 var jogo1 = 0 setget set_jogo1,get_jogo1
 var jogo2 = 0 setget set_jogo2,get_jogo2
-var data = {'dia': 1, 'hora': 12, 'minuto': 0}
+var data = {'dia': 1, 'hora': 0}
 var dicas = {'movimento': true, 'jogo1': true, 'jogo2': true}
 var shop = {
 	'permissions': [],
-	'equipped': {'chair': null, 'cabinet': null, 'wallpaper': null}}
+	'equipped': {'chairs': null, 'cabinet': null, 'wallpaper': null}}
 
 var buyed = []
 var equiped = []

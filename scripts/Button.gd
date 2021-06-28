@@ -1,9 +1,9 @@
 extends Node
 
-onready var cliente = load("res://Cliente.tscn")
+onready var cliente = load("res://scenes/Cliente.tscn")
 
 func _ready():
-	if Directory.new().file_exists(Playervariables.get_slot()) == true:
+	if Directory.new().file_exists(Playervariables.get_slot()):
 		var dados = Playervariables.load_save()
 		Playervariables.set_dinheiro(dados['dinheiro'])
 	reset_timer()
@@ -40,3 +40,4 @@ func spawn_client():
 func _on_Button_pressed():
 	$shop.visible = true
 	get_tree().paused = true
+

@@ -10,7 +10,6 @@
 [ext_resource path="res://sprites/botaohover.png" type="Texture" id=11]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=13]
 
-
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 13 )
@@ -160,6 +159,7 @@ __meta__ = {
 
 [node name="Opcoes" parent="." instance=ExtResource( 3 )]
 visible = false
+
 [connection signal="pressed" from="Pause/CenterContainer/Pause/Salvar" to="Pause/CenterContainer/Pause/Salvar" method="_on_Salvar_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/Pause/Salvar e sair" to="Pause/CenterContainer/Pause/Salvar e sair" method="_on_Sair_do_jogo_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/Pause/Voltar a tela inicial" to="Pause/CenterContainer/Pause/Voltar a tela inicial" method="_on_Voltar_a_tela_inicial_pressed"]

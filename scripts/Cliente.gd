@@ -7,8 +7,8 @@ var pode_interagir2 = false
 var ja_interagiu = false
 var listabebidas = []
 
-onready var linha = preload("res://Linhas.tscn").instance()
-onready var jogoclick = preload("res://Jogodosclick.tscn").instance()
+onready var linha = preload("res://scenes/Linhas.tscn").instance()
+onready var jogoclick = preload("res://scenes/Jogodosclick.tscn").instance()
 onready var barmannode = get_node('/root/Node/Bar/KinematicBody2D/barman')
 onready var som_acertou_linha = load('res://Songs/Acertou.wav')
 onready var som_errou_linha = load('res://Songs/Errou.wav')

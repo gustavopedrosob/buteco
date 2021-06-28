@@ -8,14 +8,14 @@ func _ready():
 
 func _on_Carregar_Jogo_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Saves.tscn")
+	get_tree().change_scene("res://scenes/Saves.tscn")
 
 func _on_Sair_do_jogo_pressed():
 	get_tree().quit()
 
 func _on_Creditos_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Creditos.tscn")
+	get_tree().change_scene("res://scenes/Creditos.tscn")
 
 func _on_Opcoes_pressed():
-	get_tree().change_scene("res://OpcoesTelaInicial.tscn")
+	get_tree().change_scene("res://scenes/OpcoesTelaInicial.tscn")

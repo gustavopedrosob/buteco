@@ -27,7 +27,7 @@ func _init(slot):
 
 func on_save_pressed(slot):
 	Playervariables.set_slot(slot)
-	get_tree().change_scene("res://Jogo.tscn")
+	get_tree().change_scene("res://scenes/Jogo.tscn")
 
 
 func on_delete_pressed(slot):

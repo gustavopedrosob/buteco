@@ -51,14 +51,15 @@ func load_save():
 		# if was buyed:
 		if "%s/%s" % [type, id] in save["shop"]["permissions"]:
 			buyed = true
-		var code: String = save["shop"]["equipped"][type]
-		var codes = code.split(":")
-		var id = int(codes[0])
-		var color_id = int(codes[1])
-		# if was equipped:
-		if self.id == id:
-			self.color_id = color_id
-			equip()
+		var code = save["shop"]["equipped"][type]
+		if code:
+			var codes = code.split(":")
+			var id = int(codes[0])
+			var color_id = int(codes[1])
+			# if was equipped:
+			if self.id == id:
+				self.color_id = color_id
+				equip()
 	else:
 		self.color_id = 1
 
