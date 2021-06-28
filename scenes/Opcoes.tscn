@@ -2,16 +2,17 @@
 
 [ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://botaopressed.tres" type="StyleBox" id=2]
-[ext_resource path="res://SeleLan.gd" type="Script" id=3]
-[ext_resource path="res://CheckFullscreen.gd" type="Script" id=4]
-[ext_resource path="res://Autosave.gd" type="Script" id=5]
-[ext_resource path="res://Dificuldade.gd" type="Script" id=6]
+[ext_resource path="res://scripts/SeleLan.gd" type="Script" id=3]
+[ext_resource path="res://scripts/CheckFullscreen.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Autosave.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Dificuldade.gd" type="Script" id=6]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://sprites/Buttons/botao check.png" type="Texture" id=8]
 [ext_resource path="res://sprites/Buttons/botao check positivo.png" type="Texture" id=9]
 [ext_resource path="res://botão.tres" type="StyleBox" id=10]
 [ext_resource path="res://Botaoselec.tres" type="StyleBox" id=11]
-[ext_resource path="res://Opcoes.gd" type="Script" id=12]
+[ext_resource path="res://scripts/Opcoes.gd" type="Script" id=12]
+
 
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0, 0, 0, 1 )

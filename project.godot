@@ -33,13 +33,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Buteco"
-run/main_scene="res://TelaInicial.tscn"
+run/main_scene="res://scenes/TelaInicial.tscn"
 config/icon="res://sprites/Icone.png"
 
 [autoload]
 
-Playervariables="*res://Playervariables.gd"
-Options="*res://Options.gd"
+Playervariables="*res://scripts/globals/Playervariables.gd"
+Options="*res://scripts/globals/Options.gd"
 
 [display]
 

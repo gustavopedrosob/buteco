@@ -1,14 +1,15 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Sair do jogo.gd" type="Script" id=2]
-[ext_resource path="res://Opcoes.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Pause.gd" type="Script" id=4]
-[ext_resource path="res://Salvar.gd" type="Script" id=7]
-[ext_resource path="res://Voltar a tela inicial.gd" type="Script" id=9]
+[ext_resource path="res://scripts/Sair do jogo.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Opcoes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Pause.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Salvar.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Voltar a tela inicial.gd" type="Script" id=9]
 [ext_resource path="res://sprites/botão.png" type="Texture" id=10]
 [ext_resource path="res://sprites/botaohover.png" type="Texture" id=11]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=13]
+
 
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0, 0, 0, 1 )

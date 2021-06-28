@@ -3,10 +3,11 @@
 [ext_resource path="res://sprites/LojaGUI.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Buttons/botaohover.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Buttons/botaopressed.png" type="Texture" id=4]
-[ext_resource path="res://Loja.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Loja.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Buttons/botao.png" type="Texture" id=6]
 [ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 40

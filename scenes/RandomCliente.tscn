@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://roupa.gd" type="Script" id=1]
+[ext_resource path="res://scripts/roupa.gd" type="Script" id=1]
 [ext_resource path="res://sprites/roupa1.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Clientes/Corpo.png" type="Texture" id=3]
-[ext_resource path="res://Corpo.gd" type="Script" id=4]
-[ext_resource path="res://Cabelo.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Corpo.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Cabelo.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Clientes/Cabelo1.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
