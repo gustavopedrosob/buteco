@@ -5,28 +5,21 @@ var rand_generate = RandomNumberGenerator.new()
 var pode_interagir = false
 var pode_interagir2 = false
 var ja_interagiu = false
+var listabebidas = []
 
-var bebida1 = load("res://sprites/Bebida 1.png")
-var bebida2 = load("res://sprites/Bebida 2.png")
-var bebida3 = load("res://sprites/Bebida 3.png")
-var bebida4 = load("res://sprites/Bebida 4.png")
-var listabebidas = [bebida1,bebida2,bebida3,bebida4]
-
-onready var Pedido = $"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido"
-onready var PedidoCliente = $"AnimationPlayer/posicao/Cliente/Pedido do cliente"
-onready var Posicao = $'AnimationPlayer/posicao'
 onready var linha = preload("res://Linhas.tscn").instance()
 onready var jogoclick = preload("res://Jogodosclick.tscn").instance()
-onready var barmannode = get_parent().get_parent().get_node(NodePath('Bar/KinematicBody2D/barman'))
+onready var barmannode = get_node('/root/Node/Bar/KinematicBody2D/barman')
 onready var som_acertou_linha = load('res://Songs/Acertou.wav')
 onready var som_errou_linha = load('res://Songs/Errou.wav')
 
 func _ready():
+	for x in range(1, 5):
+		listabebidas.append(load("res://sprites/Bebida %d.png" % x))
 	linha.connect("tree_exited", self, '_on_Linha_tree_exited')
 	jogoclick.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
 	linha.get_child(0).get_child(1).connect('acertou', self, 'on_acertou')
 	linha.get_child(0).get_child(1).connect('errou', self, 'on_errou')
-	
 	$AnimationPlayer.current_animation = 'Entrada'
 	$AnimationPlayer.play("Entrada")
 	
@@ -42,13 +35,12 @@ func _ready():
 		3:
 			Playervariables.valor_da_bebida = 40
 	var rand_pos = rand_generate.randi_range(100,800)
-	
-	Pedido.set_texture(listabebidas[rand_beb])
-	Posicao.position.x = rand_pos
+	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(listabebidas[rand_beb])
+	$'AnimationPlayer/posicao'.position.x = rand_pos
 # warning-ignore:unused_argument
 func _process(delta):
-	if Input.is_action_just_pressed("interagir") and pode_interagir == true and ja_interagiu == false and pode_interagir2 == true:
-		PedidoCliente.visible = false
+	if Input.is_action_just_pressed("interagir") and pode_interagir and not ja_interagiu and pode_interagir2:
+		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
 		ja_interagiu = true
 		# cliente é filho do spawner
 		get_parent().get_parent().add_child(linha)
@@ -58,14 +50,16 @@ func _process(delta):
 		Playervariables.esta_ocupado = true
 		$Inatividade.stop()
 		Playervariables.antipause = true
+
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'Entrada':
-		PedidoCliente.visible = true
+		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = true
 		pode_interagir2 = true
 	if anim_name == 'Saida':
 		queue_free()
+
 func _on_Linha_tree_exited():
-	var spawnernode = get_parent().get_parent().get_node(NodePath("Spawner"))
+	var spawnernode = get_parent().get_parent().get_node("Spawner")
 	get_parent().get_parent().add_child_below_node(spawnernode,jogoclick)
 	barmannode.texture = barmannode.servindo
 	Playervariables.antipause = false
@@ -74,7 +68,7 @@ func _on_Jogoclick_tree_exited():
 	barmannode.texture = barmannode.normal
 	Playervariables.can_walk = true
 func _on_Inatividade_timeout():
-	PedidoCliente.visible = false
+	$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
 	$AnimationPlayer.play("Saida")
 
 # warning-ignore:unused_argument

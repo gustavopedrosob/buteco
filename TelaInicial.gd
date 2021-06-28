@@ -1,30 +1,21 @@
 extends Control
 
-onready var savesscene = "res://Saves.tscn"
-onready var creditosscene = "res://Creditos.tscn"
-onready var opcoesscene = "res://OpcoesTelaInicial.tscn"
-
-onready var carregarjogo = $"AlinhamentoV/Carregar Jogo"
-onready var creditos = $'AlinhamentoV/Creditos'
-onready var opcoes = $'AlinhamentoV/Opcoes'
-onready var sairdojogo = $"AlinhamentoV/Sair do jogo"
-
 func _ready():
-	carregarjogo.text = Options.lang_content["load_game"]
-	creditos.text = Options.lang_content["credits"]
-	opcoes.text = Options.lang_content["options"]
-	sairdojogo.text = Options.lang_content["leave_the_game"]
+	$"AlinhamentoV/Carregar Jogo".text = Options.lang_content["load_game"]
+	$'AlinhamentoV/Creditos'.text = Options.lang_content["credits"]
+	$'AlinhamentoV/Opcoes'.text = Options.lang_content["options"]
+	$"AlinhamentoV/Sair do jogo".text = Options.lang_content["leave_the_game"]
 
 func _on_Carregar_Jogo_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(savesscene)
+	get_tree().change_scene("res://Saves.tscn")
 
 func _on_Sair_do_jogo_pressed():
 	get_tree().quit()
 
 func _on_Creditos_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(creditosscene)
+	get_tree().change_scene("res://Creditos.tscn")
 
 func _on_Opcoes_pressed():
-	get_tree().change_scene(opcoesscene)
+	get_tree().change_scene("res://OpcoesTelaInicial.tscn")

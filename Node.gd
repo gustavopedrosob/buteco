@@ -7,7 +7,7 @@ func _ready():
 # warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") and Playervariables.antipause == false:
-		if get_tree().paused == true:
+		if get_tree().paused:
 			get_tree().paused = false
 			$Pause.visible = true
 			$Opcoes.visible = false

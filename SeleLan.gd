@@ -1,18 +1,18 @@
 extends MenuButton
 
-onready var popup = get_popup()
-
 signal reload_language
 
 func _ready():
-	popup.connect("id_pressed", self, "_on_item_pressed")
+	get_popup().connect("id_pressed", self, "_on_item_pressed")
 	text = Options.language
+
 func _on_item_pressed(ID):
 	match ID:
 		0:
 			set_language('pt-br')
 		1:
 			set_language('en-us')
+
 func set_language(lang: String):
 	if lang != Options.language:
 		Options.language = lang

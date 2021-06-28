@@ -8,8 +8,4 @@ func _on_Autosave_pressed():
 	Options.create_save()
 
 func reload_button():
-	match Options.auto_save:
-		true:
-			pressed = true
-		false:
-			pressed = false
+	Options.auto_save = pressed

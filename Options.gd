@@ -40,8 +40,4 @@ func create_save():
 		print(erro)
 
 func change_fullscreen():
-	match fullscreen:
-		false:
-			OS.window_fullscreen = false
-		true:
-			OS.window_fullscreen = true
+	OS.window_fullscreen = fullscreen

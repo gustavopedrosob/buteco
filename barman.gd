@@ -6,5 +6,3 @@ onready var mixologia = load('res://sprites/barman/barman mixologia.png')
 
 func _ready():
 	texture = normal
-#func _process(delta):
-#	pass

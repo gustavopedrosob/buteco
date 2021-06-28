@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	exchange_language()
+
 func exchange_language():
 	$"Pause/Pause Title".text = Options.lang_content["game_paused"]
 	$"Pause/Opcoes".text = Options.lang_content["options"]

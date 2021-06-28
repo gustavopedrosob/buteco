@@ -74,6 +74,7 @@ one_shot = true
 autostart = true
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="AnimationPlayer/posicao/Cliente/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="AnimationPlayer/posicao/Cliente/Area2D" to="." method="_on_Area2D_body_exited"]
