@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://roupa.gd" type="Script" id=1]
 [ext_resource path="res://sprites/roupa1.png" type="Texture" id=2]
@@ -6,10 +6,8 @@
 [ext_resource path="res://Corpo.gd" type="Script" id=4]
 [ext_resource path="res://Cabelo.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Clientes/Cabelo1.png" type="Texture" id=6]
-[ext_resource path="res://RandomCliente.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 7 )
 
 [node name="Corpo" type="Sprite" parent="."]
 position = Vector2( 0, 600 )
