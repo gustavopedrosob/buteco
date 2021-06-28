@@ -1,3 +1,4 @@
 *.import
 *.md5
 .import
+.vscode
