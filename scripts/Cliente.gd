@@ -1,7 +1,5 @@
 extends Node2D
 
-var rand_generate = RandomNumberGenerator.new()
-
 var pode_interagir = false
 var pode_interagir2 = false
 var ja_interagiu = false
@@ -22,9 +20,8 @@ func _ready():
 	linha.get_child(0).get_child(1).connect('errou', self, 'on_errou')
 	$AnimationPlayer.current_animation = 'Entrada'
 	$AnimationPlayer.play("Entrada")
-	
-	rand_generate.randomize()
-	var rand_beb = rand_generate.randi_range(0,3)
+
+	var rand_beb = Functions.get_random_int(0, 3)
 	match rand_beb:
 		0:
 			Playervariables.valor_da_bebida = 10
@@ -34,7 +31,7 @@ func _ready():
 			Playervariables.valor_da_bebida = 30
 		3:
 			Playervariables.valor_da_bebida = 40
-	var rand_pos = rand_generate.randi_range(100,800)
+	var rand_pos = Functions.get_random_int(100, 800)
 	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(listabebidas[rand_beb])
 	$'AnimationPlayer/posicao'.position.x = rand_pos
 # warning-ignore:unused_argument

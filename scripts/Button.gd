@@ -16,7 +16,7 @@ func _on_Timer_timeout():
 	spawn_client()
 
 func reset_timer():
-	$Timer.set_wait_time(get_random_int(3, 10))
+	$Timer.set_wait_time(Functions.get_random_int(3, 10))
 	$Timer.start()
 
 func on_cena_tree_exited():
@@ -26,11 +26,6 @@ func _on_AutoSave_timeout():
 	if Options.auto_save:
 		Playervariables.create_save()
 		print('auto-save funcionado')
-
-func get_random_int(num1,num2):
-	var rand_generate = RandomNumberGenerator.new()
-	rand_generate.randomize()
-	return rand_generate.randi_range(num1,num2)
 
 func spawn_client():
 	var spawn = cliente.instance()

@@ -33,10 +33,7 @@ func _process(delta):
 			acertou(false,'errou')
 
 func set_random_green_line():
-	var rand_generate = RandomNumberGenerator.new() 
-	rand_generate.randomize()
-	var rand_int = rand_generate.randi_range(5,195)
-	$"Linha verde".rect_position.y = rand_int
+	$"Linha verde".rect_position.y = Functions.get_random_int(5, 195)
 
 func reset_white_line():
 	$"Linha branca".rect_position.y = 0
