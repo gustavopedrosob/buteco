@@ -42,23 +42,8 @@ func _on_quit_pressed():
 	get_tree().paused = false
 
 func add_group(group: GroupShop):
-	groups[group.type] = group
-	var button = Button.new()
-	button.text = Options.lang_content[group.type]
-	button.connect("button_down", self, "on_button_group_pressed", [group])
-	$HBoxContainer/HBoxContainer.add_child(button)
-	var child_count = $CenterContainer.get_child_count()
-	if child_count:
-		$CenterContainer.get_child(child_count - 1).visible = false
-	$CenterContainer.add_child(group)
-
-func on_button_group_pressed(widget):
-	for value in groups.values():
-		if value == widget:
-			value.visible = true
-		else:
-			value.visible = false
-
+	groups[group.name] = group
+	$TabContainer.add_child(group)
 
 func _on_message_error_timeout():
 	$"mensagem de erro".visible = false

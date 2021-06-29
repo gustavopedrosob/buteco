@@ -8,39 +8,38 @@
 [ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 40
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 7.0
 margin_right = 6.0
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 203, 36 )
 margin_left = 7.0
 margin_right = 7.0
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 202.579, 36 )
 margin_left = 7.89474
 margin_right = 7.89474
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=5]
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=18]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=7]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
@@ -69,28 +68,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-margin_left = 221.0
-margin_top = 123.56
-margin_right = 813.0
-margin_bottom = 566.56
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 213.0
-margin_top = 52.0
-margin_right = 806.0
-margin_bottom = 98.0
-custom_constants/separation = 55
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="title" type="Label" parent="HBoxContainer"]
-margin_right = 104.0
-margin_bottom = 46.0
+[node name="title" type="Label" parent="."]
+margin_left = 235.0
+margin_top = 56.0
+margin_right = 339.0
+margin_bottom = 102.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "shop"
@@ -98,22 +80,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
-margin_left = 159.0
-margin_right = 159.0
-margin_bottom = 46.0
-custom_constants/separation = 20
-
-[node name="quit" type="Button" parent="HBoxContainer"]
-margin_left = 214.0
-margin_right = 240.789
-margin_bottom = 46.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
-custom_fonts/font = SubResource( 17 )
+[node name="quit" type="Button" parent="."]
+margin_left = 775.0
+margin_top = 48.0
+margin_right = 801.789
+margin_bottom = 94.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_left = 230.0
+margin_top = 136.0
+margin_right = 798.0
+margin_bottom = 556.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="mensagem de erro" type="Panel" parent="."]
 visible = false
@@ -121,7 +110,7 @@ margin_left = 380.0
 margin_top = 166.0
 margin_right = 642.0
 margin_bottom = 300.0
-custom_styles/panel = SubResource( 18 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,7 +120,7 @@ margin_left = 1.05261
 margin_top = 1.10526
 margin_right = 260.053
 margin_bottom = 135.105
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Dinheiro insuficiente!
@@ -146,5 +135,5 @@ __meta__ = {
 wait_time = 2.0
 autostart = true
 
-[connection signal="pressed" from="HBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="mensagem de erro/Timer" to="." method="_on_message_error_timeout"]
