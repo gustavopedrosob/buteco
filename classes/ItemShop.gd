@@ -2,6 +2,9 @@ extends VBoxContainer
 
 class_name ItemShop
 
+var ButtonB = load("res://classes/Button.gd")
+var LabelB = load("res://classes/Label.gd")
+
 signal equipped
 var price: int
 var buyed: int = false
@@ -18,14 +21,15 @@ func _init(id: int, type: String, name_: String = "default", price: int = 100, c
 	self.price = price
 	self.type = type
 	self.color_id = color_id
-	var price_label = Label.new()
+	var price_label = LabelB.new()
 	price_label.text = "%d$" % price
-	var name_label = Label.new()
+	var name_label = LabelB.new()
 	if name_ == "default":
 		name_label.text = Options.lang_content["model"] % id
 	else:
 		name_label.text = Options.lang_content[name_]
-	var button = Button.new()
+	var button = ButtonB.new()
+	button.rect_min_size = Vector2(100, 10)
 	button.name = "Button"
 	if equipped:
 		button.text = Options.lang_content["equiped"]

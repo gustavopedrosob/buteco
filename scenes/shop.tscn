@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/LojaGUI.png" type="Texture" id=1]
+[ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://sprites/Buttons/botaohover.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Buttons/botaopressed.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Loja.gd" type="Script" id=5]
@@ -35,11 +36,19 @@ margin_right = 7.89474
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.545098, 0.45098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.533333, 0.486275, 0.4, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
@@ -100,6 +109,12 @@ margin_left = 230.0
 margin_top = 136.0
 margin_right = 798.0
 margin_bottom = 556.0
+custom_styles/tab_fg = SubResource( 10 )
+custom_styles/tab_bg = SubResource( 11 )
+custom_styles/panel = SubResource( 7 )
+custom_fonts/font = ExtResource( 2 )
+custom_constants/hseparation = 0
+tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -110,7 +125,7 @@ margin_left = 380.0
 margin_top = 166.0
 margin_right = 642.0
 margin_bottom = 300.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -120,7 +135,7 @@ margin_left = 1.05261
 margin_top = 1.10526
 margin_right = 260.053
 margin_bottom = 135.105
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Dinheiro insuficiente!
