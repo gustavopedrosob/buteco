@@ -7,4 +7,4 @@ func _ready():
 
 
 func _on_Voltar_pressed():
-	get_tree().change_scene("res://TelaInicial.tscn")
+	get_tree().change_scene("res://scenes/TelaInicial.tscn")

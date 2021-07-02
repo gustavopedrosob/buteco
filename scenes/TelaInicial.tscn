@@ -8,6 +8,7 @@
 [ext_resource path="res://sprites/botão.png" type="Texture" id=6]
 [ext_resource path="res://botaopressed.tres" type="StyleBox" id=7]
 [ext_resource path="res://sprites/botaohover.png" type="Texture" id=8]
+[ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=9]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 8 )
@@ -21,14 +22,11 @@ region_rect = Rect2( 0, 0, 203, 36 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 2 )
-
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 203, 36 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
 
 [node name="Tela Inicial" type="Control"]
@@ -96,7 +94,7 @@ size_flags_vertical = 0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Carregar Jogo"
@@ -115,8 +113,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Creditos"
@@ -136,8 +134,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Opções"
@@ -157,8 +155,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 7 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Sair do jogo"

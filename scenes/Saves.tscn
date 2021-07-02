@@ -7,7 +7,6 @@
 [ext_resource path="res://botaohover.tres" type="StyleBox" id=7]
 [ext_resource path="res://botão.tres" type="StyleBox" id=8]
 
-
 [node name="Saves" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
