@@ -12,10 +12,10 @@ func _init(type):
 func add_child(node, legible_unique_name: bool = false):
 	if node.equipped:
 		node_equipped = node
-	node.connect("equiped", self, "on_child_equiped", [node])
+	node.connect("equipped", self, "on_child_equipped", [node])
 	$GridContainer.add_child(node, legible_unique_name)
 
-func on_child_equiped(node):
+func on_child_equipped(node):
 	if node_equipped:
 		node_equipped.disequip()
 	node_equipped = node
