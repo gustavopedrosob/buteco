@@ -16,8 +16,8 @@ func _ready():
 		drinks.append(load("res://sprites/Bebida %d.png" % x))
 	line.connect("tree_exited", self, '_on_Linha_tree_exited')
 	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
-	line.get_child(0).get_child(1).connect('hit', self, 'on_hit')
-	line.get_child(0).get_child(1).connect('missed', self, 'on_missed')
+	line.get_child(1).connect('hit', self, 'on_hit')
+	line.get_child(1).connect('missed', self, 'on_missed')
 	$AnimationPlayer.current_animation = 'Entrada'
 	$AnimationPlayer.play("Entrada")
 

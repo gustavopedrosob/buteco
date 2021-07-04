@@ -26,7 +26,7 @@ func _on_TextureButton_pressed():
 	# Aqui executa se conseguir os clicks necessarios
 	if times_pressed == clicks_required:
 		Playervariables.set_game_2(3)
-		Playervariables.set_yield(Playervariables.drink_value)
+		Playervariables.set_yield()
 		queue_free()
 
 func get_multiplier():
@@ -37,7 +37,7 @@ func get_multiplier():
 func _on_Timer_timeout():
 	if times_pressed:
 		Playervariables.game_2 = get_multiplier()
-		Playervariables.set_yield(Playervariables.drink_value)
+		Playervariables.set_yield()
 		queue_free()
 	else:
 		Playervariables.clear_yield()

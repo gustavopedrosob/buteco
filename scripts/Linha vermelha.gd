@@ -1,6 +1,6 @@
 extends Control
 
-var times_played = 1
+var times_played = 0
 var points = 0
 var velocity = 0
 
@@ -54,5 +54,5 @@ func hit(result, sinal):
 func check_if_end():
 	if times_played == 3:
 		Playervariables.game_1 = points
-		get_parent().get_parent().queue_free()
+		get_parent().queue_free()
 		Playervariables.busy = false

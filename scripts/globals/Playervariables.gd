@@ -20,7 +20,7 @@ var can_walk = true
 var busy = false
 
 
-func set_yield(drink_value):
+func set_yield():
 	var gain = drink_value * (game_1 + game_2)/2
 	money += gain
 
