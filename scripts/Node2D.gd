@@ -15,13 +15,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$AnimationPlayer/QntPrecionado.text = str(quantidade_de_vezes_precionado)
 	$Center/Alinhamento/Time.text = str(Options.lang_content["time_left"], int($Timer.time_left))
-	# Aqui executa se conseguir os clicks necessarios
-	if quantidade_de_vezes_precionado == quantidade_clicks_requiridos:
-		Playervariables.set_jogo2(3)
-		Playervariables.set_rendimento(Playervariables.valor_da_bebida)
-		queue_free()
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()
@@ -32,6 +26,12 @@ func _on_TextureButton_pressed():
 		$Center/Alinhamento/Center2/TextureButton/TextureProgress.value = quantidade_de_vezes_precionado * multiplicador
 		$AnimationPlayer/QntPrecionado.rect_position = get_global_mouse_position() - Vector2(25,25)
 		$AnimationPlayer.play("Fade")
+	$AnimationPlayer/QntPrecionado.text = str(quantidade_de_vezes_precionado)
+	# Aqui executa se conseguir os clicks necessarios
+	if quantidade_de_vezes_precionado == quantidade_clicks_requiridos:
+		Playervariables.set_jogo2(3)
+		Playervariables.set_rendimento(Playervariables.valor_da_bebida)
+		queue_free()
 
 func get_multiplicador(quantidade_clicks_requeridos):
 	var porcentagem = (quantidade_de_vezes_precionado * 100)/quantidade_clicks_requeridos
