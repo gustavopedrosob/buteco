@@ -9,6 +9,7 @@ func _ready():
 	reset_timer()
 	$"Button".text = Options.lang_content["shop"]
 
+# warning-ignore:unused_argument
 func _process(delta):
 	$"Alinhamento/Dinheiro Display".text = str(Options.lang_content["money"], Playervariables.dinheiro)
 

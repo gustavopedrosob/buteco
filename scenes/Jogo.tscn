@@ -97,6 +97,7 @@ margin_left = 960.175
 margin_top = 6.02936
 margin_right = 1015.18
 margin_bottom = 43.0294
+focus_mode = 0
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )

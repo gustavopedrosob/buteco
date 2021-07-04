@@ -15,6 +15,7 @@ func _init(slot):
 	save_button.name = "SaveButton"
 	var delete_button = Button.new()
 	delete_button.rect_min_size = Vector2(20, 20)
+	delete_button.set_focus_mode(Control.FOCUS_NONE)
 	var delete_stylebox = StyleBoxTexture.new()
 	delete_stylebox.texture = negative_texture
 	for mode in ["normal", "hover"]:
@@ -36,10 +37,12 @@ func _init(slot):
 
 func on_save_pressed(slot):
 	Playervariables.set_slot(slot)
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/Jogo.tscn")
 
 
 func on_delete_pressed(slot):
+	# warning-ignore:return_value_discarded
 	Directory.new().remove(slot)
 	$HBoxContainer/SaveButton.text = Options.lang_content["new_game"]
 	$HBoxContainer/DeleteButton.visible = false

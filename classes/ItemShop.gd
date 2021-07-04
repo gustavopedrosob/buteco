@@ -16,11 +16,11 @@ var type: String
 func _ready():
 	load_save()
 
-func _init(id: int, type: String, name_: String = "default", price: int = 100, color_id: int = 1):
-	self.id = id
-	self.price = price
-	self.type = type
-	self.color_id = color_id
+func _init(id_: int, type_: String, name_: String = "default", price_: int = 100, color_id_: int = 1):
+	id = id_
+	price = price_
+	type = type_
+	color_id = color_id_
 	var price_label = LabelB.new()
 	price_label.text = "%d$" % price
 	var name_label = LabelB.new()
@@ -58,14 +58,14 @@ func load_save():
 		var code = save["shop"]["equipped"][type]
 		if code:
 			var codes = code.split(":")
-			var id = int(codes[0])
-			var color_id = int(codes[1])
+			var save_id = int(codes[0])
+			var save_color_id = int(codes[1])
 			# if was equipped:
-			if self.id == id:
-				self.color_id = color_id
+			if id == save_id:
+				color_id = save_color_id
 				equip()
 	else:
-		self.color_id = 1
+		color_id = 1
 
 func apply_texture():
 	pass
@@ -86,13 +86,13 @@ func set_solid_color(rgb_color):
 	add_child(image)
 	move_child(image, 1)
 
-func add_color_option(color, color_id):
+func add_color_option(color, color_id_):
 	var color_option_widget = ColorOption.new(color)
-	color_option_widget.connect("button_down", self, "on_color_option_pressed", [color_id])
+	color_option_widget.connect("button_down", self, "on_color_option_pressed", [color_id_])
 	$Colors.add_child(color_option_widget)
 
-func on_color_option_pressed(color_id):
-	self.color_id = color_id
+func on_color_option_pressed(color_id_):
+	color_id = color_id_
 	apply_texture()
 
 func on_button_pressed():

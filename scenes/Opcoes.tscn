@@ -13,7 +13,6 @@
 [ext_resource path="res://Botaoselec.tres" type="StyleBox" id=11]
 [ext_resource path="res://scripts/Opcoes.gd" type="Script" id=12]
 
-
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
@@ -155,7 +154,6 @@ focus_mode = 0
 size_flags_horizontal = 0
 custom_icons/checked = ExtResource( 9 )
 custom_icons/unchecked = ExtResource( 8 )
-enabled_focus_mode = 0
 align = 2
 script = ExtResource( 4 )
 __meta__ = {
@@ -182,7 +180,6 @@ focus_mode = 0
 size_flags_horizontal = 0
 custom_icons/checked = ExtResource( 9 )
 custom_icons/unchecked = ExtResource( 8 )
-enabled_focus_mode = 0
 align = 2
 script = ExtResource( 5 )
 __meta__ = {
@@ -202,7 +199,6 @@ custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 10 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-enabled_focus_mode = 0
 text = "Voltar"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" to="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" method="_on_CheckFullscreen_pressed"]

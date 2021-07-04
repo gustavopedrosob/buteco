@@ -64,7 +64,6 @@ custom_styles/normal = ExtResource( 8 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 button_mask = 3
-enabled_focus_mode = 0
 text = "Voltar"
 __meta__ = {
 "_edit_use_anchors_": false,

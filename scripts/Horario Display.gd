@@ -10,6 +10,7 @@ func _ready():
 	$"Hora Display/DayTimer".start()
 	$"Dia Display".text = str(Options.lang_content["day"], Playervariables.data['dia'])
 
+# warning-ignore:unused_argument
 func _process(delta):
 	var tempo_atual = int(720 - $"Hora Display/DayTimer".time_left)
 	var horas = int(tempo_atual / 60) + 12

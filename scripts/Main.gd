@@ -6,6 +6,7 @@ func _ready():
 		var barmanposition = dados['barmanposition']
 		$KinematicBody2D.position.x = barmanposition
 
+# warning-ignore:unused_argument
 func _process(delta):
 	if Input.is_action_pressed("ui_left") and Playervariables.can_walk:
 		$KinematicBody2D.move_and_slide(Vector2(-500, 0))

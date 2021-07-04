@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 func _ready():
+	# warning-ignore:return_value_discarded
 	$"GridContainer/SeleLan".connect("reload_language", self, "on_reload_language")
 	exchange_language()
 

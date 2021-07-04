@@ -3,7 +3,9 @@ extends Control
 var lista_resultados = []
 onready var velocidade = 0
 
+# warning-ignore:unused_signal
 signal acertou
+# warning-ignore:unused_signal
 signal errou
 
 var estado = 'subindo'
@@ -16,6 +18,7 @@ func _ready():
 			velocidade = 2.0
 		'dificil':
 			velocidade = 2.5
+
 # warning-ignore:unused_argument
 func _process(delta):
 	if $"Linha branca".rect_position.y <= 195 and estado == 'subindo':
@@ -42,7 +45,7 @@ func reset_and_set():
 	reset_white_line()
 	set_random_green_line()
 
-func acertou(result,sinal):
+func acertou(result, sinal):
 	lista_resultados.append(result)
 	emit_signal(sinal)
 	checa_se_acabou()

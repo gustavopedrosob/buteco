@@ -7,15 +7,17 @@ func _ready():
 	$"AlinhamentoV/Sair do jogo".text = Options.lang_content["leave_the_game"]
 
 func _on_Carregar_Jogo_pressed():
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/Saves.tscn")
 
 func _on_Sair_do_jogo_pressed():
+	# warning-ignore:return_value_discarded
 	get_tree().quit()
 
 func _on_Creditos_pressed():
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/Creditos.tscn")
 
 func _on_Opcoes_pressed():
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/OpcoesTelaInicial.tscn")
