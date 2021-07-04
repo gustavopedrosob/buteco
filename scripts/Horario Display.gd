@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 func _ready():
-	if Directory.new().file_exists(Playervariables.get_slot()):
+	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
 		var date = save['data']
 		Playervariables.date = date

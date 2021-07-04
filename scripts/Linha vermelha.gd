@@ -56,6 +56,6 @@ func get_sum():
 func check_if_end():
 	if get_sum() == 3:
 		var how_many_true = results.count(true)
-		Playervariables.set_game_1(how_many_true)
+		Playervariables.game_1 = how_many_true
 		get_parent().get_parent().queue_free()
 		Playervariables.busy = false

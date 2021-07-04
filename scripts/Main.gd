@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	if Directory.new().file_exists(Playervariables.get_slot()):
+	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
 		var barman_position = save['barmanposition']
 		$KinematicBody2D.position.x = barman_position

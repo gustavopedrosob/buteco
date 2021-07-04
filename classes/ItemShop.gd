@@ -48,7 +48,7 @@ func _init(id_: int, type_: String, name_: String = "default", price_: int = 100
 	add_child(button)
 
 func load_save():
-	var slot = Playervariables.get_slot()
+	var slot = Playervariables.slot
 	# if has a old save to read:
 	if Directory.new().file_exists(slot):
 		var save = Playervariables.load_save()

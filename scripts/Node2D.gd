@@ -30,13 +30,13 @@ func _on_TextureButton_pressed():
 		queue_free()
 
 func get_multiplier():
-	var porcentagem = (times_pressed * 100)/clicks_required
-	var multiplicador_dinheiro_click = (3.0 * porcentagem)/100.0
-	return multiplicador_dinheiro_click
+	var percentage = (times_pressed * 100)/clicks_required
+	var multiplier = (3.0 * percentage)/100.0
+	return multiplier
 
 func _on_Timer_timeout():
 	if times_pressed:
-		Playervariables.set_game_2(get_multiplier())
+		Playervariables.game_2 = get_multiplier()
 		Playervariables.set_yield(Playervariables.drink_value)
 		queue_free()
 	else:

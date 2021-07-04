@@ -3,9 +3,9 @@ extends Node
 onready var customer = load("res://scenes/Cliente.tscn")
 
 func _ready():
-	if Directory.new().file_exists(Playervariables.get_slot()):
+	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
-		Playervariables.set_money(save['dinheiro'])
+		Playervariables.money = save['dinheiro']
 	reset_timer()
 	$"Button".text = Options.lang_content["shop"]
 
