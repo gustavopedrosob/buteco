@@ -1,6 +1,7 @@
 extends Control
 
-var results = []
+var times_played = 1
+var points = 0
 var velocity = 0
 
 # warning-ignore:unused_signal
@@ -32,7 +33,6 @@ func _unhandled_input(event):
 		else:
 			hit(false, 'missed')
 
-
 func set_random_green_line():
 	$"Linha verde".rect_position.y = Functions.get_random_int(5, 195)
 
@@ -44,18 +44,15 @@ func reset_and_set():
 	set_random_green_line()
 
 func hit(result, sinal):
-	results.append(result)
+	if result:
+		points += 1
+	times_played += 1
 	emit_signal(sinal)
 	check_if_end()
 	reset_and_set()
 
-func get_sum():
-	var sum = results.count(false) + results.count(true)
-	return sum
-
 func check_if_end():
-	if get_sum() == 3:
-		var how_many_true = results.count(true)
-		Playervariables.game_1 = how_many_true
+	if times_played == 3:
+		Playervariables.game_1 = points
 		get_parent().get_parent().queue_free()
 		Playervariables.busy = false
