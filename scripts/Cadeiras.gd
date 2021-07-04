@@ -1,9 +1,9 @@
 extends HBoxContainer
 
 func _ready():
-	atualizar_cadeiras("res://sprites/cadeiraa.png")
+	update_chairs("res://sprites/cadeiraa.png")
 
-func atualizar_cadeiras(diretorio_texture):
+func update_chairs(texture_path):
 	for x in [$cadeira1, $cadeira2, $cadeira3, $cadeira4]:
-		x.texture = load(diretorio_texture)
+		x.texture = load(texture_path)
 

@@ -5,7 +5,7 @@ var dificulty = 1
 const difficulties = ["easy", "normal", "hard"]
 var auto_save = false
 var fullscreen = false
-var dicas = true
+var tips = true
 var lang_content = null
 
 func _ready():

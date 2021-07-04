@@ -1,65 +1,65 @@
 extends Node2D
 
-var pode_interagir = false
-var pode_interagir2 = false
-var ja_interagiu = false
-var listabebidas = []
+var can_interact = false
+var can_interact_2 = false
+var already_interact = false
+var drinks = []
 
-onready var linha = preload("res://scenes/Linhas.tscn").instance()
-onready var jogoclick = preload("res://scenes/Jogodosclick.tscn").instance()
+onready var line = preload("res://scenes/Linhas.tscn").instance()
+onready var click = preload("res://scenes/Jogodosclick.tscn").instance()
 onready var barmannode = get_node('/root/Node/Bar/KinematicBody2D/barman')
-onready var som_acertou_linha = load('res://Songs/Acertou.wav')
-onready var som_errou_linha = load('res://Songs/Errou.wav')
+onready var sound_of_hitting = load('res://Songs/Acertou.wav')
+onready var sound_of_miss = load('res://Songs/Errou.wav')
 
 func _ready():
 	for x in range(1, 5):
-		listabebidas.append(load("res://sprites/Bebida %d.png" % x))
-	linha.connect("tree_exited", self, '_on_Linha_tree_exited')
-	jogoclick.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
-	linha.get_child(0).get_child(1).connect('acertou', self, 'on_acertou')
-	linha.get_child(0).get_child(1).connect('errou', self, 'on_errou')
+		drinks.append(load("res://sprites/Bebida %d.png" % x))
+	line.connect("tree_exited", self, '_on_Linha_tree_exited')
+	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
+	line.get_child(0).get_child(1).connect('hit', self, 'on_hit')
+	line.get_child(0).get_child(1).connect('missed', self, 'on_missed')
 	$AnimationPlayer.current_animation = 'Entrada'
 	$AnimationPlayer.play("Entrada")
 
 	var rand_beb = Functions.get_random_int(0, 3)
 	match rand_beb:
 		0:
-			Playervariables.valor_da_bebida = 10
+			Playervariables.drink_value = 10
 		1:
-			Playervariables.valor_da_bebida = 20
+			Playervariables.drink_value = 20
 		2:
-			Playervariables.valor_da_bebida = 30
+			Playervariables.drink_value = 30
 		3:
-			Playervariables.valor_da_bebida = 40
+			Playervariables.drink_value = 40
 	var rand_pos = Functions.get_random_int(100, 800)
-	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(listabebidas[rand_beb])
+	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(drinks[rand_beb])
 	$'AnimationPlayer/posicao'.position.x = rand_pos
 
 func _unhandled_input(event):
-	if event.is_action_pressed("interagir") and pode_interagir and not ja_interagiu and pode_interagir2:
+	if event.is_action_pressed("interagir") and can_interact and not already_interact and can_interact_2:
 		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
-		ja_interagiu = true
+		already_interact = true
 		# cliente é filho do spawner
-		get_parent().get_parent().add_child(linha)
+		get_parent().get_parent().add_child(line)
 		# o primeiro get_parent é o spawner o segundo é o Node principal
 		Playervariables.can_walk = false
-		barmannode.texture = barmannode.mixologia
-		Playervariables.esta_ocupado = true
+		barmannode.texture = barmannode.mixology
+		Playervariables.busy = true
 		$Inatividade.stop()
-		Playervariables.antipause = true
+		Playervariables.anti_pause = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'Entrada':
 		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = true
-		pode_interagir2 = true
+		can_interact_2 = true
 	if anim_name == 'Saida':
 		queue_free()
 
 func _on_Linha_tree_exited():
 	var spawnernode = get_parent().get_parent().get_node("Spawner")
-	get_parent().get_parent().add_child_below_node(spawnernode,jogoclick)
-	barmannode.texture = barmannode.servindo
-	Playervariables.antipause = false
+	get_parent().get_parent().add_child_below_node(spawnernode, click)
+	barmannode.texture = barmannode.serving
+	Playervariables.anti_pause = false
 func _on_Jogoclick_tree_exited():
 	$AnimationPlayer.play("Saida")
 	barmannode.texture = barmannode.normal
@@ -70,14 +70,15 @@ func _on_Inatividade_timeout():
 
 # warning-ignore:unused_argument
 func _on_Area2D_body_entered(body):
-	pode_interagir = true
+	can_interact = true
 # warning-ignore:unused_argument
 func _on_Area2D_body_exited(body):
-	pode_interagir = false
+	can_interact = false
 	
-func on_acertou():
-	$Audio.stream = som_acertou_linha
+func on_hit():
+	$Audio.stream = sound_of_hitting
 	$Audio.play()
-func on_errou():
-	$Audio.stream = som_errou_linha
+
+func on_missed():
+	$Audio.stream = sound_of_miss
 	$Audio.play()

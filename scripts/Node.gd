@@ -8,7 +8,7 @@ func _ready():
 	$Pause/CenterContainer/Pause/Opcoes.connect("pressed", self, "_on_Opcoes_pressed")
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel") and not Playervariables.antipause:
+	if event.is_action_pressed("ui_cancel") and not Playervariables.anti_pause:
 		if get_tree().paused:
 			get_tree().paused = false
 			$Pause.visible = true

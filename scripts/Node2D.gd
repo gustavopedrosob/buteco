@@ -1,13 +1,13 @@
 extends Node2D
 
-var quantidade_clicks_requiridos = 0
-var quantidade_de_vezes_precionado = 0
+var clicks_required = 0
+var times_pressed = 0
 
-const clicks_required = [25, 35, 50]
+const possible_clicks_required = [25, 35, 50]
 
 func _ready():
-	quantidade_clicks_requiridos = clicks_required[Options.dificulty]
-	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % quantidade_clicks_requiridos
+	clicks_required = possible_clicks_required[Options.dificulty]
+	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % clicks_required
 
 # warning-ignore:unused_argument
 func _process(delta):
@@ -15,31 +15,31 @@ func _process(delta):
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()
-	var multiplicador = 100.0/float(quantidade_clicks_requiridos)
-	if quantidade_de_vezes_precionado < quantidade_clicks_requiridos:
-		quantidade_de_vezes_precionado += 1
+	var multiplier = 100.0/float(clicks_required)
+	if times_pressed < clicks_required:
+		times_pressed += 1
 		$AnimationPlayer/QntPrecionado.visible = true
-		$Center/Alinhamento/Center2/TextureButton/TextureProgress.value = quantidade_de_vezes_precionado * multiplicador
+		$Center/Alinhamento/Center2/TextureButton/TextureProgress.value = times_pressed * multiplier
 		$AnimationPlayer/QntPrecionado.rect_position = get_global_mouse_position() - Vector2(25,25)
 		$AnimationPlayer.play("Fade")
-	$AnimationPlayer/QntPrecionado.text = str(quantidade_de_vezes_precionado)
+	$AnimationPlayer/QntPrecionado.text = str(times_pressed)
 	# Aqui executa se conseguir os clicks necessarios
-	if quantidade_de_vezes_precionado == quantidade_clicks_requiridos:
-		Playervariables.set_jogo2(3)
-		Playervariables.set_rendimento(Playervariables.valor_da_bebida)
+	if times_pressed == clicks_required:
+		Playervariables.set_game_2(3)
+		Playervariables.set_yield(Playervariables.drink_value)
 		queue_free()
 
-func get_multiplicador(quantidade_clicks_requeridos):
-	var porcentagem = (quantidade_de_vezes_precionado * 100)/quantidade_clicks_requeridos
+func get_multiplier():
+	var porcentagem = (times_pressed * 100)/clicks_required
 	var multiplicador_dinheiro_click = (3.0 * porcentagem)/100.0
 	return multiplicador_dinheiro_click
 
 func _on_Timer_timeout():
-	if quantidade_de_vezes_precionado:
-		Playervariables.set_jogo2(get_multiplicador(quantidade_clicks_requiridos))
-		Playervariables.set_rendimento(Playervariables.valor_da_bebida)
+	if times_pressed:
+		Playervariables.set_game_2(get_multiplier())
+		Playervariables.set_yield(Playervariables.drink_value)
 		queue_free()
 	else:
-		Playervariables.clear_rendimento()
+		Playervariables.clear_yield()
 		queue_free()
 	

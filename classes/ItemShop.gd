@@ -100,7 +100,7 @@ func on_button_pressed():
 		equip()
 	elif equipped:
 		pass
-	elif Playervariables.dinheiro >= price:
+	elif Playervariables.money >= price:
 		buy()
 	else:
 		error_message()
@@ -122,7 +122,7 @@ func disequip():
 
 func buy():
 	$Button.text = Options.lang_content["equip"]
-	Playervariables.dinheiro -= price
+	Playervariables.money -= price
 	$Colors.visible = true
 	buyed = true
 	save_buy()

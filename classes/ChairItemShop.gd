@@ -8,4 +8,4 @@ func _init(id: int, name_: String = "default", price: int = 100, color_id: int =
 	add_color_option("44372d", 4)
 
 func apply_texture():
-	get_node("/root/Node/Bar/Cadeiras").atualizar_cadeiras("res://sprites/chairs/%s/%s.png" % [id, color_id])
+	get_node("/root/Node/Bar/Cadeiras").update_chairs("res://sprites/chairs/%s/%s.png" % [id, color_id])

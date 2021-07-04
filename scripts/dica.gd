@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	if Options.dicas and Playervariables.dicas["movimento"]:
+	if Options.tips and Playervariables.tips["movimento"]:
 		$CenterContainer/AnimationPlayer/Dica.text = 'Dica: aperte A e D para se mover.'
 		$Timer.start()
 	else:
@@ -10,7 +10,7 @@ func _ready():
 func on_animation_finished(animation):
 	if animation == "Fadeout":
 		visible = false
-		Playervariables.dicas["movimento"] = false
+		Playervariables.tips["movimento"] = false
 
 func on_timeout():
 	$CenterContainer/AnimationPlayer.play("Fadeout")

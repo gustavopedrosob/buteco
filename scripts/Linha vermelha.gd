@@ -1,36 +1,36 @@
 extends Control
 
-var lista_resultados = []
-onready var velocidade = 0
+var results = []
+var velocity = 0
 
 # warning-ignore:unused_signal
-signal acertou
+signal hit
 # warning-ignore:unused_signal
-signal errou
+signal missed
 
 const speeds = [1.5, 2.0, 2.5]
-var estado = 'subindo'
+var state = 'rising'
 
 func _ready():
-	velocidade = speeds[Options.dificulty]
+	velocity = speeds[Options.dificulty]
 
 # warning-ignore:unused_argument
 func _process(delta):
-	if $"Linha branca".rect_position.y <= 195 and estado == 'subindo':
-		$"Linha branca".rect_position.y += velocidade
+	if $"Linha branca".rect_position.y <= 195 and state == 'rising':
+		$"Linha branca".rect_position.y += velocity
 		if $"Linha branca".rect_position.y >= 195:
-			estado = 'descendo'
-	elif $"Linha branca".rect_position.y >= 0 and estado == 'descendo':
-		$"Linha branca".rect_position.y -= velocidade
+			state = 'down'
+	elif $"Linha branca".rect_position.y >= 0 and state == 'down':
+		$"Linha branca".rect_position.y -= velocity
 		if $"Linha branca".rect_position.y <= 0:
-			estado = 'subindo'
+			state = 'rising'
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_select"):
 		if $"Linha branca".rect_position.y >= $"Linha verde".rect_position.y and $"Linha branca".rect_position.y <= $"Linha verde".rect_position.y + $"Linha verde".rect_size.y:
-			acertou(true,'acertou')
+			hit(true, 'hit')
 		else:
-			acertou(false,'errou')
+			hit(false, 'missed')
 
 
 func set_random_green_line():
@@ -43,19 +43,19 @@ func reset_and_set():
 	reset_white_line()
 	set_random_green_line()
 
-func acertou(result, sinal):
-	lista_resultados.append(result)
+func hit(result, sinal):
+	results.append(result)
 	emit_signal(sinal)
-	checa_se_acabou()
+	check_if_end()
 	reset_and_set()
 
-func get_soma():
-	var soma = lista_resultados.count(false) + lista_resultados.count(true)
-	return soma
+func get_sum():
+	var sum = results.count(false) + results.count(true)
+	return sum
 
-func checa_se_acabou():
-	if get_soma() == 3:
-		var quantos_trues = lista_resultados.count(true)
-		Playervariables.set_jogo1(quantos_trues)
+func check_if_end():
+	if get_sum() == 3:
+		var how_many_true = results.count(true)
+		Playervariables.set_game_1(how_many_true)
 		get_parent().get_parent().queue_free()
-		Playervariables.esta_ocupado = false
+		Playervariables.busy = false
