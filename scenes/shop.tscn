@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://sprites/LojaGUI.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprites/Buttons/botaopressed.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Loja.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Buttons/botao.png" type="Texture" id=6]
+[ext_resource path="res://botaopressed.tres" type="StyleBox" id=7]
 [ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
 
@@ -39,12 +40,12 @@ font_data = ExtResource( 10 )
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.6, 0.545098, 0.45098, 1 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.533333, 0.486275, 0.4, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxTexture" id=13]
+[sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
@@ -52,6 +53,21 @@ region_rect = Rect2( 0, 0, 369, 303 )
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 203, 36 )
+
+[sub_resource type="DynamicFont" id=14]
 font_data = ExtResource( 10 )
 
 [node name="shop" type="Control"]
@@ -65,6 +81,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="TextureRect" parent="."]
+visible = false
 margin_top = 1.05263
 margin_right = 1027.0
 margin_bottom = 601.053
@@ -78,6 +95,7 @@ __meta__ = {
 }
 
 [node name="title" type="Label" parent="."]
+visible = false
 margin_left = 235.0
 margin_top = 56.0
 margin_right = 339.0
@@ -90,6 +108,7 @@ __meta__ = {
 }
 
 [node name="quit" type="Button" parent="."]
+visible = false
 margin_left = 775.0
 margin_top = 48.0
 margin_right = 801.789
@@ -106,13 +125,14 @@ __meta__ = {
 }
 
 [node name="TabContainer" type="TabContainer" parent="."]
+visible = false
 margin_left = 230.0
 margin_top = 136.0
 margin_right = 798.0
 margin_bottom = 556.0
 custom_styles/tab_fg = SubResource( 6 )
-custom_styles/tab_bg = SubResource( 11 )
-custom_styles/panel = SubResource( 12 )
+custom_styles/tab_bg = SubResource( 7 )
+custom_styles/panel = SubResource( 8 )
 custom_fonts/font = ExtResource( 2 )
 custom_constants/hseparation = 0
 tab_align = 0
@@ -126,7 +146,7 @@ margin_left = 380.0
 margin_top = 166.0
 margin_right = 642.0
 margin_bottom = 300.0
-custom_styles/panel = SubResource( 13 )
+custom_styles/panel = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,5 +171,24 @@ __meta__ = {
 wait_time = 2.0
 autostart = true
 
+[node name="Button" type="Button" parent="."]
+margin_left = 960.175
+margin_top = 6.02936
+margin_right = 1015.18
+margin_bottom = 43.0294
+focus_mode = 0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "LOJA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="mensagem de erro/Timer" to="." method="_on_message_error_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_open_pressed"]

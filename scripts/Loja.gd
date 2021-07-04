@@ -7,6 +7,7 @@ const Cabinet = preload("res://classes/CabinetItemShop.gd")
 var groups = {}
 
 func _ready():
+	$"Button".text = Options.lang_content["shop"]
 	add_group(GroupShop.new("wallpapers"))
 	add_group(GroupShop.new("chairs"))
 	add_group(GroupShop.new("cabinets"))
@@ -38,8 +39,17 @@ func _ready():
 	groups["cabinets"].add_child(Cabinet.new(6))
 
 func _on_quit_pressed():
-	visible = false
-	get_tree().paused = false
+	config_open(false)
+
+func _on_open_pressed():
+	config_open(true)
+
+func config_open(mode: bool):
+	Playervariables.anti_pause = mode
+	for node in [$Sprite, $title, $quit, $TabContainer]:
+		node.visible = mode
+	get_tree().paused = mode
+	$Button.disabled = mode
 
 func add_group(group: GroupShop):
 	groups[group.name] = group
