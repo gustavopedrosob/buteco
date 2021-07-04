@@ -12,6 +12,7 @@ func _ready():
 		'dificil':
 			quantidade_clicks_requiridos = 50
 	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % quantidade_clicks_requiridos
+
 # warning-ignore:unused_argument
 func _process(delta):
 	$AnimationPlayer/QntPrecionado.text = str(quantidade_de_vezes_precionado)

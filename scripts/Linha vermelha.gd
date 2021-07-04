@@ -29,11 +29,14 @@ func _process(delta):
 		$"Linha branca".rect_position.y -= velocidade
 		if $"Linha branca".rect_position.y <= 0:
 			estado = 'subindo'
-	if Input.is_action_just_pressed("ui_select"):
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_select"):
 		if $"Linha branca".rect_position.y >= $"Linha verde".rect_position.y and $"Linha branca".rect_position.y <= $"Linha verde".rect_position.y + $"Linha verde".rect_size.y:
 			acertou(true,'acertou')
 		else:
 			acertou(false,'errou')
+
 
 func set_random_green_line():
 	$"Linha verde".rect_position.y = Functions.get_random_int(5, 195)

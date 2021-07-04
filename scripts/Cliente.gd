@@ -34,9 +34,9 @@ func _ready():
 	var rand_pos = Functions.get_random_int(100, 800)
 	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(listabebidas[rand_beb])
 	$'AnimationPlayer/posicao'.position.x = rand_pos
-# warning-ignore:unused_argument
-func _process(delta):
-	if Input.is_action_just_pressed("interagir") and pode_interagir and not ja_interagiu and pode_interagir2:
+
+func _unhandled_input(event):
+	if event.is_action_pressed("interagir") and pode_interagir and not ja_interagiu and pode_interagir2:
 		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
 		ja_interagiu = true
 		# cliente é filho do spawner
