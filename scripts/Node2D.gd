@@ -3,14 +3,10 @@ extends Node2D
 var quantidade_clicks_requiridos = 0
 var quantidade_de_vezes_precionado = 0
 
+const clicks_required = [25, 35, 50]
+
 func _ready():
-	match Options.dificuldade:
-		'facil':
-			quantidade_clicks_requiridos = 25
-		'normal':
-			quantidade_clicks_requiridos = 35
-		'dificil':
-			quantidade_clicks_requiridos = 50
+	quantidade_clicks_requiridos = clicks_required[Options.dificulty]
 	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % quantidade_clicks_requiridos
 
 # warning-ignore:unused_argument

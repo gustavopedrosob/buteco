@@ -8,16 +8,11 @@ signal acertou
 # warning-ignore:unused_signal
 signal errou
 
+const speeds = [1.5, 2.0, 2.5]
 var estado = 'subindo'
 
 func _ready():
-	match Options.dificuldade:
-		'facil':
-			velocidade = 1.5
-		'normal':
-			velocidade = 2.0
-		'dificil':
-			velocidade = 2.5
+	velocidade = speeds[Options.dificulty]
 
 # warning-ignore:unused_argument
 func _process(delta):

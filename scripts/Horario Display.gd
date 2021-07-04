@@ -6,7 +6,8 @@ func _ready():
 		var data = dados['data']
 		Playervariables.data = data
 	var minutos = Playervariables.data['hora']
-	$"Hora Display/DayTimer".wait_time = minutos
+	if minutos > 0:
+		$"Hora Display/DayTimer".wait_time = minutos
 	$"Hora Display/DayTimer".start()
 	$"Dia Display".text = str(Options.lang_content["day"], Playervariables.data['dia'])
 
