@@ -20,17 +20,10 @@ func _ready():
 	line.get_child(1).connect('missed', self, 'on_missed')
 	$AnimationPlayer.current_animation = 'Entrada'
 	$AnimationPlayer.play("Entrada")
-
+	
+	var possible_drink_value = [10, 20, 30, 40]
 	var rand_beb = Functions.get_random_int(0, 3)
-	match rand_beb:
-		0:
-			Playervariables.drink_value = 10
-		1:
-			Playervariables.drink_value = 20
-		2:
-			Playervariables.drink_value = 30
-		3:
-			Playervariables.drink_value = 40
+	Playervariables.drink_value = possible_drink_value[rand_beb]
 	var rand_pos = Functions.get_random_int(100, 800)
 	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(drinks[rand_beb])
 	$'AnimationPlayer/posicao'.position.x = rand_pos
