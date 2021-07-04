@@ -7,11 +7,11 @@ const possible_clicks_required = [25, 35, 50]
 
 func _ready():
 	clicks_required = possible_clicks_required[Options.dificulty]
-	$Center/Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % clicks_required
+	$Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % clicks_required
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$Center/Alinhamento/Time.text = str(Options.lang_content["time_left"], int($Timer.time_left))
+	$Alinhamento/Time.text = str(Options.lang_content["time_left"], int($Timer.time_left))
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()
@@ -19,7 +19,7 @@ func _on_TextureButton_pressed():
 	if times_pressed < clicks_required:
 		times_pressed += 1
 		$AnimationPlayer/QntPrecionado.visible = true
-		$Center/Alinhamento/Center2/TextureButton/TextureProgress.value = times_pressed * multiplier
+		$Alinhamento/TextureButton/TextureProgress.value = times_pressed * multiplier
 		$AnimationPlayer/QntPrecionado.rect_position = get_global_mouse_position() - Vector2(25,25)
 		$AnimationPlayer.play("Fade")
 	$AnimationPlayer/QntPrecionado.text = str(times_pressed)

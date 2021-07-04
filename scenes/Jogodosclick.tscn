@@ -42,62 +42,50 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 
-[node name="Center" type="CenterContainer" parent="."]
+[node name="Alinhamento" type="VBoxContainer" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Alinhamento" type="VBoxContainer" parent="Center"]
-margin_left = 374.0
-margin_top = 106.0
-margin_right = 650.0
-margin_bottom = 494.0
 custom_constants/separation = 20
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time" type="Label" parent="Center/Alinhamento"]
-margin_right = 276.0
-margin_bottom = 28.0
+[node name="Time" type="Label" parent="Alinhamento"]
+margin_top = 106.0
+margin_right = 1024.0
+margin_bottom = 134.0
 custom_fonts/font = SubResource( 1 )
+text = "Tempo restante: 1 segundo"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dica" type="Label" parent="Center/Alinhamento"]
-margin_top = 48.0
-margin_right = 276.0
-margin_bottom = 67.0
+[node name="Dica" type="Label" parent="Alinhamento"]
+margin_top = 154.0
+margin_right = 1024.0
+margin_bottom = 173.0
 custom_fonts/font = SubResource( 2 )
+text = "Click na caneca de cerveja, 30 vezes antes que o tempo acabe para a encher."
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Center2" type="CenterContainer" parent="Center/Alinhamento"]
-margin_top = 87.0
-margin_right = 276.0
-margin_bottom = 388.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="Center/Alinhamento/Center2"]
-margin_right = 276.0
-margin_bottom = 301.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
+[node name="TextureButton" type="TextureButton" parent="Alinhamento"]
+margin_left = 374.0
+margin_top = 193.0
+margin_right = 650.0
+margin_bottom = 494.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress" type="TextureProgress" parent="Center/Alinhamento/Center2/TextureButton"]
+[node name="TextureProgress" type="TextureProgress" parent="Alinhamento/TextureButton"]
 margin_left = 14.0
 margin_top = 15.0
 margin_right = 186.0
@@ -132,5 +120,5 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
-[connection signal="pressed" from="Center/Alinhamento/Center2/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Alinhamento/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
