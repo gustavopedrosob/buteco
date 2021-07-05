@@ -25,12 +25,11 @@ func _ready():
 	var rand_beb = Functions.get_random_int(0, 3)
 	Playervariables.drink_value = possible_drink_value[rand_beb]
 	var rand_pos = Functions.get_random_int(100, 800)
-	$"AnimationPlayer/posicao/Cliente/Pedido do cliente/Pedido".set_texture(drinks[rand_beb])
-	$'AnimationPlayer/posicao'.position.x = rand_pos
+	$Pedido.set_texture(drinks[rand_beb])
+	position.x = rand_pos
 
 func _unhandled_input(event):
 	if event.is_action_pressed("interagir") and can_interact and not already_interact and can_interact_2:
-		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
 		already_interact = true
 		# cliente é filho do spawner
 		get_parent().get_parent().add_child(line)
@@ -43,7 +42,6 @@ func _unhandled_input(event):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'Entrada':
-		$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = true
 		can_interact_2 = true
 	if anim_name == 'Saida':
 		queue_free()
@@ -57,7 +55,7 @@ func _on_Jogoclick_tree_exited():
 	barmannode.texture = barmannode.normal
 	Playervariables.can_walk = true
 func _on_Inatividade_timeout():
-	$"AnimationPlayer/posicao/Cliente/Pedido do cliente".visible = false
+	$"Pedido do cliente".visible = false
 	$AnimationPlayer.play("Saida")
 
 # warning-ignore:unused_argument
