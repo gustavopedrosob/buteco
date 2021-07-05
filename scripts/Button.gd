@@ -10,7 +10,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$"Alinhamento/Dinheiro Display".text = str(Options.lang_content["money"], Playervariables.money)
+	$"Alinhamento/Dinheiro Display".text = Options.lang_content["money"] % Playervariables.money
 
 func _on_Timer_timeout():
 	spawn_client()

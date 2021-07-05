@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var clicks_required = 0
 var times_pressed = 0
@@ -11,7 +11,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$Alinhamento/Time.text = str(Options.lang_content["time_left"], int($Timer.time_left))
+	$Alinhamento/Time.text = Options.lang_content["time_left"] % $Timer.time_left
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()

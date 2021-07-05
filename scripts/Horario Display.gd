@@ -9,18 +9,18 @@ func _ready():
 	if minutes > 0:
 		$"Hora Display/DayTimer".wait_time = minutes
 	$"Hora Display/DayTimer".start()
-	$"Dia Display".text = str(Options.lang_content["day"], Playervariables.date['dia'])
+	$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['dia']
 
 # warning-ignore:unused_argument
 func _process(delta):
 	var now = int(720 - $"Hora Display/DayTimer".time_left)
 	var hours = int(now / 60) + 12
 	var minutes = int(now % 60)
-	$"Hora Display".text = str(Options.lang_content["hour"], hours, ":%002d" % minutes)
+	$"Hora Display".text = Options.lang_content["hour"] % [hours, minutes]
 	Playervariables.date['hora'] = $"Hora Display/DayTimer".time_left
 
 func _on_DayTimer_timeout():
 	$"Hora Display/DayTimer".wait_time = 720
 	$"Hora Display/DayTimer".start()
 	Playervariables.date['dia'] += 1
-	$"Dia Display".text = str(Options.lang_content["day"], Playervariables.date['dia'])
+	$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['dia']

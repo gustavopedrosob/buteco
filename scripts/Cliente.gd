@@ -49,8 +49,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		queue_free()
 
 func _on_Linha_tree_exited():
-	var spawnernode = get_parent().get_parent().get_node("Spawner")
-	get_parent().get_parent().add_child_below_node(spawnernode, click)
+	get_parent().get_parent().add_child(click)
 	barmannode.texture = barmannode.serving
 	Playervariables.anti_pause = false
 func _on_Jogoclick_tree_exited():

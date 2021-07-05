@@ -36,10 +36,10 @@ size = 22
 use_filter = true
 font_data = ExtResource( 4 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_vertical_guides_": [  ]
+"_edit_use_anchors_": false
 }
 
 [node name="Alinhamento" type="VBoxContainer" parent="."]
@@ -78,8 +78,8 @@ margin_left = 374.0
 margin_top = 193.0
 margin_right = 650.0
 margin_bottom = 494.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+rect_clip_content = true
+size_flags_horizontal = 6
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
