@@ -10,11 +10,10 @@
 [ext_resource path="res://sprites/Clientes/Corpo.png" type="Texture" id=8]
 [ext_resource path="res://sprites/Clientes/Cabelo1.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 198.692, 245.582 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "Entrada"
+[sub_resource type="Animation" id=2]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
@@ -53,8 +52,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Saida"
+[sub_resource type="Animation" id=3]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
@@ -102,7 +100,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 194.802, -70.1285 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Pedido do cliente" type="Sprite" parent="."]
 visible = false
@@ -139,8 +137,8 @@ texture = ExtResource( 9 )
 script = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Entrada = SubResource( 1 )
-anims/Saida = SubResource( 2 )
+anims/Entrada = SubResource( 2 )
+anims/Saida = SubResource( 3 )
 
 [node name="Inatividade" type="Timer" parent="."]
 wait_time = 30.0

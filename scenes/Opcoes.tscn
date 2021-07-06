@@ -1,45 +1,18 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://botaopressed.tres" type="StyleBox" id=2]
+[ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/SeleLan.gd" type="Script" id=3]
 [ext_resource path="res://scripts/CheckFullscreen.gd" type="Script" id=4]
 [ext_resource path="res://scripts/Autosave.gd" type="Script" id=5]
 [ext_resource path="res://scripts/Dificuldade.gd" type="Script" id=6]
-[ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://sprites/Buttons/botao check.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Buttons/botao check positivo.png" type="Texture" id=9]
-[ext_resource path="res://botão.tres" type="StyleBox" id=10]
-[ext_resource path="res://Botaoselec.tres" type="StyleBox" id=11]
 [ext_resource path="res://scripts/Opcoes.gd" type="Script" id=12]
-
-[sub_resource type="DynamicFont" id=1]
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=5]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=7]
-font_data = ExtResource( 1 )
 
 [node name="Opcoes" type="Control"]
 margin_left = 341.0
 margin_top = 193.0
 margin_right = 683.0
 margin_bottom = 407.0
+theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -59,15 +32,14 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 340.0
-margin_top = 199.0
+margin_top = 203.0
 margin_right = 682.0
-margin_bottom = 401.0
+margin_bottom = 397.0
 script = ExtResource( 12 )
 
 [node name="Opcoes Title" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_right = 342.0
 margin_bottom = 19.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Opcões"
 align = 1
@@ -78,7 +50,7 @@ __meta__ = {
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 23.0
 margin_right = 342.0
-margin_bottom = 169.0
+margin_bottom = 161.0
 custom_constants/vseparation = 7
 custom_constants/hseparation = 20
 columns = 2
@@ -87,7 +59,6 @@ columns = 2
 margin_top = 4.0
 margin_right = 229.0
 margin_bottom = 23.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selecione uma dificuldade:"
 
@@ -96,11 +67,6 @@ margin_left = 249.0
 margin_right = 342.0
 margin_bottom = 28.0
 rect_min_size = Vector2( 83, 28 )
-custom_styles/hover = ExtResource( 11 )
-custom_styles/pressed = ExtResource( 11 )
-custom_styles/normal = ExtResource( 11 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "facil"
 flat = false
 items = [ "Facil", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Dificil", null, 0, false, false, 2, 0, null, "", false ]
@@ -113,7 +79,6 @@ __meta__ = {
 margin_top = 40.0
 margin_right = 229.0
 margin_bottom = 59.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selecione uma linguagem:"
 
@@ -123,21 +88,15 @@ margin_top = 35.0
 margin_right = 342.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 93, 29 )
-custom_styles/hover = ExtResource( 11 )
-custom_styles/pressed = ExtResource( 11 )
-custom_styles/normal = ExtResource( 11 )
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "pt-br"
 flat = false
 items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
 script = ExtResource( 3 )
 
 [node name="Fullscreen Display" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_top = 78.0
+margin_top = 76.0
 margin_right = 229.0
-margin_bottom = 97.0
-custom_fonts/font = SubResource( 6 )
+margin_bottom = 95.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tela cheia"
 __meta__ = {
@@ -147,13 +106,11 @@ __meta__ = {
 [node name="CheckFullscreen" type="CheckBox" parent="CenterContainer/VBoxContainer/GridContainer"]
 margin_left = 249.0
 margin_top = 71.0
-margin_right = 284.0
-margin_bottom = 105.0
+margin_right = 279.0
+margin_bottom = 101.0
 rect_min_size = Vector2( 30, 30 )
 focus_mode = 0
 size_flags_horizontal = 0
-custom_icons/checked = ExtResource( 9 )
-custom_icons/unchecked = ExtResource( 8 )
 align = 2
 script = ExtResource( 4 )
 __meta__ = {
@@ -161,10 +118,9 @@ __meta__ = {
 }
 
 [node name="Autosave Display" type="Label" parent="CenterContainer/VBoxContainer/GridContainer"]
-margin_top = 119.0
+margin_top = 113.0
 margin_right = 229.0
-margin_bottom = 138.0
-custom_fonts/font = SubResource( 6 )
+margin_bottom = 132.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Autosave"
 __meta__ = {
@@ -173,13 +129,11 @@ __meta__ = {
 
 [node name="Autosave" type="CheckBox" parent="CenterContainer/VBoxContainer/GridContainer"]
 margin_left = 249.0
-margin_top = 112.0
-margin_right = 284.0
-margin_bottom = 146.0
+margin_top = 108.0
+margin_right = 279.0
+margin_bottom = 138.0
 focus_mode = 0
 size_flags_horizontal = 0
-custom_icons/checked = ExtResource( 9 )
-custom_icons/unchecked = ExtResource( 8 )
 align = 2
 script = ExtResource( 5 )
 __meta__ = {
@@ -188,17 +142,12 @@ __meta__ = {
 
 [node name="Voltar" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_left = 125.0
-margin_top = 173.0
+margin_top = 165.0
 margin_right = 216.0
-margin_bottom = 202.0
+margin_bottom = 194.0
 rect_min_size = Vector2( 91, 29 )
 focus_mode = 0
 size_flags_horizontal = 4
-custom_styles/hover = ExtResource( 2 )
-custom_styles/pressed = ExtResource( 2 )
-custom_styles/normal = ExtResource( 10 )
-custom_fonts/font = SubResource( 7 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Voltar"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" to="CenterContainer/VBoxContainer/GridContainer/CheckFullscreen" method="_on_CheckFullscreen_pressed"]

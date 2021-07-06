@@ -46,7 +46,7 @@ func _on_open_pressed():
 
 func config_open(mode: bool):
 	Playervariables.anti_pause = mode
-	for node in [$Sprite, $title, $quit, $TabContainer]:
+	for node in [$title, $quit, $TabContainer]:
 		node.visible = mode
 	get_tree().paused = mode
 	$Button.disabled = mode

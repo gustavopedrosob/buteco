@@ -1,4 +1,4 @@
-extends Tabs
+extends CenterContainer
 
 var node_equipped
 

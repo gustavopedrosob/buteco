@@ -1,20 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Node2D.gd" type="Script" id=1]
 [ext_resource path="res://sprites/cerveja.png" type="Texture" id=2]
 [ext_resource path="res://sprites/liquido cerveja.png" type="Texture" id=3]
-[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 24
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=2]
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
+[ext_resource path="res://theme.tres" type="Theme" id=4]
 
 [sub_resource type="Animation" id=3]
 length = 0.3
@@ -31,12 +20,9 @@ tracks/0/keys = {
 "values": [ Color( 0, 1, 0, 1 ), Color( 0, 1, 0, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
-size = 22
-use_filter = true
-font_data = ExtResource( 4 )
-
 [node name="Control" type="Control"]
+mouse_filter = 2
+theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,10 +38,9 @@ __meta__ = {
 }
 
 [node name="Time" type="Label" parent="Alinhamento"]
-margin_top = 106.0
+margin_top = 110.0
 margin_right = 1024.0
-margin_bottom = 134.0
-custom_fonts/font = SubResource( 1 )
+margin_bottom = 129.0
 text = "Tempo restante: 1 segundo"
 align = 1
 __meta__ = {
@@ -63,10 +48,9 @@ __meta__ = {
 }
 
 [node name="Dica" type="Label" parent="Alinhamento"]
-margin_top = 154.0
+margin_top = 149.0
 margin_right = 1024.0
-margin_bottom = 173.0
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 168.0
 text = "Click na caneca de cerveja, 30 vezes antes que o tempo acabe para a encher."
 align = 1
 __meta__ = {
@@ -75,9 +59,9 @@ __meta__ = {
 
 [node name="TextureButton" type="TextureButton" parent="Alinhamento"]
 margin_left = 374.0
-margin_top = 193.0
+margin_top = 188.0
 margin_right = 650.0
-margin_bottom = 494.0
+margin_bottom = 489.0
 rect_clip_content = true
 size_flags_horizontal = 6
 texture_normal = ExtResource( 2 )
@@ -109,7 +93,7 @@ margin_left = 168.0
 margin_top = 88.0
 margin_right = 208.0
 margin_bottom = 119.0
-custom_fonts/font = SubResource( 4 )
+theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 1, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false

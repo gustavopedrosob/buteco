@@ -1,23 +1,21 @@
 extends VBoxContainer
 
-var ButtonB = load("res://classes/Button.gd")
-var LabelB = load("res://classes/Label.gd")
-var negative_texture = load("res://sprites/Buttons/negativo.png")
+var close = load("res://sprites/interface/Close.png")
 
 class_name SaveI
 
 func _init(slot):
-	var slot_label = LabelB.new() 
+	var slot_label = Label.new() 
 	slot_label.text = "Slot"
 	var hboxcontainer = HBoxContainer.new()
 	hboxcontainer.name = "HBoxContainer"
-	var save_button = ButtonB.new()
+	var save_button = Button.new()
 	save_button.name = "SaveButton"
 	var delete_button = Button.new()
 	delete_button.rect_min_size = Vector2(20, 20)
 	delete_button.set_focus_mode(Control.FOCUS_NONE)
 	var delete_stylebox = StyleBoxTexture.new()
-	delete_stylebox.texture = negative_texture
+	delete_stylebox.texture = close
 	for mode in ["normal", "hover"]:
 		delete_button.set("custom_styles/%s" % mode, delete_stylebox)
 	delete_button.name = "DeleteButton"

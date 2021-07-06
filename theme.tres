@@ -1,0 +1,123 @@
+[gd_resource type="Theme" load_steps=20 format=2]
+
+[ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://tres/button/normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://tres/button/hover.tres" type="StyleBox" id=3]
+[ext_resource path="res://tres/button/disabled.tres" type="StyleBox" id=4]
+[ext_resource path="res://tres/button/pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://sprites/interface/Radio Checkbox Checked.png" type="Texture" id=6]
+[ext_resource path="res://sprites/interface/Radio Checkbox.png" type="Texture" id=7]
+[ext_resource path="res://sprites/interface/Checkbox Checked.png" type="Texture" id=8]
+[ext_resource path="res://sprites/interface/Checkbox.png" type="Texture" id=9]
+[ext_resource path="res://tres/button/focus.tres" type="StyleBox" id=10]
+[ext_resource path="res://tres/Popup Menu/panel.tres" type="StyleBox" id=11]
+[ext_resource path="res://tres/Popup Menu/hover.tres" type="StyleBox" id=12]
+[ext_resource path="res://tres/Button/normal.tres" type="StyleBox" id=13]
+[ext_resource path="res://tres/Tab Container/tab_disabled.tres" type="StyleBox" id=14]
+[ext_resource path="res://tres/Tab Container/tab_fg.tres" type="StyleBox" id=15]
+[ext_resource path="res://tres/Tab Container/tab_bg.tres" type="StyleBox" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = ExtResource( 1 )
+Button/styles/disabled = ExtResource( 4 )
+Button/styles/focus = ExtResource( 10 )
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 2 )
+Button/styles/pressed = ExtResource( 5 )
+CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = ExtResource( 8 )
+CheckBox/icons/radio_checked = ExtResource( 6 )
+CheckBox/icons/radio_unchecked = ExtResource( 7 )
+CheckBox/icons/unchecked = ExtResource( 9 )
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = SubResource( 1 )
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = SubResource( 2 )
+CheckBox/styles/pressed = SubResource( 3 )
+CheckButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/off_disabled = null
+CheckButton/icons/on = null
+CheckButton/icons/on_disabled = null
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/hover_pressed = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+MenuButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+MenuButton/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
+MenuButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+MenuButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+PopupMenu/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0.88, 0.88, 0.88, 1 )
+PopupMenu/colors/font_color_separator = Color( 0.88, 0.88, 0.88, 1 )
+PopupMenu/constants/hseparation = 6
+PopupMenu/constants/vseparation = 6
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = ExtResource( 12 )
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = ExtResource( 11 )
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+TabContainer/colors/font_color_bg = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+TabContainer/colors/font_color_disabled = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
+TabContainer/constants/hseparation = 0
+TabContainer/constants/label_valign_bg = 0
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 40
+TabContainer/constants/top_margin = 0
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = ExtResource( 13 )
+TabContainer/styles/tab_bg = ExtResource( 16 )
+TabContainer/styles/tab_disabled = ExtResource( 14 )
+TabContainer/styles/tab_fg = ExtResource( 15 )
