@@ -9,3 +9,4 @@ func _init(id: int, name_: String = "default", price: int = 100, color_id: int =
 
 func apply_texture():
 	get_node("/root/Node/Bar/Cadeiras").update_chairs("res://sprites/chairs/%s/%s.png" % [id, color_id])
+	save_equip()

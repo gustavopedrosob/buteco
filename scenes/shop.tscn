@@ -7,7 +7,7 @@
 [ext_resource path="res://theme.tres" type="Theme" id=7]
 [ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
@@ -23,6 +23,7 @@ __meta__ = {
 }
 
 [node name="title" type="Label" parent="."]
+visible = false
 margin_left = 240.657
 margin_top = 133.782
 margin_right = 282.657
@@ -35,6 +36,7 @@ __meta__ = {
 }
 
 [node name="quit" type="TextureButton" parent="."]
+visible = false
 margin_left = 751.285
 margin_top = 101.052
 margin_right = 782.285
@@ -46,6 +48,7 @@ __meta__ = {
 }
 
 [node name="TabContainer" type="TabContainer" parent="."]
+visible = false
 margin_left = 230.0
 margin_top = 136.0
 margin_right = 798.0
@@ -60,7 +63,7 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

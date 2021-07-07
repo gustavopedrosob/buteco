@@ -7,11 +7,8 @@ var price: int
 var buyed: int = false
 var equipped: bool = false
 var id: int
-var color_id: int
+var color_id: int = 0
 var type: String
-
-func _ready():
-	load_save()
 
 func _init(id_: int, type_: String, name_: String = "default", price_: int = 100, color_id_: int = 1):
 	id = id_
@@ -44,25 +41,25 @@ func _init(id_: int, type_: String, name_: String = "default", price_: int = 100
 	add_child(name_label)
 	add_child(button)
 
-func load_save():
-	var slot = Playervariables.slot
-	# if has a old save to read:
-	if Directory.new().file_exists(slot):
-		var save = Playervariables.load_save()
-		# if was buyed:
-		if "%s/%s" % [type, id] in save["shop"]["permissions"]:
-			buyed = true
-		var code = save["shop"]["equipped"][type]
-		if code:
-			var codes = code.split(":")
-			var save_id = int(codes[0])
-			var save_color_id = int(codes[1])
-			# if was equipped:
-			if id == save_id:
-				color_id = save_color_id
-				equip()
-	else:
-		color_id = 1
+func _enter_tree():
+	read_save()
+
+func read_save():
+	var save = Playervariables.shop
+	# if was buyed:
+	if "%s/%s" % [type, id] in save["permissions"]:
+		buy(false, false)
+		print("it was buyed")
+	var code = save["equipped"][type]
+	# if was equipped:
+	if code:
+		var codes = code.split(":")
+		var save_id = int(codes[0])
+		var save_color_id = int(codes[1])
+		# if was equipped:
+		if id == save_id:
+			color_id = save_color_id
+			equip(false)
 
 func apply_texture():
 	pass
@@ -106,23 +103,26 @@ func error_message():
 	get_node("/root/Node/shop/mensagem de erro/Timer").start()
 	get_node("/root/Node/shop/mensagem de erro").visible = true
 
-func equip():
+func equip(save = true):
 	apply_texture()
 	emit_signal("equipped")
 	equipped = true
 	$Button.text = Options.lang_content["equipped"]
-	save_equip()
+	if save:
+		save_equip()
 
 func disequip():
 	equipped = false
 	$Button.text = Options.lang_content["equip"]
 
-func buy():
+func buy(pay = true, save = true):
 	$Button.text = Options.lang_content["equip"]
-	Playervariables.money -= price
+	if pay:
+		Playervariables.money -= price
 	$Colors.visible = true
 	buyed = true
-	save_buy()
+	if save:
+		save_buy()
 
 func save_equip():
 	Playervariables.shop["equipped"][type] = "%s:%s" % [id, color_id]

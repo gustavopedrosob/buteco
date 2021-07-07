@@ -121,10 +121,10 @@ __meta__ = {
 }
 
 [node name="Versão" type="Label" parent="."]
-margin_left = 944.0
+margin_left = 925.0
 margin_top = 584.0
-margin_right = 1016.0
-margin_bottom = 598.0
+margin_right = 1015.0
+margin_bottom = 603.0
 text = "Version 1.0"
 __meta__ = {
 "_edit_use_anchors_": false

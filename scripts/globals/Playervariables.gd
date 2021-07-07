@@ -8,8 +8,8 @@ var game_2 = 0
 var date = {'dia': 1, 'hora': 0}
 var tips = {'movimento': true, 'jogo1': true, 'jogo2': true}
 var shop = {
-	'permissions': [],
-	'equipped': {'chairs': null, 'cabinet': null, 'wallpaper': null}}
+	'permissions': ["wallpaper/1", "chairs/1", "cabinet/1"],
+	'equipped': {'chairs': "1:4", 'cabinet': "1:5", 'wallpaper': "1:0"}}
 
 var buyed = []
 var equiped = []
