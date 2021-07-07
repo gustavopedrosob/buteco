@@ -19,15 +19,15 @@ margin_bottom = 3.0
 theme = ExtResource( 7 )
 script = ExtResource( 5 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="title" type="Label" parent="."]
-visible = false
-margin_left = 240.657
-margin_top = 133.782
-margin_right = 282.657
-margin_bottom = 152.782
+margin_left = 241.917
+margin_top = 95.9844
+margin_right = 283.917
+margin_bottom = 114.984
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "shop"
@@ -36,11 +36,10 @@ __meta__ = {
 }
 
 [node name="quit" type="TextureButton" parent="."]
-visible = false
-margin_left = 751.285
-margin_top = 101.052
-margin_right = 782.285
-margin_bottom = 132.052
+margin_left = 762.624
+margin_top = 64.5143
+margin_right = 793.624
+margin_bottom = 95.5143
 focus_mode = 0
 texture_normal = ExtResource( 4 )
 __meta__ = {
@@ -48,11 +47,10 @@ __meta__ = {
 }
 
 [node name="TabContainer" type="TabContainer" parent="."]
-visible = false
 margin_left = 230.0
-margin_top = 136.0
+margin_top = 96.0
 margin_right = 798.0
-margin_bottom = 537.0
+margin_bottom = 497.0
 size_flags_horizontal = 5
 custom_fonts/font = ExtResource( 2 )
 __meta__ = {

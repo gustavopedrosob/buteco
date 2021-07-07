@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=20 format=2]
+[gd_resource type="Theme" load_steps=23 format=2]
 
 [ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://tres/button/normal.tres" type="StyleBox" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://tres/Tab Container/tab_disabled.tres" type="StyleBox" id=14]
 [ext_resource path="res://tres/Tab Container/tab_fg.tres" type="StyleBox" id=15]
 [ext_resource path="res://tres/Tab Container/tab_bg.tres" type="StyleBox" id=16]
+[ext_resource path="res://tres/Scroll Bar/grabber_highlight.tres" type="StyleBox" id=17]
+[ext_resource path="res://tres/Scroll Bar/grabber.tres" type="StyleBox" id=18]
+[ext_resource path="res://tres/Scroll Bar/grabber_pressed.tres" type="StyleBox" id=19]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -102,6 +105,7 @@ PopupMenu/styles/labeled_separator_right = null
 PopupMenu/styles/panel = ExtResource( 11 )
 PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
+ScrollContainer/styles/bg = null
 TabContainer/colors/font_color_bg = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
 TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
@@ -121,3 +125,12 @@ TabContainer/styles/panel = ExtResource( 13 )
 TabContainer/styles/tab_bg = ExtResource( 16 )
 TabContainer/styles/tab_disabled = ExtResource( 14 )
 TabContainer/styles/tab_fg = ExtResource( 15 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = ExtResource( 18 )
+VScrollBar/styles/grabber_highlight = ExtResource( 17 )
+VScrollBar/styles/grabber_pressed = ExtResource( 19 )
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
