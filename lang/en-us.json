@@ -42,5 +42,6 @@
     "yellow": "Yellow",
     "purple": "Purple",
     "brown": "Brown",
-    "grey": "Grey"
+    "grey": "Grey",
+    "slot": "Save %d"
 }

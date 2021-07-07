@@ -42,5 +42,6 @@
     "yellow": "Amarelo",
     "purple": "Roxo",
     "brown": "Marrom",
-    "grey": "Cinza"
+    "grey": "Cinza",
+    "slot": "Jogo %d"
 }
