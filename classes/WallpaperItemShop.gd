@@ -7,5 +7,7 @@ func _init(color_, id: int, name_: String = "default", price: int = 100).(id, "w
 	color = color_
 
 func apply_texture():
-	get_node("/root/Node/Bar/wall").color = Color(color)
-	save_equip()
+	var node = get_node_or_null("/root/Node/Bar/wall")
+	if node:
+		node.color = Color(color)
+		save_equip()

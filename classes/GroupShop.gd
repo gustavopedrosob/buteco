@@ -1,11 +1,13 @@
 extends MarginContainer
 
 var node_equipped
+var type
 
-func _init(type):
+func _init(type_):
 	for margin in ["right", "top", "left", "bottom"]:
 		set("custom_constants/margin_%s" % margin, 20)
-	name = type
+	name = Options.lang_content[type_]
+	type = type_
 	var scroll_container = ScrollContainer.new()
 	scroll_container.name = "ScrollContainer"
 	scroll_container.rect_min_size = Vector2(530, 400)

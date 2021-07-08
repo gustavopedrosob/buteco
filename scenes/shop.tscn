@@ -1,8 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=3]
-[ext_resource path="res://sprites/interface/Close.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Loja.gd" type="Script" id=5]
 [ext_resource path="res://theme.tres" type="Theme" id=7]
 [ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
@@ -11,46 +9,32 @@
 texture = ExtResource( 24 )
 region_rect = Rect2( 0, 0, 369, 303 )
 
-[node name="shop" type="Control"]
+[node name="shop" type="WindowDialog"]
 pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = 3.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.0
+margin_top = -258.0
+margin_right = 304.0
+margin_bottom = 252.0
 theme = ExtResource( 7 )
+window_title = "Shop"
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="title" type="Label" parent="."]
-margin_left = 241.917
-margin_top = 95.9844
-margin_right = 283.917
-margin_bottom = 114.984
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "shop"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="quit" type="TextureButton" parent="."]
-margin_left = 762.624
-margin_top = 64.5143
-margin_right = 793.624
-margin_bottom = 95.5143
-focus_mode = 0
-texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 230.0
-margin_top = 96.0
-margin_right = 798.0
-margin_bottom = 497.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -284.0
+margin_top = -234.5
+margin_right = 284.0
+margin_bottom = 166.5
 size_flags_horizontal = 5
 custom_fonts/font = ExtResource( 2 )
 __meta__ = {
@@ -89,18 +73,4 @@ __meta__ = {
 wait_time = 2.0
 autostart = true
 
-[node name="Button" type="Button" parent="."]
-margin_left = 959.175
-margin_top = 6.02936
-margin_right = 1014.18
-margin_bottom = 43.0294
-focus_mode = 0
-enabled_focus_mode = 0
-text = "LOJA"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="mensagem de erro/Timer" to="." method="_on_message_error_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_open_pressed"]
