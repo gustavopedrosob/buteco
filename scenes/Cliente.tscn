@@ -14,6 +14,7 @@
 extents = Vector2( 198.692, 245.582 )
 
 [sub_resource type="Animation" id=2]
+resource_name = "Entry"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
@@ -53,6 +54,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=3]
+resource_name = "Exit"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
@@ -137,8 +139,8 @@ texture = ExtResource( 9 )
 script = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Entrada = SubResource( 2 )
-anims/Saida = SubResource( 3 )
+anims/Entry = SubResource( 2 )
+anims/Exit = SubResource( 3 )
 
 [node name="Inatividade" type="Timer" parent="."]
 wait_time = 30.0

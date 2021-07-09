@@ -18,8 +18,7 @@ func _ready():
 	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
 	line.get_child(1).connect('hit', self, 'on_hit')
 	line.get_child(1).connect('missed', self, 'on_missed')
-	$AnimationPlayer.current_animation = 'Entrada'
-	$AnimationPlayer.play("Entrada")
+	$AnimationPlayer.play("Entry")
 	
 	var possible_drink_value = [10, 20, 30, 40]
 	var rand_beb = Functions.get_random_int(0, 3)
@@ -41,9 +40,9 @@ func _unhandled_input(event):
 		Playervariables.anti_pause = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == 'Entrada':
+	if anim_name == 'Entry':
 		can_interact_2 = true
-	if anim_name == 'Saida':
+	if anim_name == 'Exit':
 		queue_free()
 
 func _on_Linha_tree_exited():
@@ -52,12 +51,12 @@ func _on_Linha_tree_exited():
 	Playervariables.anti_pause = false
 
 func _on_Jogoclick_tree_exited():
-	$AnimationPlayer.play("Saida")
+	$AnimationPlayer.play("Exit")
 	barmannode.texture = barmannode.normal
 	Playervariables.can_walk = true
 
 func _on_Inatividade_timeout():
-	$AnimationPlayer.play("Saida")
+	$AnimationPlayer.play("Exit")
 
 # warning-ignore:unused_argument
 func _on_Area2D_body_entered(body):
