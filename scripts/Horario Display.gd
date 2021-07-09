@@ -5,22 +5,11 @@ func _ready():
 		var save = Playervariables.load_save()
 		var date = save['data']
 		Playervariables.date = date
-	var minutes = Playervariables.date['hora']
-	if minutes > 0:
-		$"Hora Display/DayTimer".wait_time = minutes
-	$"Hora Display/DayTimer".start()
-	$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['dia']
-
-# warning-ignore:unused_argument
-func _process(delta):
-	var now = int(720 - $"Hora Display/DayTimer".time_left)
-	var hours = int(now / 60) + 12
-	var minutes = int(now % 60)
-	$"Hora Display".text = Options.lang_content["hour"] % [hours, minutes]
-	Playervariables.date['hora'] = $"Hora Display/DayTimer".time_left
-
-func _on_DayTimer_timeout():
-	$"Hora Display/DayTimer".wait_time = 720
-	$"Hora Display/DayTimer".start()
-	Playervariables.date['dia'] += 1
-	$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['dia']
+	while true:
+		yield(get_tree().create_timer(1.0), "timeout")
+		Playervariables.date["hour"] += 1
+		var time = Playervariables.date["hour"]
+		$"Hora Display".text = Options.lang_content["hour"] % [int(time / 60) + 12, time % 60]
+		if Playervariables.date["hour"] == 720:
+			Playervariables.date["day"] += 1
+			$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['day']

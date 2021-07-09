@@ -5,7 +5,7 @@ var money = 0
 var drink_value
 var game_1 = 0
 var game_2 = 0
-var date = {'dia': 1, 'hora': 0}
+var date = {'day': 1, 'hour': 0}
 var tips = {'movimento': true, 'jogo1': true, 'jogo2': true}
 var shop = {
 	'permissions': ["wallpaper/1", "chairs/1", "cabinet/1"],

@@ -50,12 +50,13 @@ func _on_Linha_tree_exited():
 	get_parent().get_parent().add_child(click)
 	barmannode.texture = barmannode.serving
 	Playervariables.anti_pause = false
+
 func _on_Jogoclick_tree_exited():
 	$AnimationPlayer.play("Saida")
 	barmannode.texture = barmannode.normal
 	Playervariables.can_walk = true
+
 func _on_Inatividade_timeout():
-	$"Pedido do cliente".visible = false
 	$AnimationPlayer.play("Saida")
 
 # warning-ignore:unused_argument

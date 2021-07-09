@@ -16,10 +16,6 @@ script = ExtResource( 3 )
 
 [node name="Spawner" type="Node2D" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-autostart = true
-
 [node name="Alinhamento" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -46,9 +42,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DayTimer" type="Timer" parent="Alinhamento/Hora Display"]
-wait_time = 720.0
-
 [node name="Dinheiro Display" type="Label" parent="Alinhamento"]
 margin_top = 46.0
 margin_right = 131.0
@@ -58,10 +51,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AutoSave" type="Timer" parent="."]
-wait_time = 60.0
-autostart = true
-
 [node name="Dica" parent="." instance=ExtResource( 7 )]
 visible = false
 
@@ -70,7 +59,3 @@ visible = false
 [node name="Pause" parent="." instance=ExtResource( 1 )]
 visible = false
 script = ExtResource( 6 )
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="Alinhamento/Hora Display/DayTimer" to="Alinhamento" method="_on_DayTimer_timeout"]
-[connection signal="timeout" from="AutoSave" to="." method="_on_AutoSave_timeout"]
