@@ -25,7 +25,7 @@ func _on_TextureButton_pressed():
 	$AnimationPlayer/QntPrecionado.text = str(times_pressed)
 	# Aqui executa se conseguir os clicks necessarios
 	if times_pressed == clicks_required:
-		Playervariables.set_game_2(3)
+		Playervariables.game_2 = 3
 		Playervariables.set_yield()
 		queue_free()
 

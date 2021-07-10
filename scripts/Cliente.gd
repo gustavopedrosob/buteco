@@ -12,6 +12,7 @@ onready var sound_of_hitting = load('res://Songs/Acertou.wav')
 onready var sound_of_miss = load('res://Songs/Errou.wav')
 
 func _ready():
+	$Audio.volume_db = (Options.volume - 100) * 0.8
 	for x in range(1, 5):
 		drinks.append(load("res://sprites/Bebida %d.png" % x))
 	line.connect("tree_exited", self, '_on_Linha_tree_exited')

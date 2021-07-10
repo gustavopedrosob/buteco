@@ -8,7 +8,6 @@ func _ready():
 func _on_item_pressed(ID):
 	Options.dificulty = ID
 	text = Options.lang_content[Options.difficulties[ID]]
-	Options.create_save()
 
 func button_reload_language():
 	get_popup().set_item_text(0, Options.lang_content["easy"])

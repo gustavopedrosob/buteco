@@ -25,3 +25,4 @@ func _on_Opcoes_pressed():
 func _on_Voltar_pressed():
 	$Pause.visible = true
 	$Opcoes.visible = false
+	Options.create_save()

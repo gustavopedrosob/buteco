@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=24 format=2]
+[gd_resource type="Theme" load_steps=28 format=2]
 
 [ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://tres/button/normal.tres" type="StyleBox" id=2]
@@ -19,6 +19,10 @@
 [ext_resource path="res://tres/Scroll Bar/grabber_highlight.tres" type="StyleBox" id=17]
 [ext_resource path="res://tres/Scroll Bar/grabber.tres" type="StyleBox" id=18]
 [ext_resource path="res://tres/Scroll Bar/grabber_pressed.tres" type="StyleBox" id=19]
+[ext_resource path="res://tres/Slider/grabber_area.tres" type="StyleBox" id=20]
+[ext_resource path="res://tres/Slider/slider.tres" type="StyleBox" id=21]
+[ext_resource path="res://sprites/interface/Grabber Hightlight.png" type="Texture" id=22]
+[ext_resource path="res://sprites/interface/Grabber.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -87,6 +91,13 @@ CheckButton/styles/hover = null
 CheckButton/styles/hover_pressed = null
 CheckButton/styles/normal = null
 CheckButton/styles/pressed = null
+HSlider/icons/grabber = ExtResource( 23 )
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = ExtResource( 22 )
+HSlider/icons/tick = null
+HSlider/styles/grabber_area = ExtResource( 20 )
+HSlider/styles/grabber_area_highlight = ExtResource( 20 )
+HSlider/styles/slider = ExtResource( 21 )
 MenuButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 MenuButton/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
 MenuButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )

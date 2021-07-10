@@ -7,6 +7,7 @@ var auto_save = false
 var fullscreen = false
 var tips = true
 var lang_content = null
+var volume = 100
 
 func _ready():
 	Options.load_save()
@@ -28,13 +29,19 @@ func load_save():
 		dificulty = dados['dificulty']
 		auto_save = dados['auto-save']
 		fullscreen = dados['fullscreen']
+		volume = dados['volume']
 	else:
 		print(erro)
 
 func create_save():
 	var arquivo = File.new()
 	var erro = arquivo.open('res://options', File.WRITE)
-	var dados_to_save = {'language': language,'dificulty': dificulty,'auto-save': auto_save,'fullscreen':fullscreen}
+	var dados_to_save = {
+		'language': language,
+		'dificulty': dificulty,
+		'auto-save': auto_save,
+		'fullscreen':fullscreen,
+		'volume': volume}
 	if not erro:
 		arquivo.store_var(dados_to_save)
 	else:

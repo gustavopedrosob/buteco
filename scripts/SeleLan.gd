@@ -20,4 +20,3 @@ func set_language(lang: String):
 		Options.get_language()
 		emit_signal("reload_language")
 		text = Options.language
-		Options.create_save()
