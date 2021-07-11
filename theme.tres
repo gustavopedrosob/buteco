@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=28 format=2]
+[gd_resource type="Theme" load_steps=29 format=2]
 
 [ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://tres/button/normal.tres" type="StyleBox" id=2]
@@ -30,7 +30,12 @@
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxLine" id=4]
+color = Color( 0.137255, 0.12549, 0.101961, 1 )
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.698039, 0.639216, 0.52549, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -164,7 +169,7 @@ VScrollBar/icons/increment_highlight = null
 VScrollBar/styles/grabber = ExtResource( 18 )
 VScrollBar/styles/grabber_highlight = ExtResource( 17 )
 VScrollBar/styles/grabber_pressed = ExtResource( 19 )
-VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll = SubResource( 4 )
 VScrollBar/styles/scroll_focus = null
 WindowDialog/colors/title_color = Color( 1, 1, 1, 1 )
 WindowDialog/constants/close_h_ofs = 18
@@ -174,4 +179,4 @@ WindowDialog/constants/title_height = 20
 WindowDialog/fonts/title_font = null
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = SubResource( 4 )
+WindowDialog/styles/panel = SubResource( 5 )
