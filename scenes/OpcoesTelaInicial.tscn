@@ -11,7 +11,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TelaInicial" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 510.246, 300.016 )
 scale = Vector2( 0.834449, 0.834449 )
 texture = ExtResource( 2 )
@@ -19,9 +19,11 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Opcoes" parent="." instance=ExtResource( 1 )]
+[node name="Options" parent="." instance=ExtResource( 1 )]
 margin_left = 336.0
 margin_top = 200.0
 margin_right = 678.0
 margin_bottom = 414.0
 script = ExtResource( 3 )
+
+[editable path="Options"]

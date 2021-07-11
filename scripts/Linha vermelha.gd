@@ -17,27 +17,27 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	if $"Linha branca".rect_position.y <= 195 and state == 'rising':
-		$"Linha branca".rect_position.y += velocity
-		if $"Linha branca".rect_position.y >= 195:
+	if $WhiteLine.rect_position.y <= 195 and state == 'rising':
+		$WhiteLine.rect_position.y += velocity
+		if $WhiteLine.rect_position.y >= 195:
 			state = 'down'
-	elif $"Linha branca".rect_position.y >= 0 and state == 'down':
-		$"Linha branca".rect_position.y -= velocity
-		if $"Linha branca".rect_position.y <= 0:
+	elif $WhiteLine.rect_position.y >= 0 and state == 'down':
+		$WhiteLine.rect_position.y -= velocity
+		if $WhiteLine.rect_position.y <= 0:
 			state = 'rising'
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_select"):
-		if $"Linha branca".rect_position.y >= $"Linha verde".rect_position.y and $"Linha branca".rect_position.y <= $"Linha verde".rect_position.y + $"Linha verde".rect_size.y:
+		if $WhiteLine.rect_position.y >= $GreenLine.rect_position.y and $WhiteLine.rect_position.y <= $GreenLine.rect_position.y + $GreenLine.rect_size.y:
 			hit(true, 'hit')
 		else:
 			hit(false, 'missed')
 
 func set_random_green_line():
-	$"Linha verde".rect_position.y = Functions.get_random_int(5, 195)
+	$GreenLine.rect_position.y = Functions.get_random_int(5, 195)
 
 func reset_white_line():
-	$"Linha branca".rect_position.y = 0
+	$WhiteLine.rect_position.y = 0
 
 func reset_and_set():
 	reset_white_line()

@@ -29,7 +29,7 @@ tracks/0/keys = {
 "values": [ 0.0, -300.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pedido:visible")
+tracks/1/path = NodePath("Drink:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -41,7 +41,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Pedido do cliente:visible")
+tracks/2/path = NodePath("Balloon:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -69,7 +69,7 @@ tracks/0/keys = {
 "values": [ -300.0, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Pedido do cliente:visible")
+tracks/1/path = NodePath("Balloon:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -81,7 +81,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Pedido:visible")
+tracks/2/path = NodePath("Drink:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -93,7 +93,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Costumer" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -104,19 +104,19 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 194.802, -70.1285 )
 shape = SubResource( 1 )
 
-[node name="Pedido do cliente" type="Sprite" parent="."]
+[node name="Balloon" type="Sprite" parent="."]
 visible = false
 position = Vector2( -36.0228, 613.198 )
 scale = Vector2( 0.881075, 0.881075 )
 texture = ExtResource( 1 )
 
-[node name="Pedido" type="Sprite" parent="."]
+[node name="Drink" type="Sprite" parent="."]
 visible = false
 position = Vector2( -36.0228, 595.576 )
 scale = Vector2( 0.70486, 0.70486 )
 texture = ExtResource( 2 )
 
-[node name="Corpo" type="Sprite" parent="."]
+[node name="Body" type="Sprite" parent="."]
 position = Vector2( 0, 900 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
@@ -124,7 +124,7 @@ centered = false
 offset = Vector2( 0, -552 )
 script = ExtResource( 5 )
 
-[node name="roupa" type="Sprite" parent="."]
+[node name="Clothing" type="Sprite" parent="."]
 position = Vector2( 0, 900 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
@@ -132,7 +132,7 @@ centered = false
 offset = Vector2( 0, -395 )
 script = ExtResource( 6 )
 
-[node name="Cabelo" type="Sprite" parent="."]
+[node name="Hair" type="Sprite" parent="."]
 position = Vector2( 99.9935, 652.633 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
@@ -142,7 +142,7 @@ script = ExtResource( 4 )
 anims/Entry = SubResource( 2 )
 anims/Exit = SubResource( 3 )
 
-[node name="Inatividade" type="Timer" parent="."]
+[node name="Inactivity" type="Timer" parent="."]
 wait_time = 30.0
 one_shot = true
 autostart = true
@@ -152,4 +152,4 @@ autostart = true
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-[connection signal="timeout" from="Inatividade" to="." method="_on_Inatividade_timeout"]
+[connection signal="timeout" from="Inactivity" to="." method="_on_Inatividade_timeout"]

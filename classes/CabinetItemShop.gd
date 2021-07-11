@@ -9,5 +9,5 @@ func _init(id: int, name_: String = "default", price: int = 100).(id, "cabinet",
 	add_color_option("44372d", 5)
 
 func apply_texture():
-	get_node("/root/Node/Bar/Balcao").texture = load("res://sprites/cabinet/%s/%s.png" % [id, color_id])
+	get_node("/root/Game/Pub/Cabinet").texture = load("res://sprites/cabinet/%s/%s.png" % [id, color_id])
 	save_equip()

@@ -1,15 +1,15 @@
 extends Control
 
 func _ready():
-	$Options/Voltar.connect("pressed", self, "_on_options_back_pressed")
+	$Options/Back.connect("pressed", self, "_on_options_back_pressed")
 	exchange_language()
 
 func exchange_language():
-	$"Pause/Pause Title".text = Options.lang_content["game_paused"]
-	$"Pause/Opcoes".text = Options.lang_content["options"]
-	$"Pause/Salvar e sair".text = Options.lang_content["save_and_leave"]
-	$"Pause/Salvar".text = Options.lang_content["save"]
-	$"Pause/Voltar a tela inicial".text = Options.lang_content["return_to_home_screen"]
+	$Pause/Title.text = Options.lang_content["game_paused"]
+	$Pause/Options.text = Options.lang_content["options"]
+	$Pause/SaveAndQuit.text = Options.lang_content["save_and_leave"]
+	$Pause/Save.text = Options.lang_content["save"]
+	$Pause/ReturnToHomeScreen.text = Options.lang_content["return_to_home_screen"]
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel") and not Playervariables.anti_pause:

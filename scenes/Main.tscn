@@ -14,10 +14,10 @@ extents = Vector2( 200, 294.404 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 152.499 )
 
-[node name="Bar" type="Node2D"]
+[node name="Pub" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="wall" type="ColorRect" parent="."]
+[node name="Wall" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 2
@@ -27,7 +27,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Estante de Bebidas" type="Sprite" parent="."]
+[node name="Shelf" type="Sprite" parent="."]
 position = Vector2( 522.359, 99.3418 )
 scale = Vector2( 0.689537, 0.689537 )
 texture = ExtResource( 2 )
@@ -39,24 +39,24 @@ position = Vector2( 863.537, 130.316 )
 scale = Vector2( 0.420255, 0.420255 )
 shape = SubResource( 1 )
 
-[node name="barman" type="Sprite" parent="KinematicBody2D"]
+[node name="Barman" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 776, 8.5 )
 scale = Vector2( 0.428961, 0.428961 )
 texture = ExtResource( 5 )
 centered = false
 script = ExtResource( 7 )
 
-[node name="Balcao" type="Sprite" parent="."]
+[node name="Cabinet" type="Sprite" parent="."]
 position = Vector2( 513.85, 429.608 )
 scale = Vector2( 0.803328, 0.803328 )
 texture = ExtResource( 6 )
 
-[node name="bebedouro" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 115.029, 199.226 )
 scale = Vector2( 0.186587, 0.186587 )
 texture = ExtResource( 4 )
 
-[node name="Cadeiras" type="HBoxContainer" parent="."]
+[node name="Chairs" type="HBoxContainer" parent="."]
 margin_left = 1.0
 margin_top = 289.0
 margin_right = 1464.0
@@ -69,22 +69,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cadeira1" type="TextureRect" parent="Cadeiras"]
+[node name="cadeira1" type="TextureRect" parent="Chairs"]
 margin_left = 656.0
 margin_right = 656.0
 margin_bottom = 215.0
 
-[node name="cadeira2" type="TextureRect" parent="Cadeiras"]
+[node name="cadeira2" type="TextureRect" parent="Chairs"]
 margin_left = 706.0
 margin_right = 706.0
 margin_bottom = 215.0
 
-[node name="cadeira3" type="TextureRect" parent="Cadeiras"]
+[node name="cadeira3" type="TextureRect" parent="Chairs"]
 margin_left = 756.0
 margin_right = 756.0
 margin_bottom = 215.0
 
-[node name="cadeira4" type="TextureRect" parent="Cadeiras"]
+[node name="cadeira4" type="TextureRect" parent="Chairs"]
 margin_left = 806.0
 margin_right = 806.0
 margin_bottom = 215.0

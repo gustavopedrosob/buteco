@@ -7,7 +7,7 @@ var drinks = []
 
 onready var line = preload("res://scenes/Linhas.tscn").instance()
 onready var click = preload("res://scenes/Jogodosclick.tscn").instance()
-onready var barmannode = get_node('/root/Node/Bar/KinematicBody2D/barman')
+onready var barmannode = get_node('/root/Game/Pub/KinematicBody2D/Barman')
 onready var sound_of_hitting = load('res://Songs/Acertou.wav')
 onready var sound_of_miss = load('res://Songs/Errou.wav')
 
@@ -25,7 +25,7 @@ func _ready():
 	var rand_beb = Functions.get_random_int(0, 3)
 	Playervariables.drink_value = possible_drink_value[rand_beb]
 	var rand_pos = Functions.get_random_int(100, 800)
-	$Pedido.set_texture(drinks[rand_beb])
+	$Drink.set_texture(drinks[rand_beb])
 	position.x = rand_pos
 
 func _unhandled_input(event):
@@ -37,7 +37,7 @@ func _unhandled_input(event):
 		Playervariables.can_walk = false
 		barmannode.texture = barmannode.mixology
 		Playervariables.busy = true
-		$Inatividade.stop()
+		$Inactivity.stop()
 		Playervariables.anti_pause = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):

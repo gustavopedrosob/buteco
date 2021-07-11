@@ -8,7 +8,7 @@
 [ext_resource path="res://scripts/Dificuldade.gd" type="Script" id=6]
 [ext_resource path="res://scripts/Opcoes.gd" type="Script" id=12]
 
-[node name="Opcoes" type="VBoxContainer"]
+[node name="Options" type="VBoxContainer"]
 margin_left = 341.0
 margin_top = 193.0
 margin_right = 683.0
@@ -19,7 +19,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Opcoes Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 margin_right = 342.0
 margin_bottom = 19.0
 custom_constants/line_spacing = 0
@@ -37,13 +37,13 @@ custom_constants/vseparation = 7
 custom_constants/hseparation = 20
 columns = 2
 
-[node name="Dif" type="Label" parent="GridContainer"]
+[node name="DifficultyLabel" type="Label" parent="GridContainer"]
 margin_top = 4.0
 margin_right = 229.0
 margin_bottom = 23.0
 text = "Selecione uma dificuldade:"
 
-[node name="SeleDif" type="MenuButton" parent="GridContainer"]
+[node name="Difficulty" type="MenuButton" parent="GridContainer"]
 margin_left = 249.0
 margin_right = 342.0
 margin_bottom = 28.0
@@ -56,13 +56,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Language Display" type="Label" parent="GridContainer"]
+[node name="LanguageLabel" type="Label" parent="GridContainer"]
 margin_top = 40.0
 margin_right = 229.0
 margin_bottom = 59.0
 text = "Selecione uma linguagem:"
 
-[node name="SeleLan" type="MenuButton" parent="GridContainer"]
+[node name="Language" type="MenuButton" parent="GridContainer"]
 margin_left = 249.0
 margin_top = 35.0
 margin_right = 342.0
@@ -73,7 +73,7 @@ flat = false
 items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
 script = ExtResource( 3 )
 
-[node name="Fullscreen Display" type="Label" parent="GridContainer"]
+[node name="FullscreenLabel" type="Label" parent="GridContainer"]
 margin_top = 76.0
 margin_right = 229.0
 margin_bottom = 95.0
@@ -82,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckFullscreen" type="CheckBox" parent="GridContainer"]
+[node name="Fullscreen" type="CheckBox" parent="GridContainer"]
 margin_left = 249.0
 margin_top = 71.0
 margin_right = 279.0
@@ -96,7 +96,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Autosave Display" type="Label" parent="GridContainer"]
+[node name="AutosaveLabel" type="Label" parent="GridContainer"]
 margin_top = 113.0
 margin_right = 229.0
 margin_bottom = 132.0
@@ -118,13 +118,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Volume" type="Label" parent="GridContainer"]
+[node name="VolumeLabel" type="Label" parent="GridContainer"]
 margin_top = 145.0
 margin_right = 229.0
 margin_bottom = 164.0
 text = "Volume"
 
-[node name="HSlider" type="HSlider" parent="GridContainer"]
+[node name="Volume" type="HSlider" parent="GridContainer"]
 margin_left = 249.0
 margin_top = 145.0
 margin_right = 342.0
@@ -134,7 +134,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Voltar" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
 margin_left = 125.0
 margin_top = 191.0
 margin_right = 216.0
@@ -145,6 +145,6 @@ size_flags_horizontal = 4
 custom_constants/hseparation = 0
 text = "Voltar"
 
-[connection signal="pressed" from="GridContainer/CheckFullscreen" to="GridContainer/CheckFullscreen" method="_on_CheckFullscreen_pressed"]
+[connection signal="pressed" from="GridContainer/Fullscreen" to="GridContainer/Fullscreen" method="_on_CheckFullscreen_pressed"]
 [connection signal="pressed" from="GridContainer/Autosave" to="GridContainer/Autosave" method="_on_Autosave_pressed"]
-[connection signal="value_changed" from="GridContainer/HSlider" to="GridContainer/HSlider" method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="GridContainer/Volume" to="GridContainer/Volume" method="_on_HSlider_value_changed"]

@@ -11,7 +11,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$"Alinhamento/Dinheiro Display".text = Options.lang_content["money"] % Playervariables.money
+	$VBoxContainer/Money.text = Options.lang_content["money"] % Playervariables.money
 
 func on_cena_tree_exited():
 	spawn_client()

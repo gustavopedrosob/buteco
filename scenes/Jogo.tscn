@@ -8,14 +8,14 @@
 [ext_resource path="res://scenes/dica.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=10]
 
-[node name="Node" type="Node"]
+[node name="Game" type="Node"]
 script = ExtResource( 3 )
 
-[node name="Bar" parent="." instance=ExtResource( 2 )]
+[node name="Pub" parent="." instance=ExtResource( 2 )]
 
 [node name="Spawner" type="Node2D" parent="."]
 
-[node name="Alinhamento" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 theme = ExtResource( 4 )
@@ -24,7 +24,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dia Display" type="Label" parent="Alinhamento"]
+[node name="Day" type="Label" parent="VBoxContainer"]
 margin_right = 131.0
 margin_bottom = 19.0
 text = "Dia: 1"
@@ -32,7 +32,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hora Display" type="Label" parent="Alinhamento"]
+[node name="Hour" type="Label" parent="VBoxContainer"]
 margin_top = 23.0
 margin_right = 131.0
 margin_bottom = 42.0
@@ -41,7 +41,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dinheiro Display" type="Label" parent="Alinhamento"]
+[node name="Money" type="Label" parent="VBoxContainer"]
 margin_top = 46.0
 margin_right = 131.0
 margin_bottom = 65.0
@@ -50,11 +50,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dica" parent="." instance=ExtResource( 7 )]
+[node name="Tip" parent="." instance=ExtResource( 7 )]
 visible = false
 
-[node name="shop" parent="." instance=ExtResource( 10 )]
-visible = false
+[node name="Shop" parent="." instance=ExtResource( 10 )]
 
 [node name="Pause" parent="." instance=ExtResource( 1 )]
 visible = false

@@ -40,7 +40,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="mensagem de erro" type="Panel" parent="."]
+[node name="InsufficientMoney" type="Panel" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -49,7 +49,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="mensagem de erro"]
+[node name="Label" type="Label" parent="InsufficientMoney"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -68,8 +68,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="mensagem de erro"]
+[node name="Timer" type="Timer" parent="InsufficientMoney"]
 wait_time = 2.0
 autostart = true
 
-[connection signal="timeout" from="mensagem de erro/Timer" to="." method="_on_message_error_timeout"]
+[connection signal="timeout" from="InsufficientMoney/Timer" to="." method="_on_message_error_timeout"]

@@ -7,22 +7,22 @@ const possible_clicks_required = [25, 35, 50]
 
 func _ready():
 	clicks_required = possible_clicks_required[Options.dificulty]
-	$Alinhamento/Dica.text = Options.lang_content["click_on_beer"] % clicks_required
+	$VBoxContainer/Tip.text = Options.lang_content["click_on_beer"] % clicks_required
 
 # warning-ignore:unused_argument
 func _process(delta):
-	$Alinhamento/Time.text = Options.lang_content["time_left"] % $Timer.time_left
+	$VBoxContainer/Time.text = Options.lang_content["time_left"] % $Timer.time_left
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()
 	var multiplier = 100.0/float(clicks_required)
 	if times_pressed < clicks_required:
 		times_pressed += 1
-		$AnimationPlayer/QntPrecionado.visible = true
-		$Alinhamento/TextureButton/TextureProgress.value = times_pressed * multiplier
-		$AnimationPlayer/QntPrecionado.rect_position = get_global_mouse_position() - Vector2(25,25)
+		$AnimationPlayer/TimesPressed.visible = true
+		$VBoxContainer/TextureButton/TextureProgress.value = times_pressed * multiplier
+		$AnimationPlayer/TimesPressed.rect_position = get_global_mouse_position() - Vector2(25,25)
 		$AnimationPlayer.play("Fade")
-	$AnimationPlayer/QntPrecionado.text = str(times_pressed)
+	$AnimationPlayer/TimesPressed.text = str(times_pressed)
 	# Aqui executa se conseguir os clicks necessarios
 	if times_pressed == clicks_required:
 		Playervariables.game_2 = 3

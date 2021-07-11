@@ -6,7 +6,7 @@
 [sub_resource type="Animation" id=1]
 resource_name = "Fadeout"
 tracks/0/type = "bezier"
-tracks/0/path = NodePath("AnimationPlayer/Dica:custom_colors/font_color:r")
+tracks/0/path = NodePath("AnimationPlayer/Label:custom_colors/font_color:r")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 )
 }
 tracks/1/type = "bezier"
-tracks/1/path = NodePath("AnimationPlayer/Dica:custom_colors/font_color:g")
+tracks/1/path = NodePath("AnimationPlayer/Label:custom_colors/font_color:g")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -26,7 +26,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 )
 }
 tracks/2/type = "bezier"
-tracks/2/path = NodePath("AnimationPlayer/Dica:custom_colors/font_color:b")
+tracks/2/path = NodePath("AnimationPlayer/Label:custom_colors/font_color:b")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -36,7 +36,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 1 )
 }
 tracks/3/type = "bezier"
-tracks/3/path = NodePath("AnimationPlayer/Dica:custom_colors/font_color:a")
+tracks/3/path = NodePath("AnimationPlayer/Label:custom_colors/font_color:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -49,7 +49,7 @@ tracks/3/keys = {
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[node name="Control" type="Control"]
+[node name="Tip" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -64,7 +64,7 @@ margin_bottom = 602.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer"]
 anims/Fadeout = SubResource( 1 )
 
-[node name="Dica" type="Label" parent="CenterContainer/AnimationPlayer"]
+[node name="Label" type="Label" parent="CenterContainer/AnimationPlayer"]
 margin_left = 512.0
 margin_top = 291.0
 margin_right = 512.0

@@ -26,12 +26,6 @@ margin_top = -110.0
 margin_right = 171.0
 margin_bottom = 110.0
 
-[node name="SeleDif" parent="Options/GridContainer" index="1"]
-items = [ "Facil", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Dificil", null, 0, false, false, 2, 0, null, "", false ]
-
-[node name="SeleLan" parent="Options/GridContainer" index="3"]
-items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
-
 [node name="Pause" type="VBoxContainer" parent="."]
 margin_left = 412.0
 margin_top = 210.0
@@ -43,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pause Title" type="Label" parent="Pause"]
+[node name="Title" type="Label" parent="Pause"]
 margin_right = 200.0
 margin_bottom = 19.0
 text = "Jogo pausado"
@@ -52,7 +46,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Opcoes" type="Button" parent="Pause"]
+[node name="Options" type="Button" parent="Pause"]
 margin_top = 29.0
 margin_right = 200.0
 margin_bottom = 59.0
@@ -66,7 +60,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Salvar" type="Button" parent="Pause"]
+[node name="Save" type="Button" parent="Pause"]
 margin_top = 69.0
 margin_right = 200.0
 margin_bottom = 99.0
@@ -79,7 +73,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Salvar e sair" type="Button" parent="Pause"]
+[node name="SaveAndQuit" type="Button" parent="Pause"]
 margin_top = 109.0
 margin_right = 200.0
 margin_bottom = 139.0
@@ -93,7 +87,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Voltar a tela inicial" type="Button" parent="Pause"]
+[node name="ReturnToHomeScreen" type="Button" parent="Pause"]
 margin_top = 149.0
 margin_right = 200.0
 margin_bottom = 179.0
@@ -107,9 +101,9 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[connection signal="pressed" from="Pause/Opcoes" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Pause/Salvar" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="Pause/Salvar e sair" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Pause/Voltar a tela inicial" to="." method="_on_back_to_homescreen_pressed"]
+[connection signal="pressed" from="Pause/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Pause/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Pause/SaveAndQuit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Pause/ReturnToHomeScreen" to="." method="_on_back_to_homescreen_pressed"]
 
 [editable path="Options"]

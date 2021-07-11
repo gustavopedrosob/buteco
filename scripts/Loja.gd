@@ -60,4 +60,4 @@ func add_group(group: GroupShop):
 	$TabContainer.add_child(group)
 
 func _on_message_error_timeout():
-	$"mensagem de erro".visible = false
+	$InsufficientMoney.visible = false

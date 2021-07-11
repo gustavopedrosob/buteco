@@ -24,7 +24,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 512.0 ]
 }
 
-[node name="coqueteleira" type="Sprite" parent="."]
+[node name="CocktailShaker" type="Sprite" parent="."]
 position = Vector2( 511.81, 298.644 )
 scale = Vector2( 0.674277, 0.674277 )
 texture = ExtResource( 2 )
@@ -36,8 +36,11 @@ margin_right = 537.0
 margin_bottom = 400.0
 rect_min_size = Vector2( 50, 200 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Linha vermelha" type="Panel" parent="Control"]
+[node name="Background" type="Panel" parent="Control"]
 margin_right = 50.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 50, 200 )
@@ -47,7 +50,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Linha verde" type="Panel" parent="Control"]
+[node name="GreenLine" type="Panel" parent="Control"]
 margin_top = 95.0
 margin_right = 50.0
 margin_bottom = 105.0
@@ -57,7 +60,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Linha branca" type="Panel" parent="Control"]
+[node name="WhiteLine" type="Panel" parent="Control"]
 margin_top = 97.0
 margin_right = 50.0
 margin_bottom = 99.5

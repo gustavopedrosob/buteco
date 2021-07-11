@@ -8,8 +8,8 @@ func _ready():
 	while true:
 		Playervariables.date["hour"] += 1
 		var time = Playervariables.date["hour"]
-		$"Hora Display".text = Options.lang_content["hour"] % [int(time / 60) + 12, time % 60]
+		$Hour.text = Options.lang_content["hour"] % [int(time / 60) + 12, time % 60]
 		if Playervariables.date["hour"] == 720:
 			Playervariables.date["day"] += 1
-			$"Dia Display".text = Options.lang_content["day"] % Playervariables.date['day']
+			$Day.text = Options.lang_content["day"] % Playervariables.date['day']
 		yield(get_tree().create_timer(1.0), "timeout")

@@ -4,7 +4,7 @@
 [ext_resource path="res://theme.tres" type="Theme" id=2]
 [ext_resource path="res://sprites/TelaInicial.png" type="Texture" id=3]
 
-[node name="Creditos" type="Control"]
+[node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
@@ -13,7 +13,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TelaInicial" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 510.246, 300.016 )
 scale = Vector2( 0.834449, 0.834449 )
 texture = ExtResource( 3 )
@@ -21,7 +21,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Creditos Texto" type="RichTextLabel" parent="."]
+[node name="Text" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

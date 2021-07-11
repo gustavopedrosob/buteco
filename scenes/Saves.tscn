@@ -14,7 +14,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="TelaInicial" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 510.246, 300.016 )
 scale = Vector2( 0.834449, 0.834449 )
 texture = ExtResource( 4 )
@@ -48,7 +48,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Voltar" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Back" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 20.0
 margin_right = 150.0
 margin_bottom = 45.0
@@ -63,4 +63,4 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Back" to="." method="_on_Voltar_pressed"]

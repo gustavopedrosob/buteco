@@ -5,10 +5,10 @@
 [ext_resource path="res://sprites/liquido cerveja.png" type="Texture" id=3]
 [ext_resource path="res://theme.tres" type="Theme" id=4]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/QntPrecionado:custom_colors/font_color")
+tracks/0/path = NodePath("AnimationPlayer/TimesPressed:custom_colors/font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -28,7 +28,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Alinhamento" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
 custom_constants/separation = 20
@@ -37,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time" type="Label" parent="Alinhamento"]
+[node name="Time" type="Label" parent="VBoxContainer"]
 margin_top = 110.0
 margin_right = 1024.0
 margin_bottom = 129.0
@@ -47,7 +47,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dica" type="Label" parent="Alinhamento"]
+[node name="Tip" type="Label" parent="VBoxContainer"]
 margin_top = 149.0
 margin_right = 1024.0
 margin_bottom = 168.0
@@ -57,7 +57,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="Alinhamento"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
 margin_left = 374.0
 margin_top = 188.0
 margin_right = 650.0
@@ -69,7 +69,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress" type="TextureProgress" parent="Alinhamento/TextureButton"]
+[node name="TextureProgress" type="TextureProgress" parent="VBoxContainer/TextureButton"]
 margin_left = 14.0
 margin_top = 15.0
 margin_right = 186.0
@@ -85,9 +85,9 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fade = SubResource( 3 )
+anims/Fade = SubResource( 1 )
 
-[node name="QntPrecionado" type="Label" parent="AnimationPlayer"]
+[node name="TimesPressed" type="Label" parent="AnimationPlayer"]
 visible = false
 margin_left = 168.0
 margin_top = 88.0
@@ -104,5 +104,5 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
-[connection signal="pressed" from="Alinhamento/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
