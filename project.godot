@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Buteco"
-run/main_scene="res://scenes/TelaInicial.tscn"
+run/main_scene="res://scenes/HomeScreen.tscn"
 config/icon="res://sprites/Icone.png"
 
 [autoload]

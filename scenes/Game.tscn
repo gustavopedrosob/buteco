@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Pause.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Pub.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/Button.gd" type="Script" id=3]
 [ext_resource path="res://theme.tres" type="Theme" id=4]
 [ext_resource path="res://scripts/Horario Display.gd" type="Script" id=5]
-[ext_resource path="res://scenes/dica.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Tip.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=10]
 
 [node name="Game" type="Node"]

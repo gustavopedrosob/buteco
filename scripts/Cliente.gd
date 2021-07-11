@@ -5,8 +5,8 @@ var can_interact_2 = false
 var already_interact = false
 var drinks = []
 
-onready var line = preload("res://scenes/Linhas.tscn").instance()
-onready var click = preload("res://scenes/Jogodosclick.tscn").instance()
+onready var line = preload("res://scenes/LineGame.tscn").instance()
+onready var click = preload("res://scenes/ClickGame.tscn").instance()
 onready var barmannode = get_node('/root/Game/Pub/KinematicBody2D/Barman')
 onready var sound_of_hitting = load('res://Songs/Acertou.wav')
 onready var sound_of_miss = load('res://Songs/Errou.wav')

@@ -50,7 +50,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AlinhamentoV" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 122.0
 margin_right = 428.0
 margin_bottom = 302.0
@@ -60,7 +60,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Carregar Jogo" type="Button" parent="CenterContainer/VBoxContainer/AlinhamentoV"]
+[node name="Load" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 margin_left = 114.0
 margin_right = 314.0
 margin_bottom = 30.0
@@ -73,7 +73,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Creditos" type="Button" parent="CenterContainer/VBoxContainer/AlinhamentoV"]
+[node name="Credits" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 margin_left = 114.0
 margin_top = 50.0
 margin_right = 314.0
@@ -89,7 +89,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Opcoes" type="Button" parent="CenterContainer/VBoxContainer/AlinhamentoV"]
+[node name="Options" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 margin_left = 114.0
 margin_top = 100.0
 margin_right = 314.0
@@ -105,7 +105,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Sair do jogo" type="Button" parent="CenterContainer/VBoxContainer/AlinhamentoV"]
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer"]
 margin_left = 114.0
 margin_top = 150.0
 margin_right = 314.0
@@ -130,7 +130,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/AlinhamentoV/Carregar Jogo" to="CenterContainer/VBoxContainer" method="_on_Carregar_Jogo_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/AlinhamentoV/Creditos" to="CenterContainer/VBoxContainer" method="_on_Creditos_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/AlinhamentoV/Opcoes" to="CenterContainer/VBoxContainer" method="_on_Opcoes_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/AlinhamentoV/Sair do jogo" to="CenterContainer/VBoxContainer" method="_on_Sair_do_jogo_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Load" to="CenterContainer/VBoxContainer" method="_on_Carregar_Jogo_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Credits" to="CenterContainer/VBoxContainer" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Options" to="CenterContainer/VBoxContainer" method="_on_Opcoes_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Quit" to="CenterContainer/VBoxContainer" method="_on_Sair_do_jogo_pressed"]

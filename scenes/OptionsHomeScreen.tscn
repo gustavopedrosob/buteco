@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/Opcoes.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/TelaInicial.png" type="Texture" id=2]
 [ext_resource path="res://scripts/OpcoesTelaInicial.gd" type="Script" id=3]
 
@@ -25,5 +25,11 @@ margin_top = 200.0
 margin_right = 678.0
 margin_bottom = 414.0
 script = ExtResource( 3 )
+
+[node name="Difficulty" parent="Options/GridContainer" index="1"]
+items = [ "Facil", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Dificil", null, 0, false, false, 2, 0, null, "", false ]
+
+[node name="Language" parent="Options/GridContainer" index="3"]
+items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
 
 [editable path="Options"]

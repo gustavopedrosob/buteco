@@ -7,4 +7,4 @@ func _ready():
 
 func _on_Voltar_pressed():
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/TelaInicial.tscn")
+	get_tree().change_scene("res://scenes/HomeScreen.tscn")

@@ -6,4 +6,4 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		# warning-ignore:return_value_discarded
-		get_tree().change_scene("res://scenes/TelaInicial.tscn")
+		get_tree().change_scene("res://scenes/HomeScreen.tscn")

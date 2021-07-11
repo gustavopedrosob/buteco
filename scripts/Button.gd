@@ -1,6 +1,6 @@
 extends Node
 
-onready var customer = load("res://scenes/Cliente.tscn")
+onready var customer = load("res://scenes/Costumer.tscn")
 
 func _ready():
 	if Directory.new().file_exists(Playervariables.slot):

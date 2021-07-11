@@ -36,7 +36,7 @@ func _init(slot: int):
 func on_save_pressed(slot):
 	Playervariables.slot = "res://slot%d" % slot
 	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/Jogo.tscn")
+	get_tree().change_scene("res://scenes/Game.tscn")
 
 func on_delete_pressed(slot):
 	# warning-ignore:return_value_discarded
