@@ -1,38 +1,38 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
-[ext_resource path="res://scripts/Sair do jogo.gd" type="Script" id=2]
-[ext_resource path="res://scenes/Opcoes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Opcoes.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/Pause.gd" type="Script" id=4]
-[ext_resource path="res://scripts/Salvar.gd" type="Script" id=7]
-[ext_resource path="res://scripts/Voltar a tela inicial.gd" type="Script" id=9]
 
 [node name="Pause" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_edit_vertical_guides_": [ 511.772 ]
 }
 
-[node name="Pause" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Options" parent="." instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.0
+margin_top = -110.0
+margin_right = 171.0
+margin_bottom = 110.0
 
-[node name="CenterContainer" type="CenterContainer" parent="Pause"]
-margin_right = 1024.0
-margin_bottom = 600.0
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SeleDif" parent="Options/GridContainer" index="1"]
+items = [ "Facil", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Dificil", null, 0, false, false, 2, 0, null, "", false ]
 
-[node name="Pause" type="VBoxContainer" parent="Pause/CenterContainer"]
+[node name="SeleLan" parent="Options/GridContainer" index="3"]
+items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
+
+[node name="Pause" type="VBoxContainer" parent="."]
 margin_left = 412.0
 margin_top = 210.0
 margin_right = 612.0
@@ -43,7 +43,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pause Title" type="Label" parent="Pause/CenterContainer/Pause"]
+[node name="Pause Title" type="Label" parent="Pause"]
 margin_right = 200.0
 margin_bottom = 19.0
 text = "Jogo pausado"
@@ -52,7 +52,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Opcoes" type="Button" parent="Pause/CenterContainer/Pause"]
+[node name="Opcoes" type="Button" parent="Pause"]
 margin_top = 29.0
 margin_right = 200.0
 margin_bottom = 59.0
@@ -66,7 +66,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Salvar" type="Button" parent="Pause/CenterContainer/Pause"]
+[node name="Salvar" type="Button" parent="Pause"]
 margin_top = 69.0
 margin_right = 200.0
 margin_bottom = 99.0
@@ -75,12 +75,11 @@ focus_mode = 0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Salvar"
-script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Salvar e sair" type="Button" parent="Pause/CenterContainer/Pause"]
+[node name="Salvar e sair" type="Button" parent="Pause"]
 margin_top = 109.0
 margin_right = 200.0
 margin_bottom = 139.0
@@ -89,13 +88,12 @@ focus_mode = 0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Salvar e sair"
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
-[node name="Voltar a tela inicial" type="Button" parent="Pause/CenterContainer/Pause"]
+[node name="Voltar a tela inicial" type="Button" parent="Pause"]
 margin_top = 149.0
 margin_right = 200.0
 margin_bottom = 179.0
@@ -104,15 +102,14 @@ focus_mode = 0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Voltar a tela inicial"
-script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
-[node name="Opcoes" parent="." instance=ExtResource( 3 )]
-visible = false
+[connection signal="pressed" from="Pause/Opcoes" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Pause/Salvar" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Pause/Salvar e sair" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Pause/Voltar a tela inicial" to="." method="_on_back_to_homescreen_pressed"]
 
-[connection signal="pressed" from="Pause/CenterContainer/Pause/Salvar" to="Pause/CenterContainer/Pause/Salvar" method="_on_Salvar_pressed"]
-[connection signal="pressed" from="Pause/CenterContainer/Pause/Salvar e sair" to="Pause/CenterContainer/Pause/Salvar e sair" method="_on_Sair_do_jogo_pressed"]
-[connection signal="pressed" from="Pause/CenterContainer/Pause/Voltar a tela inicial" to="Pause/CenterContainer/Pause/Voltar a tela inicial" method="_on_Voltar_a_tela_inicial_pressed"]
+[editable path="Options"]

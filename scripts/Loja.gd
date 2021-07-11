@@ -51,17 +51,9 @@ func load_save():
 func _unhandled_key_input(event):
 	if event.scancode == KEY_S and event.pressed:
 		if visible:
-			unpopup()
+			visible = false
 		else:
 			popup()
-
-func unpopup():
-	visible = false
-	get_tree().paused = false
-
-func popup(bounds = Rect2(0, 0, 0, 0)):
-	get_tree().paused = true
-	.popup(bounds)
 
 func add_group(group: GroupShop):
 	groups[group.type] = group
