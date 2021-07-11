@@ -11,6 +11,7 @@ func _init(slot: int):
 	hboxcontainer.name = "HBoxContainer"
 	var save_button = Button.new()
 	save_button.name = "SaveButton"
+	save_button.rect_min_size = Vector2(150, 22.5)
 	var delete_button = Button.new()
 	delete_button.rect_min_size = Vector2(20, 20)
 	delete_button.set_focus_mode(Control.FOCUS_NONE)
