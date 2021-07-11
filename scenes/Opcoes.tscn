@@ -41,7 +41,6 @@ script = ExtResource( 12 )
 [node name="Opcoes Title" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_right = 342.0
 margin_bottom = 19.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Opcões"
 align = 1
 __meta__ = {
@@ -60,7 +59,6 @@ columns = 2
 margin_top = 4.0
 margin_right = 229.0
 margin_bottom = 23.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selecione uma dificuldade:"
 
 [node name="SeleDif" type="MenuButton" parent="CenterContainer/VBoxContainer/GridContainer"]
@@ -80,7 +78,6 @@ __meta__ = {
 margin_top = 40.0
 margin_right = 229.0
 margin_bottom = 59.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selecione uma linguagem:"
 
 [node name="SeleLan" type="MenuButton" parent="CenterContainer/VBoxContainer/GridContainer"]
@@ -98,7 +95,6 @@ script = ExtResource( 3 )
 margin_top = 76.0
 margin_right = 229.0
 margin_bottom = 95.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Tela cheia"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -122,7 +118,6 @@ __meta__ = {
 margin_top = 113.0
 margin_right = 229.0
 margin_bottom = 132.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Autosave"
 __meta__ = {
 "_edit_use_anchors_": false
