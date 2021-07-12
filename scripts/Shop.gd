@@ -58,6 +58,3 @@ func _unhandled_key_input(event):
 func add_group(group: GroupShop):
 	groups[group.type] = group
 	$TabContainer.add_child(group)
-
-func _on_message_error_timeout():
-	$InsufficientMoney.visible = false

@@ -100,8 +100,13 @@ func on_button_pressed():
 		error_message()
 
 func error_message():
-	get_node("/root/Node/shop/mensagem de erro/Timer").start()
-	get_node("/root/Node/shop/mensagem de erro").visible = true
+	error_message_visible(true)
+	yield(get_tree().create_timer(2.0), "timeout")
+	error_message_visible(false)
+
+func error_message_visible(visible_: bool):
+	get_node("/root/Game/Shop/InsufficientMoney").visible = visible_
+	get_node("/root/Game/Shop/Label").visible = visible_
 
 func equip(save = true):
 	apply_texture()

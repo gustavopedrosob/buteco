@@ -1,15 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/Shop.gd" type="Script" id=5]
 [ext_resource path="res://theme.tres" type="Theme" id=7]
-[ext_resource path="res://sprites/fundo erro dinheiro insuficiente.png" type="Texture" id=24]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 24 )
-region_rect = Rect2( 0, 0, 369, 303 )
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 0.784314, 0, 0, 0, 0.392157 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = SubResource( 2 )
 
 [node name="shop" type="WindowDialog"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -44,12 +49,18 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+margin_left = 3.0
+margin_top = 506.0
+margin_right = -102.0
+margin_bottom = 597.0
+rect_rotation = -90.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="InsufficientMoney"]
+[node name="Label" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -67,9 +78,3 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Timer" type="Timer" parent="InsufficientMoney"]
-wait_time = 2.0
-autostart = true
-
-[connection signal="timeout" from="InsufficientMoney/Timer" to="." method="_on_message_error_timeout"]
