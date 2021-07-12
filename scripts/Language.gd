@@ -6,11 +6,7 @@ func _ready():
 	text = Options.language
 
 func _on_item_pressed(ID):
-	match ID:
-		0:
-			set_language('pt-br')
-		1:
-			set_language('en-us')
+	set_language(Options.languages[ID])
 
 func set_language(lang: String):
 	if lang != Options.language:

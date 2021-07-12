@@ -2,8 +2,8 @@ extends Node
 
 signal language_change
 
-#en-us,pt-br
 var language = 'pt-br' setget set_language, get_language
+const languages = ["pt-br", "en-us"]
 var dificulty = 1
 const difficulties = ["easy", "normal", "hard"]
 var auto_save = false
