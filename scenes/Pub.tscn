@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Barman.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Estante de Bebidas.png" type="Texture" id=2]
+[ext_resource path="res://sprites/pub/Shelf.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Chairs.gd" type="Script" id=3]
-[ext_resource path="res://sprites/bebedouro.png" type="Texture" id=4]
-[ext_resource path="res://sprites/barman/barman normal.png" type="Texture" id=5]
-[ext_resource path="res://sprites/Balção reduzido.png" type="Texture" id=6]
+[ext_resource path="res://sprites/pub/Faucet.png" type="Texture" id=4]
+[ext_resource path="res://sprites/barman/Normal.png" type="Texture" id=5]
+[ext_resource path="res://sprites/cabinet/1/5.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Barman Walk.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]

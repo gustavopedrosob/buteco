@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Click Game.gd" type="Script" id=1]
-[ext_resource path="res://sprites/cerveja.png" type="Texture" id=2]
-[ext_resource path="res://sprites/liquido cerveja.png" type="Texture" id=3]
+[ext_resource path="res://sprites/minigames/Mug.png" type="Texture" id=2]
+[ext_resource path="res://sprites/minigames/Beer.png" type="Texture" id=3]
 [ext_resource path="res://theme.tres" type="Theme" id=4]
 
 [sub_resource type="Animation" id=1]

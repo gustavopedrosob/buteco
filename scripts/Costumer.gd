@@ -14,7 +14,7 @@ onready var sound_of_miss = load('res://Songs/Errou.wav')
 func _ready():
 	$Audio.volume_db = (Options.volume - 100) * 0.8
 	for x in range(1, 5):
-		drinks.append(load("res://sprites/Bebida %d.png" % x))
+		drinks.append(load("res://sprites/drinks/%d.png" % x))
 	line.connect("tree_exited", self, '_on_Linha_tree_exited')
 	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
 	line.get_child(1).connect('hit', self, 'on_hit')
