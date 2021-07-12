@@ -7,11 +7,15 @@ const possible_clicks_required = [25, 35, 50]
 
 func _ready():
 	clicks_required = possible_clicks_required[Options.dificulty]
-	$VBoxContainer/Tip.text = Options.lang_content["click_on_beer"] % clicks_required
+	Options.connect("language_change", self, "update_language")
+	update_language()
 
 # warning-ignore:unused_argument
 func _process(delta):
 	$VBoxContainer/Time.text = Options.lang_content["time_left"] % $Timer.time_left
+
+func update_language():
+	$VBoxContainer/Tip.text = Options.lang_content["click_on_beer"] % clicks_required
 
 func _on_TextureButton_pressed():
 	$AnimationPlayer.stop()

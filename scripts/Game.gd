@@ -8,6 +8,7 @@ func _ready():
 		Playervariables.money = save['dinheiro']
 	spawn_client()
 	auto_save()
+	Options.connect("language_change", self, "update_language")
 
 func on_cena_tree_exited():
 	spawn_client()
@@ -24,3 +25,7 @@ func spawn_client():
 	var spawn = customer.instance()
 	spawn.connect("tree_exited", self, "on_cena_tree_exited")
 	$Spawner.add_child(spawn)
+
+func update_language():
+	$VBoxContainer/Money.text = Options.lang_content["money"] % Playervariables.money
+

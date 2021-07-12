@@ -1,4 +1,4 @@
-extends Control
+extends "res://scripts/Options.gd"
 
 func _ready():
 	# warning-ignore:return_value_discarded

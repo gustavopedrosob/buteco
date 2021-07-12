@@ -26,10 +26,4 @@ margin_right = 678.0
 margin_bottom = 414.0
 script = ExtResource( 3 )
 
-[node name="Difficulty" parent="Options/GridContainer" index="1"]
-items = [ "Facil", null, 0, false, false, 0, 0, null, "", false, "Normal", null, 0, false, false, 1, 0, null, "", false, "Dificil", null, 0, false, false, 2, 0, null, "", false ]
-
-[node name="Language" parent="Options/GridContainer" index="3"]
-items = [ "pt-br", null, 0, false, false, 0, 0, null, "", false, "en-us", null, 0, false, false, 1, 0, null, "", false ]
-
 [editable path="Options"]

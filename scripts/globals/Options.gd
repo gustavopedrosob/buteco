@@ -1,6 +1,9 @@
 extends Node
 
-var language = 'pt-br' #en-us,pt-br
+signal language_change
+
+#en-us,pt-br
+var language = 'pt-br' setget set_language, get_language
 var dificulty = 1
 const difficulties = ["easy", "normal", "hard"]
 var auto_save = false
@@ -9,23 +12,27 @@ var tips = true
 var lang_content = null
 var volume = 100
 
-func _ready():
-	Options.load_save()
-	change_fullscreen()
-	get_language()
-
-func get_language():
+func set_language(value):
+	language = value
 	var file = File.new()
 	file.open('lang/%s.json' % language, File.READ)
 	var text = file.get_as_text()
 	lang_content = parse_json(text)
+	emit_signal("language_change")
+
+func get_language():
+	return language
+
+func _ready():
+	Options.load_save()
+	change_fullscreen()
 
 func load_save():
 	var arquivo = File.new()
 	var erro = arquivo.open('res://options', File.READ)
 	if not erro:
 		var dados = arquivo.get_var()
-		language = dados['language']
+		self.language = dados['language']
 		dificulty = dados['dificulty']
 		auto_save = dados['auto-save']
 		fullscreen = dados['fullscreen']

@@ -2,9 +2,10 @@ extends Control
 
 func _ready():
 	$Options/Back.connect("pressed", self, "_on_options_back_pressed")
-	exchange_language()
+	Options.connect("language_change", self, "update_language")
+	update_language()
 
-func exchange_language():
+func update_language():
 	$Pause/Title.text = Options.lang_content["game_paused"]
 	$Pause/Options.text = Options.lang_content["options"]
 	$Pause/SaveAndQuit.text = Options.lang_content["save_and_leave"]
