@@ -2,11 +2,11 @@
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/volume.gd" type="Script" id=2]
-[ext_resource path="res://scripts/SeleLan.gd" type="Script" id=3]
-[ext_resource path="res://scripts/CheckFullscreen.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Language.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Fullscreen.gd" type="Script" id=4]
 [ext_resource path="res://scripts/Autosave.gd" type="Script" id=5]
-[ext_resource path="res://scripts/Dificuldade.gd" type="Script" id=6]
-[ext_resource path="res://scripts/Opcoes.gd" type="Script" id=12]
+[ext_resource path="res://scripts/Difficulty.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Options.gd" type="Script" id=12]
 
 [node name="Options" type="VBoxContainer"]
 margin_left = 341.0
