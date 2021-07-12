@@ -16,3 +16,7 @@ func get_random_color():
 func get_random_in_list(list):
 	var size = len(list)
 	return list[get_random_int(0, size - 1)]
+
+func add_and_move_child(parent, child, position):
+	parent.add_child(child)
+	parent.move_child(child, position)

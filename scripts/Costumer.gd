@@ -32,13 +32,12 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interagir") and can_interact and not already_interact and can_interact_2:
 		already_interact = true
 		# cliente é filho do spawner
-		get_parent().get_parent().add_child(line)
+		Functions.add_and_move_child(get_node("/root/Game"), line, 5)
 		# o primeiro get_parent é o spawner o segundo é o Node principal
 		Playervariables.can_walk = false
 		barmannode.texture = barmannode.mixology
 		Playervariables.busy = true
 		$Inactivity.stop()
-		Playervariables.anti_pause = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == 'Entry':
@@ -47,9 +46,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		queue_free()
 
 func _on_Linha_tree_exited():
-	get_parent().get_parent().add_child(click)
+	Functions.add_and_move_child(get_node("/root/Game"), click, 5)
 	barmannode.texture = barmannode.serving
-	Playervariables.anti_pause = false
 
 func _on_Jogoclick_tree_exited():
 	$AnimationPlayer.play("Exit")

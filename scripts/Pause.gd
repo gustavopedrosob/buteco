@@ -13,7 +13,7 @@ func update_language():
 	$Pause/ReturnToHomeScreen.text = Options.lang_content["return_to_home_screen"]
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel") and not Playervariables.anti_pause:
+	if event.is_action_pressed("ui_cancel"):
 		if get_tree().paused:
 			get_tree().paused = false
 			$Pause.visible = true

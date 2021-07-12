@@ -15,7 +15,6 @@ var buyed = []
 var equiped = []
 
 var barman_x_positon
-var anti_pause = false
 var can_walk = true
 var busy = false
 
