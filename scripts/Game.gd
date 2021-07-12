@@ -9,10 +9,6 @@ func _ready():
 	spawn_client()
 	auto_save()
 
-# warning-ignore:unused_argument
-func _process(delta):
-	$VBoxContainer/Money.text = Options.lang_content["money"] % Playervariables.money
-
 func on_cena_tree_exited():
 	spawn_client()
 

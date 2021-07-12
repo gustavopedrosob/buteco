@@ -8,7 +8,7 @@
     "load_game": "Carregar jogo",
     "credits": "Creditos",
     "leave_the_game": "Sair do jogo",
-    "money": "Dinheiro: %d",
+    "money": "Dinheiro: R$ %d",
     "game_paused": "Jogo pausado",
     "save_and_leave": "Salvar e sair",
     "save": "Salvar",

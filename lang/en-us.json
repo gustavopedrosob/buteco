@@ -8,7 +8,7 @@
     "load_game": "Load game",
     "credits": "Credits",
     "leave_the_game": "Leave game",
-    "money": "Money: %d",
+    "money": "Money: $%d",
     "game_paused": "Game paused",
     "save_and_leave": "Save and leave",
     "save": "Save",

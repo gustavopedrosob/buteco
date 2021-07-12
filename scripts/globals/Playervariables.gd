@@ -1,7 +1,7 @@
 extends Node
 
 var slot
-var money = 0
+var money = 0 setget set_money, get_money
 var drink_value
 var game_1 = 0
 var game_2 = 0
@@ -22,11 +22,19 @@ var busy = false
 
 func set_yield():
 	var gain = drink_value * (game_1 + game_2)/2
-	money += gain
+	self.money += gain
 
 func clear_yield():
 	game_1 = 0
 	game_2 = 0
+
+func set_money(value):
+	money = value
+	get_node("/root/Game/VBoxContainer/Money").text = Options.lang_content["money"] % value
+	print("why it dont change")
+
+func get_money():
+	return money
 
 func load_save():
 	var file = File.new()
