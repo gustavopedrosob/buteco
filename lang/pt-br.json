@@ -43,5 +43,6 @@
     "purple": "Roxo",
     "brown": "Marrom",
     "grey": "Cinza",
-    "slot": "Jogo %d"
+    "slot": "Jogo %d",
+    "insufficient_money": "Dinheiro insuficiente!\n Trabalhe para conseguir mais."
 }

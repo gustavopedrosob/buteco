@@ -12,9 +12,9 @@ gradient = SubResource( 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = SubResource( 2 )
+region_rect = Rect2( 0, 0, 2048, 1 )
 
 [node name="shop" type="WindowDialog"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -59,16 +59,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -132.0
-margin_top = -66.9999
-margin_right = 132.0
-margin_bottom = 66.9999
+margin_right = 607.0
+margin_bottom = 508.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_left = 171.0
+margin_top = 233.0
+margin_right = 435.0
+margin_bottom = 274.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Dinheiro insuficiente!

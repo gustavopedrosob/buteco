@@ -106,7 +106,7 @@ func error_message():
 
 func error_message_visible(visible_: bool):
 	get_node("/root/Game/Shop/InsufficientMoney").visible = visible_
-	get_node("/root/Game/Shop/Label").visible = visible_
+	get_node("/root/Game/Shop/CenterContainer").visible = visible_
 
 func equip(save = true):
 	apply_texture()

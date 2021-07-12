@@ -43,5 +43,6 @@
     "purple": "Purple",
     "brown": "Brown",
     "grey": "Grey",
-    "slot": "Save %d"
+    "slot": "Save %d",
+    "insufficient_money": "Insufficient money!\n Work to get more."
 }

@@ -8,6 +8,7 @@ var groups = {}
 
 func _ready():
 	window_title = Options.lang_content["shop"]
+	$CenterContainer/Label.text = Options.lang_content["insufficient_money"]
 	load_save()
 	add_group(GroupShop.new("wallpapers"))
 	add_group(GroupShop.new("chairs"))
