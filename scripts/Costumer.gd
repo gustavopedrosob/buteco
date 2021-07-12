@@ -3,7 +3,6 @@ extends Node2D
 var can_interact = false
 var can_interact_2 = false
 var already_interact = false
-var drinks = []
 
 onready var line = preload("res://scenes/LineGame.tscn").instance()
 onready var click = preload("res://scenes/ClickGame.tscn").instance()
@@ -13,8 +12,6 @@ onready var sound_of_miss = load('res://Songs/Errou.wav')
 
 func _ready():
 	$Audio.volume_db = (Options.volume - 100) * 0.8
-	for x in range(1, 5):
-		drinks.append(load("res://sprites/drinks/%d.png" % x))
 	line.connect("tree_exited", self, '_on_Linha_tree_exited')
 	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
 	line.get_child(1).connect('hit', self, 'on_hit')
@@ -25,7 +22,7 @@ func _ready():
 	var rand_beb = Functions.get_random_int(0, 3)
 	Playervariables.drink_value = possible_drink_value[rand_beb]
 	var rand_pos = Functions.get_random_int(100, 800)
-	$Drink.set_texture(drinks[rand_beb])
+	$Drink.set_texture(load("res://sprites/drinks/%d.png" % (rand_beb + 1)))
 	position.x = rand_pos
 
 func _unhandled_input(event):

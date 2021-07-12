@@ -2,6 +2,7 @@ extends VBoxContainer
 
 func _ready():
 	Options.connect("language_change", self, "update_language")
+	update_language()
 	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
 		var date = save['data']
