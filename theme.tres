@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=29 format=2]
+[gd_resource type="Theme" load_steps=30 format=2]
 
 [ext_resource path="res://Fonte Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://tres/button/normal.tres" type="StyleBox" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://sprites/interface/Grabber Hightlight.png" type="Texture" id=22]
 [ext_resource path="res://sprites/interface/Grabber.png" type="Texture" id=23]
 [ext_resource path="res://tres/Scroll Bar/scroll.tres" type="StyleBox" id=24]
+[ext_resource path="res://fonts/Font.tres" type="DynamicFont" id=25]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -44,7 +45,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [resource]
-default_font = ExtResource( 1 )
+default_font = ExtResource( 25 )
 Button/colors/font_color = Color( 1, 1, 1, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
