@@ -9,10 +9,16 @@ func _ready():
 	clicks_required = possible_clicks_required[Options.dificulty]
 	Options.connect("language_change", self, "update_language")
 	update_language()
-
-# warning-ignore:unused_argument
-func _process(delta):
-	$VBoxContainer/Time.text = Options.lang_content["time_left"] % $Timer.time_left
+	for second in range(5, 0, -1):
+		$VBoxContainer/Time.text = Options.lang_content["time_left"] % second
+		yield(get_tree().create_timer(1.0), "timeout")
+	if times_pressed:
+		Playervariables.game_2 = get_multiplier()
+		Playervariables.set_yield()
+		queue_free()
+	else:
+		Playervariables.clear_yield()
+		queue_free()
 
 func update_language():
 	$VBoxContainer/Tip.text = Options.lang_content["click_on_beer"] % clicks_required
@@ -37,13 +43,3 @@ func get_multiplier():
 	var percentage = (times_pressed * 100)/clicks_required
 	var multiplier = (3.0 * percentage)/100.0
 	return multiplier
-
-func _on_Timer_timeout():
-	if times_pressed:
-		Playervariables.game_2 = get_multiplier()
-		Playervariables.set_yield()
-		queue_free()
-	else:
-		Playervariables.clear_yield()
-		queue_free()
-	

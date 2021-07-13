@@ -69,22 +69,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="cadeira1" type="TextureRect" parent="Chairs"]
+[node name="Chair1" type="TextureRect" parent="Chairs"]
 margin_left = 656.0
 margin_right = 656.0
 margin_bottom = 215.0
 
-[node name="cadeira2" type="TextureRect" parent="Chairs"]
+[node name="Chair2" type="TextureRect" parent="Chairs"]
 margin_left = 706.0
 margin_right = 706.0
 margin_bottom = 215.0
 
-[node name="cadeira3" type="TextureRect" parent="Chairs"]
+[node name="Chair3" type="TextureRect" parent="Chairs"]
 margin_left = 756.0
 margin_right = 756.0
 margin_bottom = 215.0
 
-[node name="cadeira4" type="TextureRect" parent="Chairs"]
+[node name="Chair4" type="TextureRect" parent="Chairs"]
 margin_left = 806.0
 margin_right = 806.0
 margin_bottom = 215.0
