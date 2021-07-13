@@ -13,7 +13,7 @@ func _init(slot: int):
 	save_button.name = "SaveButton"
 	save_button.rect_min_size = Vector2(150, 22.5)
 	var delete_button = Button.new()
-	delete_button.rect_min_size = Vector2(20, 20)
+	delete_button.rect_min_size = Vector2(22.5, 22.5)
 	delete_button.set_focus_mode(Control.FOCUS_NONE)
 	var delete_stylebox = StyleBoxTexture.new()
 	delete_stylebox.texture = close
