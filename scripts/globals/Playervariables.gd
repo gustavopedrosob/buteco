@@ -14,7 +14,7 @@ var shop = {
 var buyed = []
 var equiped = []
 
-var barman_x_positon
+var positon
 var can_walk = true
 var busy = false
 
@@ -49,8 +49,8 @@ func create_save():
 	var file = File.new()
 	var error = file.open_encrypted_with_pass(slot, File.WRITE, 'zito20201805')
 	var data_to_save = {
-		'dinheiro': money,
-		'barmanposition': barman_x_positon,
+		'money': money,
+		'position': positon,
 		'data': date,
 		'shop': shop
 		}
@@ -65,5 +65,5 @@ func reset_vars():
 	money = 0
 	game_1 = 0
 	game_2 = 0
-	date = {'dia': 1, 'hora': 12, 'minuto': 00}
-	barman_x_positon = 0
+	date = {'day': 1, 'hour': 12}
+	positon = 0

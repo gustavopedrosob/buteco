@@ -5,9 +5,10 @@ onready var customer = load("res://scenes/Costumer.tscn")
 func _ready():
 	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
-		Playervariables.money = save['dinheiro']
+		Playervariables.money = save['money']
 	spawn_client()
 	auto_save()
+	update_language()
 	Options.connect("language_change", self, "update_language")
 
 func on_cena_tree_exited():
