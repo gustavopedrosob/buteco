@@ -1,3 +1,4 @@
+
 extends Node
 
 onready var customer = load("res://scenes/Costumer.tscn")
@@ -22,10 +23,12 @@ func auto_save():
 			print('auto-save funcionado')
 
 func spawn_client():
-	yield(get_tree().create_timer(Functions.get_random_int(3, 10)), "timeout")
-	var spawn = customer.instance()
-	spawn.connect("tree_exited", self, "on_cena_tree_exited")
-	Functions.add_and_move_child(self, spawn, 1)
+	var tree = get_tree()
+	if tree:
+		yield(tree.create_timer(Functions.get_random_int(3, 10)), "timeout")
+		var spawn = customer.instance()
+		spawn.connect("tree_exited", self, "on_cena_tree_exited")
+		Functions.add_and_move_child(self, spawn, 1)
 
 func update_language():
 	$VBoxContainer/Money.text = Options.lang_content["money"] % Playervariables.money
