@@ -30,7 +30,6 @@ func clear_yield():
 func set_money(value):
 	money = value
 	get_node("/root/Game/VBoxContainer/Money").text = Options.lang_content["money"] % value
-	print("why it dont change")
 
 func get_money():
 	return money
@@ -56,7 +55,6 @@ func create_save():
 		}
 	if not error:
 		file.store_var(data_to_save)
-		print('o jogo foi salvo')
 	else:
 		print(error)
 	file.close()

@@ -10,6 +10,7 @@ func _ready():
 	spawn_client()
 	auto_save()
 	update_language()
+	# warning-ignore:return_value_discarded
 	Options.connect("language_change", self, "update_language")
 
 func on_cena_tree_exited():
@@ -20,7 +21,6 @@ func auto_save():
 		yield(get_tree().create_timer(60.0), "timeout")
 		if Options.auto_save:
 			Playervariables.create_save()
-			print('auto-save funcionado')
 
 func spawn_client():
 	var tree = get_tree()

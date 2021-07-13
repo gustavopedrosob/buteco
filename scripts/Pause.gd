@@ -1,7 +1,9 @@
 extends Control
 
 func _ready():
+	# warning-ignore:return_value_discarded
 	$Options/Back.connect("pressed", self, "_on_options_back_pressed")
+	# warning-ignore:return_value_discarded
 	Options.connect("language_change", self, "update_language")
 	update_language()
 

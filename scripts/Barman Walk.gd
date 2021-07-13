@@ -1,7 +1,6 @@
 extends Node2D
 
 func _ready():
-	print("just testing")
 	if Directory.new().file_exists(Playervariables.slot):
 		var save = Playervariables.load_save()
 		var barman_position = save['position']

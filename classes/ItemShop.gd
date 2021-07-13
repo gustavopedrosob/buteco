@@ -49,7 +49,6 @@ func read_save():
 	# if was buyed:
 	if "%s/%s" % [type, id] in save["permissions"]:
 		buy(false, false)
-		print("it was buyed")
 	var code = save["equipped"][type]
 	# if was equipped:
 	if code:

@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 func _ready():
+	# warning-ignore:return_value_discarded
 	Options.connect("language_change", self, "update_language")
 	update_language()
 	if Directory.new().file_exists(Playervariables.slot):

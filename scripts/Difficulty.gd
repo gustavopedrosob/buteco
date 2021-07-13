@@ -1,6 +1,7 @@
 extends MenuButton
 
 func _ready():
+	# warning-ignore:return_value_discarded
 	Options.connect("language_change", self, "update_language")
 	# warning-ignore:return_value_discarded
 	get_popup().connect("id_pressed", self, "_on_item_pressed")
