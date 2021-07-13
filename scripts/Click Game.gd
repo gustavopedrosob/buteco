@@ -11,7 +11,7 @@ func _ready():
 	update_language()
 	for second in range(5, 0, -1):
 		$VBoxContainer/Time.text = Options.lang_content["time_left"] % second
-		yield(get_tree().create_timer(1.0), "timeout")
+		yield(get_tree().create_timer(1.0, false), "timeout")
 	if times_pressed:
 		Playervariables.game_2 = get_multiplier()
 		Playervariables.set_yield()
