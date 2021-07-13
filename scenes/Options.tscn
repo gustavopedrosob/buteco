@@ -14,6 +14,7 @@ margin_top = 193.0
 margin_right = 683.0
 margin_bottom = 407.0
 theme = ExtResource( 1 )
+alignment = 1
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
