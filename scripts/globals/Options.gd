@@ -15,7 +15,7 @@ var volume = 100
 func set_language(value):
 	language = value
 	var file = File.new()
-	file.open('lang/%s.json' % language, File.READ)
+	file.open('res://lang/%s.json' % language, File.READ)
 	var text = file.get_as_text()
 	lang_content = parse_json(text)
 	emit_signal("language_change")
