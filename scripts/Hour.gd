@@ -15,6 +15,7 @@ func _ready():
 		if Playervariables.date["hour"] == 720:
 			Playervariables.date["day"] += 1
 			$Day.text = Options.lang_content["day"] % Playervariables.date['day']
+			Playervariables.date["hour"] = 0
 		yield(get_tree().create_timer(1.0, false), "timeout")
 
 func update_language():
