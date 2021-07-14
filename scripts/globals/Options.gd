@@ -29,30 +29,30 @@ func _ready():
 
 func load_save():
 	var arquivo = File.new()
-	var erro = arquivo.open('res://options', File.READ)
-	if not erro:
-		var dados = arquivo.get_var()
-		self.language = dados['language']
-		dificulty = dados['dificulty']
-		auto_save = dados['auto-save']
-		fullscreen = dados['fullscreen']
-		volume = dados['volume']
+	var error = arquivo.open('res://options', File.READ)
+	if error:
+		self.language = "en-us"
 	else:
-		print(erro)
+		var data = arquivo.get_var()
+		self.language = data['language']
+		dificulty = data['dificulty']
+		auto_save = data['auto-save']
+		fullscreen = data['fullscreen']
+		volume = data['volume']
 
 func create_save():
-	var arquivo = File.new()
-	var erro = arquivo.open('res://options', File.WRITE)
-	var dados_to_save = {
+	var file = File.new()
+	var error = file.open('res://options', File.WRITE)
+	var data = {
 		'language': language,
 		'dificulty': dificulty,
 		'auto-save': auto_save,
 		'fullscreen':fullscreen,
 		'volume': volume}
-	if not erro:
-		arquivo.store_var(dados_to_save)
+	if error:
+		print(error)
 	else:
-		print(erro)
+		file.store_var(data)
 
 func change_fullscreen():
 	OS.window_fullscreen = fullscreen
