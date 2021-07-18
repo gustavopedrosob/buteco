@@ -1,4 +1,4 @@
-extends VBoxContainer
+ extends VBoxContainer
 
 class_name ItemShop
 

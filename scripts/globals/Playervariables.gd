@@ -6,13 +6,9 @@ var drink_value
 var game_1 = 0
 var game_2 = 0
 var date = {'day': 1, 'hour': 0}
-var tips = {'movimento': true, 'jogo1': true, 'jogo2': true}
 var shop = {
 	'permissions': ["wallpaper/1", "chairs/1", "cabinet/1"],
 	'equipped': {'chairs': "1:4", 'cabinet': "1:5", 'wallpaper': "1:0"}}
-
-var buyed = []
-var equiped = []
 
 var positon
 var can_walk = true
@@ -20,7 +16,7 @@ var busy = false
 
 
 func set_yield():
-	var gain = drink_value * (game_1 + game_2)/2
+	var gain = drink_value * (game_1 + game_2) / 2
 	self.money += gain
 
 func clear_yield():
@@ -37,31 +33,34 @@ func get_money():
 func load_save():
 	var file = File.new()
 	var error = file.open_encrypted_with_pass(slot, File.READ, 'zito20201805')
-	if not error:
+	if error:
+		print(error)
+	else:
 		var data = file.get_var()
 		return data
-	else:
-		print(error)
 	file.close()
 
 func create_save():
 	var file = File.new()
 	var error = file.open_encrypted_with_pass(slot, File.WRITE, 'zito20201805')
-	var data_to_save = {
+	var data = {
 		'money': money,
 		'position': positon,
 		'data': date,
 		'shop': shop
 		}
-	if not error:
-		file.store_var(data_to_save)
-	else:
+	if error:
 		print(error)
+	else:
+		file.store_var(data)
 	file.close()
 
 func reset_vars():
 	money = 0
 	game_1 = 0
 	game_2 = 0
-	date = {'day': 1, 'hour': 12}
+	date = {'day': 1, 'hour': 0}
 	positon = 0
+	shop = {
+		'permissions': ["wallpaper/1", "chairs/1", "cabinet/1"],
+		'equipped': {'chairs': "1:4", 'cabinet': "1:5", 'wallpaper': "1:0"}}
