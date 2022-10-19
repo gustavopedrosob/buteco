@@ -10,21 +10,27 @@ signal hit
 signal missed
 
 const speeds = [1.5, 2.0, 2.5]
-var state = 'rising'
+var down = true
 
 func _ready():
-	velocity = speeds[Options.dificulty]
+	velocity = speeds[Options.options['difficulty']]
 
 # warning-ignore:unused_argument
 func _process(delta):
-	if $WhiteLine.rect_position.y <= 195 and state == 'rising':
-		$WhiteLine.rect_position.y += velocity
-		if $WhiteLine.rect_position.y >= 195:
-			state = 'down'
-	elif $WhiteLine.rect_position.y >= 0 and state == 'down':
-		$WhiteLine.rect_position.y -= velocity
-		if $WhiteLine.rect_position.y <= 0:
-			state = 'rising'
+	move_white_line(-velocity if down else +velocity)
+	if is_line_at_bottom():
+		down = false
+	elif is_line_at_top():
+		down = true
+
+func is_line_at_bottom():
+	return $WhiteLine.rect_position.y <= 0
+
+func is_line_at_top():
+	return $WhiteLine.rect_position.y >= 195
+
+func move_white_line(position):
+	$WhiteLine.rect_position.y += position
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_select"):

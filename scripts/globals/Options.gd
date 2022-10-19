@@ -2,57 +2,54 @@ extends Node
 
 signal language_change
 
-var language = 'pt-br' setget set_language, get_language
-const languages = ["pt-br", "en-us"]
-var dificulty = 1
-const difficulties = ["easy", "normal", "hard"]
-var auto_save = false
-var fullscreen = false
-var tips = true
-var lang_content = null
-var volume = 100
+var options = {
+	'language': 'pt-br',
+	'auto-save': true,
+	'fullscreen': true,
+	'volume': 100,
+	'difficulty': 1
+}
+var lang_content
 
-func set_language(value):
-	language = value
+func get_difficulty_as_str(difficulty: int = options['difficulty']):
+	return ['easy', 'normal', 'hard'][difficulty]
+
+func set_language(language: String):
+	options['language'] = language
+	setup_language()
+
+
+func setup_language(language: String = options['language']):
 	var file = File.new()
-	file.open('res://lang/%s.json' % language, File.READ)
-	var text = file.get_as_text()
-	lang_content = parse_json(text)
+	var error = file.open('res://lang/%s.json' % language, File.READ)
+	if not error:
+		lang_content = parse_json(file.get_as_text())
 	emit_signal("language_change")
 
-func get_language():
-	return language
+
+func set_fullscreen(fullscreen: bool):
+	options['fullscreen'] = fullscreen
+
+
+func setup_fullscreen(fullscreen: bool = options['fullscreen']):
+	OS.window_fullscreen = fullscreen
+
 
 func _ready():
-	Options.load_save()
-	change_fullscreen()
+	Options.read()
+	setup_fullscreen()
+	setup_language()
 
-func load_save():
-	var arquivo = File.new()
-	var error = arquivo.open('res://options', File.READ)
-	if error:
-		self.language = "en-us"
-	else:
-		var data = arquivo.get_var()
-		self.language = data['language']
-		dificulty = data['dificulty']
-		auto_save = data['auto-save']
-		fullscreen = data['fullscreen']
-		volume = data['volume']
 
-func create_save():
+func read():
+	var file = File.new()
+	var error = file.open('res://options', File.READ)
+	if not error:
+		options = file.get_var()
+
+
+func save():
 	var file = File.new()
 	var error = file.open('res://options', File.WRITE)
-	var data = {
-		'language': language,
-		'dificulty': dificulty,
-		'auto-save': auto_save,
-		'fullscreen':fullscreen,
-		'volume': volume}
-	if error:
-		print(error)
-	else:
-		file.store_var(data)
-
-func change_fullscreen():
-	OS.window_fullscreen = fullscreen
+	if not error:
+		file.store_var(options)

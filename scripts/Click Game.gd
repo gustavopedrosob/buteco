@@ -6,7 +6,7 @@ var times_pressed = 0
 const possible_clicks_required = [25, 35, 50]
 
 func _ready():
-	clicks_required = possible_clicks_required[Options.dificulty]
+	clicks_required = possible_clicks_required[Options.options['difficulty']]
 	# warning-ignore:return_value_discarded
 	Options.connect("language_change", self, "update_language")
 	update_language()

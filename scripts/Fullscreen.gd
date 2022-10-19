@@ -1,8 +1,7 @@
 extends CheckBox
 
 func _ready():
-	pressed = Options.fullscreen
+	pressed = Options.options['fullscreen']
 
 func _on_CheckFullscreen_pressed():
-	OS.window_fullscreen = !OS.window_fullscreen
-	Options.fullscreen = !Options.fullscreen
+	Options.set_fullscreen(!OS.window_fullscreen)

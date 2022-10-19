@@ -1,7 +1,7 @@
 extends HSlider
 
 func _ready():
-	value = Options.volume
+	value = Options.options['volume']
 
 func _on_HSlider_value_changed(value):
-	Options.volume = int(value)
+	Options.options['volume'] = int(value)

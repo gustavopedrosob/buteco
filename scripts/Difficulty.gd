@@ -15,4 +15,4 @@ func update_language():
 	get_popup().set_item_text(0, Options.lang_content["easy"])
 	get_popup().set_item_text(1, Options.lang_content["normal"])
 	get_popup().set_item_text(2, Options.lang_content["hard"])
-	text = Options.lang_content[Options.difficulties[Options.dificulty]]
+	text = Options.lang_content[Options.get_difficulty_as_str()]

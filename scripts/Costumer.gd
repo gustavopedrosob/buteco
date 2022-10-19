@@ -11,7 +11,7 @@ onready var sound_of_hitting = load('res://Songs/Acertou.wav')
 onready var sound_of_miss = load('res://Songs/Errou.wav')
 
 func _ready():
-	$Audio.volume_db = (Options.volume - 100) * 0.8
+	$Audio.volume_db = (Options.options['volume'] - 100) * 0.8
 	line.connect("tree_exited", self, '_on_Linha_tree_exited')
 	click.connect("tree_exited", self,'_on_Jogoclick_tree_exited')
 	line.get_child(1).connect('hit', self, 'on_hit')
